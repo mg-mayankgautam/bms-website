@@ -58,11 +58,11 @@ a{
 }
 .bentoGrid{
   display: grid;
-  grid-template-columns: repeat(3, 200px);
-  grid-template-rows: repeat(3, 125px);
-  gap: 20px;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  gap: 10px;
   justify-content: center;
-  align-content: center;
+  /* align-content: center; */
   margin-bottom: 18px;
 }
 .bentoGrid>div{
@@ -70,9 +70,9 @@ a{
   border-radius: 25px;
 }
 .bentoGrid>div>img{
-  object-fit: fill;
-  /* height: 300px; */
-  /* width: 300px; */
+  object-fit: cover;
+  height: 140px;
+  width: 150px;
   max-height: 100%;
   max-width: 100%;
   border-radius: 25px;
@@ -113,4 +113,24 @@ a{
   height: 400px;
   min-width: 200px;
   border-radius: 25px;
+  /* animation: scale-member linear 250ms;
+  animation-timeline: view();
+  animation-range-start: 400px;
+  animation-range-end: 500px; */
 }
+
+/* .teamMember>img{
+  object-fit: cover;
+}
+
+@keyframes scale-member {
+  0%{
+    scale:1
+  }
+  50%{
+    scale: 1.5;
+  }
+  100%{
+    scale: 1;
+  }
+} */

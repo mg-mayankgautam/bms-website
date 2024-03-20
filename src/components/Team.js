@@ -7,7 +7,7 @@ const Team = () => {
         <h2>Meet the Team</h2>
         <div className='teamCarousel'>
             <div className='teamMember'>
-                <img src={image1} alt="" />
+                {/* <img src={image1} alt="" /> */}
             </div>
             <div className='teamMember'>
             </div>

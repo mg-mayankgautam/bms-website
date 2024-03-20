@@ -1,5 +1,5 @@
 import React from 'react'
-// import img1 from '../assets/Frame 3.png'
+import img1 from '../assets/logo.png'
 
 const Events = () => {
   return (
@@ -9,13 +9,13 @@ const Events = () => {
             <h2>2023-24</h2>
             <div className='bentoGrid'>
                 <div className='event1'>
-                    {/* <img src={img1} alt="" /> */}
+                    <img src={img1} alt="" />
                 </div>
                 <div className='event2'>
-                    {/* <img src={img2} alt="" /> */}
+                    <img src={img1} alt="" />
                 </div>
                 <div className='event3'>
-                    {/* <img src={img3} alt="" /> */}
+                    <img src={img1} alt="" />
                 </div>
                 <div className='event4'>
                     {/* <img src={img4} alt="" /> */}
