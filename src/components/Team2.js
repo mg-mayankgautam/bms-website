@@ -5,103 +5,88 @@ import { motion, useScroll,useMotionValueEvent,useInView } from "framer-motion";
 import Slider from 'react-slick';
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
+import { IoIosArrowBack, IoIosArrowForward } from "react-icons/io";
 
+
+var settings = {
+  className: "center",
+  centerMode: true,
+  dots: false,
+  infinite: false,
+  speed: 500,
+  slidesToShow: 3,
+  slidesToScroll: 1,
+  initialSlide: 1,
+  arrows : false,
+};
 
 
 const Team2 = () => {
-  const ref = useRef(null);
- 
+  const arrowRef = useRef(null);
 
-const horizontalAnimation = {
-  noFocus: { opacity: 0.8 }, 
-  focus: {opacity: 1,scaleY:1.3, scaleX:1.3, zIndex:21}, 
-  vp: {margin:"0px -70% 0px -48%"},
-  duration: {duration:0.1}
-}
-
-let sliderRef = useRef(null);
-  const next = () => {
-    sliderRef.slickNext();
-  };
-  const previous = () => {
-    sliderRef.slickPrev();
-  };
-
-const settings = {
-    arrows:true,
-    className: "center",
-    centerMode: true,
-    infinite: false,
-    centerPadding: "60px",
-    slidesToShow: 3,
-    speed: 500
-  };
+  console.log(arrowRef.current)
 
   return (
+
     <div className='Team'>
         <h2>Meet the Team</h2>
-        <div className='slider-container' >
-        <Slider ref={slider => {
-          sliderRef = slider;
-        }} {...settings}> 
-            {/* <div  className='teamMember_dummy'>
-                
-            </div>
-            <div  className='teamMember_dummy'>
-                
-            </div> */}
-            <motion.div  className='teamMember'
+       <div className='SliderContainer'>
+        <Slider ref={arrowRef} {...settings}> 
+              <motion.div  className='teamMember'
+                >
+                  A
+              </motion.div>
+              <motion.div className='teamMember'
+                >B
+              </motion.div>
+              <motion.div className='teamMember'
               >
-                {/* <img src={image1} alt="" /> */}
-                A
-            </motion.div>
-            <motion.div className='teamMember'
-              
-              >B
-            </motion.div>
-            <motion.div className='teamMember'
-             >
-                C
-            </motion.div>
-            <motion.div className='teamMember'
+                  C
+              </motion.div>
+              <motion.div className='teamMember'
+                >
+                  D
+              </motion.div>
+              <motion.div className='teamMember' 
               >
-                D
-            </motion.div>
-            <motion.div className='teamMember' 
-              
-            >
-              E
-            </motion.div>
-            <motion.div className='teamMember' 
-              
-            >
-              F***
-            </motion.div>
-            <motion.div className='teamMember' 
+                E
+              </motion.div>
+              <motion.div className='teamMember'
               >
-                F
-            </motion.div>
-            <motion.div className='teamMember'   
-              >
-                G
-            </motion.div>
-            <motion.div className='teamMember' 
-              >
-                H
-            </motion.div>
-            {/* <div  className='teamMember_dummy'>
+                F***
+              </motion.div>
+              <motion.div className='teamMember' 
+                >
+                  F
+              </motion.div>
+              <motion.div className='teamMember'   
+                >
+                  G
+              </motion.div>
+              <motion.div className='teamMember' 
+                >
+                  H
+              </motion.div>
+              <div  className='teamMember_dummy'>
                 
             </div>
             <div  className='teamMember_dummy'>
                 
             </div>
-            <div  className='teamMember_dummy'>
-                
-            </div> */}
+            
+            
             </Slider>
+                  <button 
+                  onClick={() => arrowRef.current.slickPrev()}
+                  className='back'><IoIosArrowBack/></button>
+                  <button 
+                  onClick={() => arrowRef.current.slickNext()}
+                  className='next'><IoIosArrowForward/></button>
+           
+            {/* </Container> */}
         </div>
     </div>
   )
 }
 
-export default Team2
+export default Team2;
