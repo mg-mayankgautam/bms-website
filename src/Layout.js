@@ -5,7 +5,7 @@ import Nav from './components/Nav';
 const Layout = () => {
   return (
     <div className='App'>
-        <Nav/>
+        {/* <Nav/> */}
         <Outlet/>
         {/* <Footer/> */}
     </div>
