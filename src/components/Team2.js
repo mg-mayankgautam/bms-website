@@ -21,6 +21,8 @@ var settings = {
   focusOnSelect: true,
   swipeToSlide: true,
   centerPadding: "100px",
+  verticalSwiping: true,
+    // swipeToSlide: true,
 };
 
 
@@ -31,7 +33,7 @@ const Team2 = () => {
 
   return (
 
-    <div className='Team'>
+    <div className='Team2'>
         <h2>Meet the Team</h2>
        <div className='SliderContainer'>
         <Slider ref={arrowRef} {...settings}> 
