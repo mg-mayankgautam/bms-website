@@ -14,10 +14,13 @@ var settings = {
   dots: false,
   infinite: false,
   speed: 500,
-  slidesToShow: 3,
+  slidesToShow: 7,
   slidesToScroll: 1,
   initialSlide: 1,
   arrows : false,
+  focusOnSelect: true,
+  swipeToSlide: true,
+  centerPadding: "100px",
 };
 
 
@@ -32,6 +35,9 @@ const Team2 = () => {
         <h2>Meet the Team</h2>
        <div className='SliderContainer'>
         <Slider ref={arrowRef} {...settings}> 
+        <div  className='teamMember_dummy'>
+                
+                </div>
               <motion.div  className='teamMember'
                 >
                   A
@@ -73,6 +79,21 @@ const Team2 = () => {
             <div  className='teamMember_dummy'>
                 
             </div>
+            <div  className='teamMember_dummy'>
+                
+                </div>
+                <div  className='teamMember_dummy'>
+                
+                </div>
+                <div  className='teamMember_dummy'>
+                
+                </div>
+                <div  className='teamMember_dummy'>
+                
+                </div>
+                {/* <div  className='teamMember_dummy'>
+                
+                </div> */}
             
             
             </Slider>

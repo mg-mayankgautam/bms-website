@@ -38,10 +38,10 @@ const Home = () => {
         <Nav hidden={hidden} setHidden={setHidden} />
         <Welcome hidden={hidden} setHidden={setHidden} scrollvar={scrollvar}/>
         {isDisplayed? <About/>:<></> }
-        {isDisplayed? <Events/>:<></> }
+       
         {isDisplayed?  <Team/>:<></> }
         {isDisplayed?  <Team2/>:<></> }
-       
+        {isDisplayed? <Events/>:<></> }
     </div>
   )
 }
