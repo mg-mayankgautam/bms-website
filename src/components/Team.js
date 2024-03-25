@@ -38,7 +38,7 @@ const horizontalAnimation = {
 
   return (
     <div className='Team' >
-        <h2>Meet the Team</h2>
+        <div className='teamHeading'>Meet the Team</div>
         <div className='teamCarousel' >
             <div  className='teamMember_dummy'>
                 

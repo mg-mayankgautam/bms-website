@@ -13,9 +13,11 @@ const Home = () => {
   const [isDisplayed, setIsDisplayed] = useState(false);
 
   useEffect(() => {
+    if(hidden){
     setTimeout(() => {
       setIsDisplayed(true);
     }, 1500);
+  }
     
   }, [hidden])
   
@@ -39,7 +41,7 @@ const Home = () => {
         <Welcome hidden={hidden} setHidden={setHidden} scrollvar={scrollvar}/>
         {isDisplayed? <About/>:<></> }
        
-        {isDisplayed?  <Team/>:<></> }
+        {/* {isDisplayed?  <Team/>:<></> } */}
         {isDisplayed?  <Team2/>:<></> }
         {isDisplayed? <Events/>:<></> }
     </div>

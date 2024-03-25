@@ -12,17 +12,16 @@ var settings = {
   className: "center",
   centerMode: true,
   dots: false,
-  infinite: false,
+  infinite: true,
   speed: 500,
   slidesToShow: 7,
   slidesToScroll: 1,
-  initialSlide: 1,
+  initialSlide: 0,
   arrows : false,
   focusOnSelect: true,
   swipeToSlide: true,
-  centerPadding: "100px",
-  verticalSwiping: true,
-    // swipeToSlide: true,
+  centerPadding: "150px",
+  verticalSwiping: true
 };
 
 
@@ -32,14 +31,14 @@ const Team2 = () => {
   console.log(arrowRef.current)
 
   return (
-
+<div className='teamContainer'>
     <div className='Team2'>
-        <h2>Meet the Team</h2>
+        <div className='teamHeading'>Meet the Team</div>
        <div className='SliderContainer'>
         <Slider ref={arrowRef} {...settings}> 
-        <div  className='teamMember_dummy'>
+        {/* <div  className='teamMember_dummy'>
                 
-                </div>
+                </div> */}
               <motion.div  className='teamMember'
                 >
                   A
@@ -59,10 +58,6 @@ const Team2 = () => {
               >
                 E
               </motion.div>
-              <motion.div className='teamMember'
-              >
-                F***
-              </motion.div>
               <motion.div className='teamMember' 
                 >
                   F
@@ -75,27 +70,12 @@ const Team2 = () => {
                 >
                   H
               </motion.div>
-              <div  className='teamMember_dummy'>
-                
-            </div>
-            <div  className='teamMember_dummy'>
-                
-            </div>
-            <div  className='teamMember_dummy'>
-                
-                </div>
-                <div  className='teamMember_dummy'>
-                
-                </div>
-                <div  className='teamMember_dummy'>
-                
-                </div>
-                <div  className='teamMember_dummy'>
-                
-                </div>
-                {/* <div  className='teamMember_dummy'>
-                
-                </div> */}
+              {/* <div  className='teamMember_dummy'></div>
+              <div  className='teamMember_dummy'></div>
+              <div  className='teamMember_dummy'></div>
+              <div  className='teamMember_dummy'></div>
+              <div  className='teamMember_dummy'></div>
+              <div  className='teamMember_dummy'></div> */}
             
             
             </Slider>
@@ -108,6 +88,7 @@ const Team2 = () => {
            
             {/* </Container> */}
         </div>
+    </div>
     </div>
   )
 }
