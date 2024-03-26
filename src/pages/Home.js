@@ -6,20 +6,21 @@ import Events from '../components/Events'
 import Team from '../components/Team'
 import Team2 from '../components/Team2'
 import Nav from '../components/Nav';
+import Footer from '../components/Footer';
 
 const Home = () => {
 
-  const [hidden, setHidden] = useState(false)
+  const [hide, setHide] = useState(false)
   const [isDisplayed, setIsDisplayed] = useState(false);
 
   useEffect(() => {
-    if(hidden){
+    if(hide){
     setTimeout(() => {
       setIsDisplayed(true);
     }, 1500);
   }
     
-  }, [hidden])
+  }, [hide])
   
 
   const ref = useRef(null);
@@ -29,6 +30,7 @@ const Home = () => {
   const [scrollvar, setscrollvar]= useState(0)
   
   useMotionValueEvent(scrollY, "change", (latest) => {
+      // console.log(latest);
       const height = document.body.clientHeight;
       setscrollvar(latest*100/height)
     //  console.log(scrollvar)
@@ -37,12 +39,13 @@ const Home = () => {
 
   return (
     <div>
-        <Nav hidden={hidden} setHidden={setHidden} />
-        <Welcome hidden={hidden} setHidden={setHidden} scrollvar={scrollvar}/>
+        <Nav hide={hide} setHide={setHide} />
+        <Welcome hide={hide} setHide={setHide} scrollvar={scrollvar}/>
         {isDisplayed? <About/>:<></> }
-        {isDisplayed? <Events/>:<></> }
+        {isDisplayed? <Events scrollvar={scrollvar}/>:<></> }
         {/* {isDisplayed?  <Team/>:<></> } */}
         {isDisplayed?  <Team2/>:<></> }
+        {isDisplayed?  <Footer/>:<></> }
     </div>
   )
 }

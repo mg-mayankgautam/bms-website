@@ -28,7 +28,7 @@ var settings = {
 const Team2 = () => {
   const arrowRef = useRef(null);
 
-  console.log(arrowRef.current)
+  // console.log(arrowRef.current)
 
   return (
 <div className='teamContainer'>
@@ -36,9 +36,7 @@ const Team2 = () => {
         <div className='teamHeading'>Meet the Team</div>
        <div className='SliderContainer'>
         <Slider ref={arrowRef} {...settings}> 
-        {/* <div  className='teamMember_dummy'>
-                
-                </div> */}
+        
               <motion.div  className='teamMember'
                 >
                   A

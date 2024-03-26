@@ -60,7 +60,7 @@ a{
   100= newRange
   75= oldRange
   0=newMin */
-  /* opacity:0.3; */
+  opacity:0.3;
 }
 
 .welcomeText{
@@ -117,13 +117,17 @@ a{
   position: sticky;
   top: 0;
   background-color: #ffffff;
-  background-image: linear-gradient(to bottom right,#ddf2ffa1, #dbbdff);
+  /* background-image: linear-gradient(to bottom right,#ddf2ffa1, #dbbdff); */
+  background-image: url(./assets/bg.png);
+  background-size: cover;
+  background-repeat: no-repeat;
   border-bottom-left-radius: 100px;
   border-bottom-right-radius: 100px;
   display: flex;
   flex-direction: column;
   justify-content:center;    
-  box-shadow: rgba(171, 26, 255, 0.35) 0px 2px 10px;           
+  box-shadow: rgba(171, 26, 255, 0.35) 0px 2px 10px; 
+  opacity: 0.6;          
 }
 
 .aboutHeading{
@@ -233,7 +237,9 @@ a{
   /* max-height: max-content; */
   background-color: #ffffff;
   /* background-image: linear-gradient(to bottom right,#a0cce7a1, #b683f4); */
-  background-image: linear-gradient(to bottom right,#ddf2ffa1, #dbbdff);
+  background-image: url(./assets/bg.png);
+  background-size: cover;
+  background-repeat: no-repeat;
   display: flex;
   flex-direction: column;
   justify-content: center; 
@@ -372,11 +378,31 @@ a{
   /* .one{
       animation: fade-in 0.5s;
   } */
+
   .Home_nav{
     animation: fade-in 2s;
   }
 
-/* .Home_nav>a{
-  color: red;
-  animation: fade-in 2s;
-} */
+.Footer{
+  position: relative;
+  min-height: 80vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+.footerBg{
+  /* position: absolute; */
+  bottom: 0;
+  left: 0;
+  width: 100vw;
+  max-width: 100%;
+  height: 60dvh;
+}
+.footerBMS{
+  position: absolute;
+  font-size: 90px;
+  bottom: 0;
+  width: 100%;
+  font-family: 'ribeye marrow';
+  color: white;
+}

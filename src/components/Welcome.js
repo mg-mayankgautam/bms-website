@@ -2,7 +2,7 @@ import React, {useState, useEffect}from 'react';
 import { color, motion,useMotionValueEvent,useScroll  } from "framer-motion"
 import illustration from '../assets/illus.png'
 
-const Welcome = ({hidden,setHidden, scrollvar}) => {
+const Welcome = ({hide,setHide, scrollvar}) => {
   // const { scrollY } = useScroll();
   // // const [hidden, setHidden] = useState(false)
   // // var scroll = 100-scrollYProgress;
@@ -13,7 +13,7 @@ const Welcome = ({hidden,setHidden, scrollvar}) => {
   useEffect(()=>{
     document.querySelector('.Welcome').style.setProperty("--scroll", Math.min(scrollvar, 100))
     // console.log(Math.min(scrollvar, 100))
-    if(scrollvar>=1){setHidden(true)}
+    if(scrollvar>=1){setHide(true)}
   },[scrollvar])
 
   const defaultAnimation = {hidden:{opacity:0,y:"25%"},visible:{opacity:1,y:"0%"}}
@@ -32,7 +32,7 @@ const Welcome = ({hidden,setHidden, scrollvar}) => {
         <motion.div className='welcomeText'
         variants={{fade:{opacity: 0},visible:{opacity: 1}}}
         initial='visible'
-        animate={hidden?"fade":""}
+        animate={hide?"fade":""}
         transition={{duration:0.5}}
         > 
         hello and welcome
@@ -40,9 +40,9 @@ const Welcome = ({hidden,setHidden, scrollvar}) => {
 
         <motion.div 
           className='Main'
-          variants={{fade:{opacity: 0},visibl:{opacity: 1}}}
+          variants={{fade:{opacity: 0},show:{opacity: 1}}}
           initial='fade'
-          animate={hidden?"visibl":"fade"}
+          animate={hide?"show":"fade"}
           transition={{duration:0.5}}
         >  
         
@@ -50,7 +50,7 @@ const Welcome = ({hidden,setHidden, scrollvar}) => {
             
             <motion.h1 
               initial='hidden' 
-              animate= {hidden? 'visible':''}
+              animate= {hide? 'visible':''}
               transition={{staggerChildren: 0.01}}
               className='mainHeading'
               >  
@@ -64,7 +64,7 @@ const Welcome = ({hidden,setHidden, scrollvar}) => {
             
             <motion.div 
               initial='hidden' 
-              animate= {hidden? 'visible':''}
+              animate= {hide? 'visible':''}
               transition={{staggerChildren: 0.01,delayChildren: 0.3}}
               >  
                     {text2.split('').map(char=>
@@ -77,7 +77,7 @@ const Welcome = ({hidden,setHidden, scrollvar}) => {
 
             <motion.div 
               initial='hidden' 
-              animate= {hidden? 'visible':''}
+              animate= {hide? 'visible':''}
               transition={{staggerChildren: 0.01,delayChildren: 0.5}}
               >  
                     {text3.split('').map(char=>
@@ -90,7 +90,7 @@ const Welcome = ({hidden,setHidden, scrollvar}) => {
             
             <motion.div 
               initial='hidden' 
-              animate= {hidden? 'visible':''}
+              animate= {hide? 'visible':''}
               transition={{staggerChildren: 0.01,delayChildren: 0.7}}
               >  
                     {text5.split('').map(char=>
@@ -103,7 +103,7 @@ const Welcome = ({hidden,setHidden, scrollvar}) => {
             
             <motion.div 
               initial='hidden' 
-              animate= {hidden? 'visible':''}
+              animate= {hide? 'visible':''}
               transition={{staggerChildren: 0.01,delayChildren: 0.9}}
               >  
                     {text4.split('').map(char=>
@@ -116,7 +116,7 @@ const Welcome = ({hidden,setHidden, scrollvar}) => {
             
             <motion.div 
               initial='hidden' 
-              animate= {hidden? 'visible':''}
+              animate= {hide? 'visible':''}
               transition={{staggerChildren: 0.01,delayChildren: 1.1}}
               
               >  
