@@ -3,28 +3,30 @@ import img1 from '../assets/logo.png'
 
 const Events = () => {
   return (
-    <div className='Events'>
-        <div className='carousel'>
-            <h3>MEMORIES</h3>
-            <h2>2023-24</h2>
-            <div className='bentoGrid'>
-                <div className='event1'>
-                    <img src={img1} alt="" />
-                </div>
-                <div className='event2'>
-                    <img src={img1} alt="" />
-                </div>
-                <div className='event3'>
-                    <img src={img1} alt="" />
-                </div>
-                <div className='event4'>
-                    {/* <img src={img4} alt="" /> */}
-                </div>
-                <div className='event5'>
-                    {/* <img src={img5} alt="" /> */}
-                </div>
-                <div className='event6'>
-                    {/* <img src={img6} alt="" /> */}
+    <div className='EventsContainer'>
+        <div className='Events'>
+            <div className='carousel'>
+                <div className='eventsHeading'>EVENTS</div>
+                <div className='eventsSubHeading'>2023-24</div>
+                <div className='bentoGrid'>
+                        <div className='event1'>
+                            <img src={img1} alt="" />
+                        </div>
+                        <div className='event2'>
+                            <img src={img1} alt="" />
+                        </div>
+                        <div className='event3'>
+                            <img src={img1} alt="" />
+                        </div>
+                        <div className='event4'>
+                            <img src={img1} alt="" />
+                        </div>
+                        <div className='event5'>
+                            <img src={img1} alt="" />
+                        </div>
+                        <div className='event6'>
+                            <img src={img1} alt="" />
+                        </div>
                 </div>
             </div>
         </div>

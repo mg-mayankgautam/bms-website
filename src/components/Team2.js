@@ -12,7 +12,7 @@ var settings = {
   className: "center",
   centerMode: true,
   dots: false,
-  infinite: true,
+  infinite: false,
   speed: 500,
   slidesToShow: 7,
   slidesToScroll: 1,
@@ -70,12 +70,12 @@ const Team2 = () => {
                 >
                   H
               </motion.div>
-              {/* <div  className='teamMember_dummy'></div>
               <div  className='teamMember_dummy'></div>
               <div  className='teamMember_dummy'></div>
               <div  className='teamMember_dummy'></div>
               <div  className='teamMember_dummy'></div>
-              <div  className='teamMember_dummy'></div> */}
+              <div  className='teamMember_dummy'></div>
+              <div  className='teamMember_dummy'></div>
             
             
             </Slider>

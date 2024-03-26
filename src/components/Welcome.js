@@ -18,6 +18,7 @@ const Welcome = ({hidden,setHidden, scrollvar}) => {
 
   const defaultAnimation = {hidden:{opacity:0,y:"25%"},visible:{opacity:1,y:"0%"}}
 
+  const heading ='Keeping Mental Health in Check'
   const text=' funsi bansi chal lor Lorem ipsum dolor sit amet consectetur'
   const text2= 'Temporibus iusto natus eaque perferendis. Ratione vero' 
   const text3= 'architecto itaque veniam nihil voluptates, explicabo '
@@ -47,18 +48,19 @@ const Welcome = ({hidden,setHidden, scrollvar}) => {
         
           <div className="mainWritten">
             
-            <motion.div 
+            <motion.h1 
               initial='hidden' 
               animate= {hidden? 'visible':''}
               transition={{staggerChildren: 0.01}}
+              className='mainHeading'
               >  
-                    {text.split('').map(char=>
+                    {heading.split('').map(char=>
                     <motion.span  variants={defaultAnimation} >
                       {char}
                     </motion.span>
                     )}
                    
-            </motion.div>
+            </motion.h1>
             
             <motion.div 
               initial='hidden' 
