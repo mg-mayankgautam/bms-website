@@ -85,7 +85,7 @@ a{
   text-align: left;
 }
 .mainHeading{
-  font-family: 'ribeye marrow';
+  /* font-family: 'ribeye marrow'; */
 }
 .mainHeading1{
   /* font-family: 'titan one'; */
@@ -128,7 +128,7 @@ a{
 
 .aboutHeading{
   font-size: 56px;
-  font-family: 'ribeye marrow';
+  /* font-family: 'ribeye marrow'; */
   color: #219897;
 }
 .aboutMain{
@@ -178,7 +178,7 @@ a{
 }
 .eventsSubHeading{
   font-size: 40px;
-  font-family: 'bangers';
+  /* font-family: 'bangers'; */
   color: rgb(231, 118, 118);
   margin-bottom: 10px;
 }
@@ -249,7 +249,7 @@ a{
   /* padding: 4px 0 0; */
   /* font-weight: 600; */
   margin-left: 275px;
-  font-family: 'titan one';
+  /* font-family: 'titan one'; */
   color: #219897;
 }
 
