@@ -3,7 +3,7 @@ import { motion } from "framer-motion"
 import { Link } from 'react-router-dom'
 import logo from '../assets/logo.png'
 
-const Nav = ({hidden,setHidden}) => {
+const Nav = ({hide,setHide}) => {
   return (
     // hidden?
     (<motion.div className='Nav'
@@ -12,7 +12,7 @@ const Nav = ({hidden,setHidden}) => {
         dropdown:{opacity:1, translateY: 0}
       }}
       initial='hidden'
-      animate={hidden?"dropdown":""}
+      animate={hide?"dropdown":""}
       transition={{duration:0.5}}>
 
         <ul className='navItems'>

@@ -31,63 +31,75 @@ const Team2 = () => {
   // console.log(arrowRef.current)
 
   return (
-<div className='teamContainer'>
-    <div className='Team2'>
-        <div className='teamHeading'>Meet the Team</div>
-       <div className='SliderContainer'>
-        <Slider ref={arrowRef} {...settings}> 
-        
-              <motion.div  className='teamMember'
-                >
-                  A
-              </motion.div>
-              <motion.div className='teamMember'
-                >B
-              </motion.div>
-              <motion.div className='teamMember'
-              >
-                  C
-              </motion.div>
-              <motion.div className='teamMember'
-                >
-                  D
-              </motion.div>
-              <motion.div className='teamMember' 
-              >
-                E
-              </motion.div>
-              <motion.div className='teamMember' 
-                >
-                  F
-              </motion.div>
-              <motion.div className='teamMember'   
-                >
-                  G
-              </motion.div>
-              <motion.div className='teamMember' 
-                >
-                  H
-              </motion.div>
-              <div  className='teamMember_dummy'></div>
-              <div  className='teamMember_dummy'></div>
-              <div  className='teamMember_dummy'></div>
-              <div  className='teamMember_dummy'></div>
-              <div  className='teamMember_dummy'></div>
-              <div  className='teamMember_dummy'></div>
-            
-            
-            </Slider>
-                  <button 
-                  onClick={() => arrowRef.current.slickPrev()}
-                  className='back'><IoIosArrowBack/></button>
-                  <button 
-                  onClick={() => arrowRef.current.slickNext()}
-                  className='next'><IoIosArrowForward/></button>
-           
-            {/* </Container> */}
+  <div className='teamContainer'>
+    <div className='Faculty'>
+      <div className='teamHeading'>Meet Our Faculty Coordinator</div>
+      <div className='facultyContent'>
+        <div className='facultyImg'></div>
+        <div>
+          <div className='facultyHeading'>Mirs. Bubina</div>
+          <div className='facultyText'>
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Fuga autem repellat itaque, sequi reiciendis, reprehenderit suscipit ipsam cum distinctio dolores assumenda unde esse sunt. Iusto tenetur laudantium optio perferendis cum velit labore perspiciatis repellendus ea quidem qui distinctio id earum odio vel necessitatibus natus, nulla, accusamus quis voluptas rerum dicta vero. Temporibus laudantium totam cumque nesciunt veritatis veniam magnam optio sint molestiae, ipsam eveniet officia tempore consequuntur atque ex distinctio, expedita dicta consectetur dolores ea. Itaque ipsa quibusdam praesentium consequatur illo. Deserunt, voluptatem nulla cum necessitatibus consequatur officia? Qui tempora quaerat similique ea temporibus ut. Cumque vero deleniti molestias magni.
+          </div>
         </div>
+      </div>
     </div>
+    <div className='Team2'>
+          <div className='teamHeading'>Meet the Team</div>
+        <div className='SliderContainer'>
+          <Slider ref={arrowRef} {...settings}> 
+          
+                <motion.div  className='teamMember'
+                  >
+                    A
+                </motion.div>
+                <motion.div className='teamMember'
+                  >B
+                </motion.div>
+                <motion.div className='teamMember'
+                >
+                    C
+                </motion.div>
+                <motion.div className='teamMember'
+                  >
+                    D
+                </motion.div>
+                <motion.div className='teamMember' 
+                >
+                  E
+                </motion.div>
+                <motion.div className='teamMember' 
+                  >
+                    F
+                </motion.div>
+                <motion.div className='teamMember'   
+                  >
+                    G
+                </motion.div>
+                <motion.div className='teamMember' 
+                  >
+                    H
+                </motion.div>
+                <div  className='teamMember_dummy'></div>
+                <div  className='teamMember_dummy'></div>
+                <div  className='teamMember_dummy'></div>
+                <div  className='teamMember_dummy'></div>
+                <div  className='teamMember_dummy'></div>
+                <div  className='teamMember_dummy'></div>
+              
+              
+              </Slider>
+                    <button 
+                    onClick={() => arrowRef.current.slickPrev()}
+                    className='back'><IoIosArrowBack/></button>
+                    <button 
+                    onClick={() => arrowRef.current.slickNext()}
+                    className='next'><IoIosArrowForward/></button>
+            
+              {/* </Container> */}
+          </div>
     </div>
+  </div>
   )
 }
 
