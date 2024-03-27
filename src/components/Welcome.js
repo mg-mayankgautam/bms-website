@@ -51,7 +51,7 @@ const Welcome = ({hide,setHide, scrollvar}) => {
             <motion.h1 
               initial='hidden' 
               animate= {hide? 'visible':''}
-              transition={{staggerChildren: 0.01}}
+              transition={{staggerChildren: 0.1}}
               className='mainHeading'
               >  
                     {heading.split('').map(char=>

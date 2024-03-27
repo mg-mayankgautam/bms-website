@@ -8,7 +8,7 @@ const Events = ({events_ref,scrollvar}) => {
 
     useEffect(()=>{
         document.querySelector('.Events').style.setProperty("--scroll", (scrollvar))
-        if(scrollvar>=200){setInView(true)}
+        if(scrollvar>=180){setInView(true)}
       },[scrollvar])
 
   const slideAnimation = {
@@ -20,7 +20,7 @@ const Events = ({events_ref,scrollvar}) => {
         opacity:1,
         x:"0", y:'0'
     },
-    transition:{duration:1, type:"easeInOut"}
+    transition:{duration:0.8, type:"easeInOut"}
 }
 
 
@@ -32,7 +32,7 @@ const Events = ({events_ref,scrollvar}) => {
                 <div className='eventsSubHeading'>2023-24</div>
                 <div className='bentoGrid'>
                         <motion.div className='event1' variants={slideAnimation}
-                            initial={{opacity:0, x:'-50%', y:'-50%'}}
+                            initial={{opacity:0, x:'-10%', y:'-10%'}}
                             animate={inView?"visible":""}
                             transition={slideAnimation.transition}
                         >
@@ -40,7 +40,7 @@ const Events = ({events_ref,scrollvar}) => {
                         </motion.div>
 
                         <motion.div className='event2' variants={slideAnimation}
-                            initial={{opacity:0, x:'50%', y:'-50%'}}
+                            initial={{opacity:0, x:'10%', y:'-10%'}}
                             animate={inView?"visible":""}
                             transition={slideAnimation.transition}
                         >
@@ -56,7 +56,7 @@ const Events = ({events_ref,scrollvar}) => {
                         </motion.div>
 
                         <motion.div className='event4' variants={slideAnimation}
-                            initial={{opacity:0, x:'50%', y:'0'}}
+                            initial={{opacity:0, x:'10%', y:'0'}}
                             animate={inView?"visible":""}
                             transition={slideAnimation.transition}
                         >
@@ -64,7 +64,7 @@ const Events = ({events_ref,scrollvar}) => {
                         </motion.div>
 
                         <motion.div className='event5' variants={slideAnimation}
-                            initial={{opacity:0, x:'-50%', y:'50%'}}
+                            initial={{opacity:0, x:'-10%', y:'10%'}}
                             animate={inView?"visible":""}
                             transition={slideAnimation.transition}
                         >
@@ -72,7 +72,7 @@ const Events = ({events_ref,scrollvar}) => {
                         </motion.div>
 
                         <motion.div className='event6' variants={slideAnimation}
-                            initial={{opacity:0, x:'50%', y:'50%'}}
+                            initial={{opacity:0, x:'10%', y:'10%'}}
                             animate={inView?"visible":""}
                             transition={slideAnimation.transition}
                         >
@@ -81,15 +81,16 @@ const Events = ({events_ref,scrollvar}) => {
                 </div>
             </div>
         </div>
-        <div className='FacultyHeadingLayer'>
+        <div className='FacultyLayer'>
             <div></div>
-            <div>
-            <div className='facultyHeading'>
-            Meet Our Faculty Coordinator
-            </div>
-            <div className='facultyText'>
-                    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Fuga autem repellat itaque, sequi reiciendis, reprehenderit suscipit ipsam cum distinctio dolores assumenda unde esse sunt. Iusto tenetur laudantium optio perferendis cum velit labore perspiciatis repellendus ea quidem qui distinctio id earum odio vel necessitatibus natus, nulla, accusamus quis voluptas rerum dicta vero. Temporibus laudantium totam cumque nesciunt veritatis veniam magnam optio sint molestiae, ipsam eveniet officia tempore consequuntur atque ex distinctio, expedita dicta consectetur dolores ea. Itaque ipsa quibusdam praesentium consequatur illo. Deserunt, voluptatem nulla cum necessitatibus consequatur officia? Qui tempora quaerat similique ea temporibus ut. Cumque vero deleniti molestias magni.
-            </div>
+            <div className='facultyLayerContent'>
+                <div className='facultyHeading'>
+                Meet Our Faculty Coordinator
+                </div>
+                <div className='facultyName'>Prof Bubina</div>
+                <div className='facultyText'>
+                        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Fuga autem repellat itaque, sequi reiciendis, reprehenderit suscipit ipsam cum distinctio dolores assumenda unde esse sunt. Iusto tenetur laudantium optio perferendis cum velit labore perspiciatis repellendus ea quidem qui distinctio id earum odio vel necessitatibus natus, nulla, accusamus quis voluptas rerum dicta vero. Temporibus laudantium totam cumque nesciunt veritatis veniam magnam optio sint molestiae, ipsam eveniet officia tempore consequuntur atque ex distinctio, expedita dicta consectetur dolores ea. Itaque ipsa quibusdam praesentium consequatur illo. Deserunt, voluptatem nulla
+                </div>
             </div>
         </div>
     </div>

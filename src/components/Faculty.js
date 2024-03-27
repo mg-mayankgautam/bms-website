@@ -8,8 +8,7 @@ const Faculty = () => {
             <div className='facultyContent'>
                 <div className='facultyImg'></div>
                 <div>
-                <div className='facultyTitle'>Mirs. Bubina</div>
-                
+                                
                 </div>
             </div>
             </div>
