@@ -23,6 +23,7 @@ const Home = () => {
     
   }, [hide])
   
+  const events_ref = useRef(null);
 
   const ref = useRef(null);
   const { scrollY } = useScroll(
@@ -40,10 +41,10 @@ const Home = () => {
 
   return (
     <div>
-        <Nav hide={hide} setHide={setHide} />
+        <Nav events_ref={events_ref} hide={hide} setHide={setHide} />
         <Welcome hide={hide} setHide={setHide} scrollvar={scrollvar}/>
         {isDisplayed? <About/>:<></> }
-        {isDisplayed? <Events scrollvar={scrollvar}/>:<></> }
+        {isDisplayed? <Events events_ref={events_ref}  scrollvar={scrollvar}/>:<></> }
         {isDisplayed?  <Faculty/>:<></> }
         {isDisplayed?  <Team2/>:<></> }
         {isDisplayed?  <Footer/>:<></> }

@@ -222,15 +222,15 @@ a{
 
 
 .teamContainer{
-  /* height: 300vh;
+  height: 300vh;
   margin-top: -200dvh;
-  z-index: 10;
-  position: relative; */
+  z-index:-10 ;
+  position: relative;
 }
-.Team2, .Team{
-  /* z-index: 10; */
-  /* position: sticky; 
-  top: 0;  */
+.Team2{
+  z-index: -10;
+  position: sticky; 
+  top: 0; 
   /* border-bottom-left-radius: 100px;
   border-bottom-right-radius: 100px; */
   min-height: 100vh;
@@ -348,6 +348,11 @@ a{
 
 .FacultyHeadingLayer{
   min-height: 20vh;
+  /* display: flex;
+  flex-direction: column;
+  align-items:end; */
+  display: grid;
+  grid-template-columns: 1fr 1fr;
 }
 .facultyHeading{
     font-size: 56px;
@@ -360,7 +365,7 @@ a{
   }
 
 .FacultyContainer{
-  min-height: 380vh;
+  min-height: 340vh;
   margin-top: -300vh;
 }
 

@@ -2,7 +2,7 @@ import React, {useEffect, useState} from 'react'
 import img1 from '../assets/logo.png'
 import {motion} from 'framer-motion'
 
-const Events = ({scrollvar}) => {
+const Events = ({events_ref,scrollvar}) => {
 
     const [inView, setInView] = useState(false);
 
@@ -25,7 +25,7 @@ const Events = ({scrollvar}) => {
 
 
   return (
-    <div className='EventsContainer'>
+    <div ref={events_ref} className='EventsContainer'>
         <div className='Events'>
             <div className='carousel'>
                 <div className='eventsHeading'>EVENTS</div>
@@ -82,8 +82,14 @@ const Events = ({scrollvar}) => {
             </div>
         </div>
         <div className='FacultyHeadingLayer'>
+            <div></div>
+            <div>
             <div className='facultyHeading'>
             Meet Our Faculty Coordinator
+            </div>
+            <div className='facultyText'>
+                    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Fuga autem repellat itaque, sequi reiciendis, reprehenderit suscipit ipsam cum distinctio dolores assumenda unde esse sunt. Iusto tenetur laudantium optio perferendis cum velit labore perspiciatis repellendus ea quidem qui distinctio id earum odio vel necessitatibus natus, nulla, accusamus quis voluptas rerum dicta vero. Temporibus laudantium totam cumque nesciunt veritatis veniam magnam optio sint molestiae, ipsam eveniet officia tempore consequuntur atque ex distinctio, expedita dicta consectetur dolores ea. Itaque ipsa quibusdam praesentium consequatur illo. Deserunt, voluptatem nulla cum necessitatibus consequatur officia? Qui tempora quaerat similique ea temporibus ut. Cumque vero deleniti molestias magni.
+            </div>
             </div>
         </div>
     </div>
