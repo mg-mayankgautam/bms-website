@@ -122,8 +122,8 @@ a{
   background-image: url(./assets/bg.png);
   background-size: cover;
   background-repeat: no-repeat;
-  border-bottom-left-radius: 100px;
-  border-bottom-right-radius: 100px;
+  /* border-bottom-left-radius: 100px; */
+  /* border-bottom-right-radius: 100px; */
   display: flex;
   flex-direction: column;
   justify-content:center;    
@@ -152,16 +152,16 @@ a{
 }
 
 .EventsContainer{
-  height: 300vh;
-  margin-top: -200dvh;
+  /* height: 300vh; */
+  /* margin-top: -200dvh; */
   z-index: 10;
   position: relative;
 }
 
 .Events{
   z-index: 10;
-  position: sticky; 
-  top: 0; 
+  /* position: sticky;  */
+  /* top: 0;  */
   /* border-bottom-left-radius: 100px;
   border-bottom-right-radius: 100px; */
   min-height: 100vh;
@@ -228,7 +228,7 @@ a{
   position: relative; */
 }
 .Team2, .Team{
-  z-index: 10;
+  /* z-index: 10; */
   /* position: sticky; 
   top: 0;  */
   /* border-bottom-left-radius: 100px;
@@ -346,8 +346,28 @@ a{
   right:650px;
 }
 
+.FacultyHeadingLayer{
+  min-height: 20vh;
+}
+.facultyHeading{
+    font-size: 56px;
+    padding: 80px 0 0;
+    /* margin-top: 64px; */
+    /* font-weight: 600; */
+    /* margin-left: 275px; */
+    /* font-family: 'titan one'; */
+    color: #219897;
+  }
+
+.FacultyContainer{
+  min-height: 380vh;
+  margin-top: -300vh;
+}
+
 .Faculty{
-  z-index: 10;
+  position: sticky;
+  top: 0;
+  /* z-index: 10; */
   min-height: 100vh;
   min-height: 100dvh;
   background-color: #ffffff;
@@ -356,12 +376,12 @@ a{
   background-repeat: no-repeat;
   display: flex;
   flex-direction: column;
-  justify-content: center; 
+  justify-content: flex-end; 
   box-shadow: rgba(255, 255, 255, 0.35) 0px 2px 50px;
 }
 
 .facultyContent{
-  margin-top: 32px;
+  margin:0px 0 100px;
   /* display: flex;
   align-items: center;
   justify-content: space-evenly; */

@@ -81,6 +81,11 @@ const Events = ({scrollvar}) => {
                 </div>
             </div>
         </div>
+        <div className='FacultyHeadingLayer'>
+            <div className='facultyHeading'>
+            Meet Our Faculty Coordinator
+            </div>
+        </div>
     </div>
   )
 }
