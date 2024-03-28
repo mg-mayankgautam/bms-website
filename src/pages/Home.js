@@ -8,6 +8,8 @@ import Team2 from '../components/Team2'
 import Nav from '../components/Nav';
 import Footer from '../components/Footer';
 import Faculty from '../components/Faculty';
+import Wall from '../components/Wall';
+import Support from '../components/Support';
 
 const Home = () => {
 
@@ -35,7 +37,7 @@ const Home = () => {
       // console.log(latest);
       const height = document.body.clientHeight;
       setscrollvar(latest*100/height)
-    //  console.log(scrollvar)
+     console.log(scrollvar)
        //   const previous = scrollY.getPrevious();
   })
 
@@ -47,6 +49,8 @@ const Home = () => {
         {isDisplayed? <Events events_ref={events_ref}  scrollvar={scrollvar}/>:<></> }
         {isDisplayed?  <Faculty/>:<></> }
         {isDisplayed?  <Team2/>:<></> }
+        {isDisplayed?  <Wall scrollvar={scrollvar}/>:<></> }
+        {isDisplayed?  <Support/>:<></> }
         {isDisplayed?  <Footer/>:<></> }
     </div>
   )
