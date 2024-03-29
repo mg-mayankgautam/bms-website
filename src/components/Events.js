@@ -1,5 +1,13 @@
 import React, {useEffect, useState} from 'react'
-import img1 from '../assets/logo.png'
+import bibo from '../assets/bibo.png'
+import bibo1 from '../assets/bibo1.png'
+import cpc1 from '../assets/cpc1.png'
+import bvest from '../assets/bvest.png'
+import udd from '../assets/uddeshya.png'
+import aksh from '../assets/aksh.png'
+// import img1 from '../assets/logo.png'
+// import img1 from '../assets/logo.png'
+
 import {motion} from 'framer-motion'
 
 const Events = ({events_ref,scrollvar}) => {
@@ -36,7 +44,7 @@ const Events = ({events_ref,scrollvar}) => {
                             animate={inView?"visible":""}
                             transition={slideAnimation.transition}
                         >
-                            <img src={img1} alt="" />
+                            <img src={bibo1} alt="" style={{width:'190px'}}/>
                         </motion.div>
 
                         <motion.div className='event2' variants={slideAnimation}
@@ -44,7 +52,7 @@ const Events = ({events_ref,scrollvar}) => {
                             animate={inView?"visible":""}
                             transition={slideAnimation.transition}
                         >
-                            <img src={img1} alt="" />
+                            <img src={udd} alt="" style={{width:'390px'}}/>
                         </motion.div>
 
                         <motion.div className='event3' variants={slideAnimation}
@@ -52,7 +60,7 @@ const Events = ({events_ref,scrollvar}) => {
                             animate={inView?"visible":""}
                             transition={slideAnimation.transition}
                         >
-                            <img src={img1} alt="" />
+                            <img src='' alt="" />
                         </motion.div>
 
                         <motion.div className='event4' variants={slideAnimation}
@@ -60,7 +68,7 @@ const Events = ({events_ref,scrollvar}) => {
                             animate={inView?"visible":""}
                             transition={slideAnimation.transition}
                         >
-                            <img src={img1} alt="" />
+                            <img src={aksh} alt="" style={{width:'190px'}}/>
                         </motion.div>
 
                         <motion.div className='event5' variants={slideAnimation}
@@ -68,7 +76,7 @@ const Events = ({events_ref,scrollvar}) => {
                             animate={inView?"visible":""}
                             transition={slideAnimation.transition}
                         >
-                            <img src={img1} alt="" />
+                            <img src={bibo} alt="" style={{width:'390px'}}/>
                         </motion.div>
 
                         <motion.div className='event6' variants={slideAnimation}
@@ -76,7 +84,7 @@ const Events = ({events_ref,scrollvar}) => {
                             animate={inView?"visible":""}
                             transition={slideAnimation.transition}
                         >
-                            <img src={img1} alt="" />
+                            <img src={bvest} alt="" style={{width:'190px'}}/>
                         </motion.div>
                 </div>
             </div>

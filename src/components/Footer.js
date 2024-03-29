@@ -9,7 +9,7 @@ const Footer = () => {
         <div className='footerjoinUs'>
           <div className='joinUs'>
             <h1>Join our community!</h1>
-            <div>perferendis cum velit labore perspiciatis repellendus ea quidem qui distinctio id earum odio vel necessitatibus natus, nulla, accusamus quis voluptas rerum dicta vero. Temporibus </div>
+            <div>Be a part of a community that cares! Join Blissful Minds Society today and help us in creating a community that aims at ending stigma and fostering acceptance around mental health and well-being.</div>
             <button>ask a question</button>
           </div>
           <div></div>

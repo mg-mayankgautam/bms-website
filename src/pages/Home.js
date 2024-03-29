@@ -50,7 +50,7 @@ const Home = () => {
         {isDisplayed?  <Faculty/>:<></> }
         {isDisplayed?  <Team2/>:<></> }
         {isDisplayed?  <Wall scrollvar={scrollvar}/>:<></> }
-        {isDisplayed?  <Support/>:<></> }
+        {/* {isDisplayed?  <Support/>:<></> } */}
         {isDisplayed?  <Footer/>:<></> }
     </div>
   )
