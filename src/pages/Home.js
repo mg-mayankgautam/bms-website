@@ -10,17 +10,22 @@ import Footer from '../components/Footer';
 import Faculty from '../components/Faculty';
 import Wall from '../components/Wall';
 import Support from '../components/Support';
+import SpotlightModal from '../components/SpotlightModal';
 
 const Home = () => {
 
   const [hide, setHide] = useState(false)
   const [isDisplayed, setIsDisplayed] = useState(false);
+  const [showModal, setShowModal] = useState(false);
 
   useEffect(() => {
     if(hide){
     setTimeout(() => {
       setIsDisplayed(true);
     }, 1500);
+    setTimeout(() => {
+      setShowModal(true);
+    }, 2500);
   }
     
   }, [hide])
@@ -43,8 +48,10 @@ const Home = () => {
 
   return (
     <div>
-        <Nav events_ref={events_ref} hide={hide} setHide={setHide} />
+        <Nav events_ref={events_ref} hide={hide} setHide={setHide} showModal={showModal} setShowModal={setShowModal}/>
         <Welcome hide={hide} setHide={setHide} scrollvar={scrollvar}/>
+        
+        {isDisplayed&&showModal? <SpotlightModal onClose={()=> setShowModal(false)}/>:<></> }
         {isDisplayed? <About/>:<></> }
         {isDisplayed? <Events events_ref={events_ref}  scrollvar={scrollvar}/>:<></> }
         {isDisplayed?  <Faculty/>:<></> }

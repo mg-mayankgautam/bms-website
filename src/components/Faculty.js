@@ -1,4 +1,5 @@
 import React from 'react'
+import maam from '../assets/rubeenamam.jpeg'
 
 const Faculty = () => {
   return (
@@ -6,7 +7,9 @@ const Faculty = () => {
         <div className='Faculty'>
             {/* <div className='teamHeading'>Meet Our Faculty Coordinator</div> */}
             <div className='facultyContent'>
-                <div className='facultyImg'></div>
+                <div className='facultyImgDiv'>
+                  <img src={maam} className='facultyImg'/>
+                </div>
                 <div>
                                 
                 </div>

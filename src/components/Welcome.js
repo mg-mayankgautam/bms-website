@@ -1,6 +1,7 @@
 import React, {useState, useEffect}from 'react';
 import { color, motion,useMotionValueEvent,useScroll  } from "framer-motion"
-import illustration from '../assets/illus.png'
+import illustration from '../assets/Group 30.svg'
+import SVGillus from './SVGillus';
 
 const Welcome = ({hide,setHide, scrollvar}) => {
   // const { scrollY } = useScroll();
@@ -19,12 +20,17 @@ const Welcome = ({hide,setHide, scrollvar}) => {
   const defaultAnimation = {hidden:{opacity:0,y:"25%"},visible:{opacity:1,y:"0%"}}
 
   const heading ='Keeping Mental Health in Check'
-  const text=' funsi bansi chal lor Lorem ipsum dolor sit amet consectetur'
-  const text2= 'Temporibus iusto natus eaque perferendis. Ratione vero' 
-  const text3= 'architecto itaque veniam nihil voluptates, explicabo '
-  const text4='Quam, modi Natus, vel? Modi ut in, ipsum quia eligendi'
-  const text5=' voluptate perspiciatis debitis officiis blanditiis fugiat vel'
-  const text6= 'Praesentium earum molestias asperiores eum, eligendi'
+  const text=' Popularly abbreviated as BMS and founded in 2022, is the first student         '
+  const text2= '-led Mental Health society at Bharati Vidyapeeth’s College of' 
+  const text3= 'Engineering and IP University. The main purpose of BMS is to'
+  const text4='advocate the cause of spreading awareness about mental health'
+  const text5='issues and encourage people to look beyond the stigma associated'
+  const text6= 'with this sensitive subject. The vision of our society is to create a safe'
+  const text7='space for all, such that under no circumstance, a student feels'
+  const text8='hesitant to talk about his/her mental health issues. We aim to'
+  const text9='destigmatize mental illness by conducting interactive and fun'
+  const text10='sessions, wherein the students can feel heard and can be given useful '
+  const text11='advice.'
   
   
   return (
@@ -62,7 +68,20 @@ const Welcome = ({hide,setHide, scrollvar}) => {
                    
             </motion.h1>
             
-            <motion.div 
+            <motion.p 
+              initial='hidden' 
+              animate= {hide? 'visible':''}
+              transition={{staggerChildren: 0.01,delayChildren: 0.3}}
+              >  
+                    {text.split('').map(char=>
+                    <motion.span variants={defaultAnimation} >
+                      {char}
+                    </motion.span>
+                    )}
+                
+            </motion.p>
+
+            <motion.p 
               initial='hidden' 
               animate= {hide? 'visible':''}
               transition={{staggerChildren: 0.01,delayChildren: 0.3}}
@@ -73,9 +92,9 @@ const Welcome = ({hide,setHide, scrollvar}) => {
                     </motion.span>
                     )}
                 
-            </motion.div>
+            </motion.p>
 
-            <motion.div 
+            <motion.p 
               initial='hidden' 
               animate= {hide? 'visible':''}
               transition={{staggerChildren: 0.01,delayChildren: 0.5}}
@@ -86,12 +105,12 @@ const Welcome = ({hide,setHide, scrollvar}) => {
                     </motion.span>
                     )}
                 
-            </motion.div>
+            </motion.p>
             
-            <motion.div 
+            <motion.p 
               initial='hidden' 
               animate= {hide? 'visible':''}
-              transition={{staggerChildren: 0.01,delayChildren: 0.7}}
+              transition={{staggerChildren: 0.01,delayChildren: 0.5}}
               >  
                     {text5.split('').map(char=>
                     <motion.span variants={defaultAnimation} >
@@ -99,12 +118,12 @@ const Welcome = ({hide,setHide, scrollvar}) => {
                     </motion.span>
                     )}
                 
-            </motion.div>
+            </motion.p>
             
-            <motion.div 
+            <motion.p 
               initial='hidden' 
               animate= {hide? 'visible':''}
-              transition={{staggerChildren: 0.01,delayChildren: 0.9}}
+              transition={{staggerChildren: 0.01,delayChildren: 0.7}}
               >  
                     {text4.split('').map(char=>
                     <motion.span variants={defaultAnimation} >
@@ -112,12 +131,12 @@ const Welcome = ({hide,setHide, scrollvar}) => {
                     </motion.span>
                     )}
                 
-            </motion.div>
+            </motion.p>
             
-            <motion.div 
+            <motion.p 
               initial='hidden' 
               animate= {hide? 'visible':''}
-              transition={{staggerChildren: 0.01,delayChildren: 1.1}}
+              transition={{staggerChildren: 0.01,delayChildren: 0.7}}
               
               >  
                     {text6.split('').map(char=>
@@ -126,12 +145,83 @@ const Welcome = ({hide,setHide, scrollvar}) => {
                     </motion.span>
                     )}
                 
-            </motion.div>
+            </motion.p>
+
+            <motion.p 
+              initial='hidden' 
+              animate= {hide? 'visible':''}
+              transition={{staggerChildren: 0.01,delayChildren: 0.9}}
+              
+              >  
+                    {text7.split('').map(char=>
+                    <motion.span variants={defaultAnimation} >
+                      {char}
+                    </motion.span>
+                    )}
+                
+            </motion.p>
+
+            <motion.p 
+              initial='hidden' 
+              animate= {hide? 'visible':''}
+              transition={{staggerChildren: 0.01,delayChildren: 0.9}}
+              
+              >  
+                    {text8.split('').map(char=>
+                    <motion.span variants={defaultAnimation} >
+                      {char}
+                    </motion.span>
+                    )}
+                
+            </motion.p>
+
+            <motion.p 
+              initial='hidden' 
+              animate= {hide? 'visible':''}
+              transition={{staggerChildren: 0.01,delayChildren: 1.1}}
+              
+              >  
+                    {text9.split('').map(char=>
+                    <motion.span variants={defaultAnimation} >
+                      {char}
+                    </motion.span>
+                    )}
+                
+            </motion.p>
+
+            <motion.p 
+              initial='hidden' 
+              animate= {hide? 'visible':''}
+              transition={{staggerChildren: 0.01,delayChildren: 1.15}}
+              
+              >  
+                    {text10.split('').map(char=>
+                    <motion.span variants={defaultAnimation} >
+                      {char}
+                    </motion.span>
+                    )}
+                
+            </motion.p>
+
+            <motion.p 
+              initial='hidden' 
+              animate= {hide? 'visible':''}
+              transition={{staggerChildren: 0.01,delayChildren: 1.2}}
+              
+              >  
+                    {text11.split('').map(char=>
+                    <motion.span variants={defaultAnimation} >
+                      {char}
+                    </motion.span>
+                    )}
+                
+            </motion.p>
            
           </div>
 
-          <img src={illustration} className='mainImg'/>
-    
+          {/* <img src={illustration} className='mainImg'/> */}
+          <div className='mainImg'><SVGillus/></div>
+
         </motion.div>
     </div>
   )

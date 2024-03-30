@@ -5,14 +5,17 @@ import cpc1 from '../assets/cpc1.png'
 import bvest from '../assets/bvest.png'
 import udd from '../assets/uddeshya.png'
 import aksh from '../assets/aksh.png'
-// import img1 from '../assets/logo.png'
-// import img1 from '../assets/logo.png'
-
+import bloom from '../assets/bloom.png'
 import {motion} from 'framer-motion'
+import EventModal from './EventModal'
+import Slider from "react-slick";
 
 const Events = ({events_ref,scrollvar}) => {
 
     const [inView, setInView] = useState(false);
+    const [showEventModal, setShowEventModal] = useState(false);
+    const [EventName, setEventName] = useState('');
+
 
     useEffect(()=>{
         document.querySelector('.Events').style.setProperty("--scroll", (scrollvar))
@@ -31,73 +34,176 @@ const Events = ({events_ref,scrollvar}) => {
     transition:{duration:0.8, type:"easeInOut"}
 }
 
+    useEffect(()=>{
+        if(showEventModal){
+            document.body.style.overflow = 'hidden';
+        }
+        else{
+            document.body.style.overflow = 'unset';
+        }
+    })
+
+    var settings = {
+        dots: true,
+        infinite: true,
+        speed: 500,
+        slidesToShow: 1,
+        slidesToScroll: 1,
+      };
 
   return (
     <div ref={events_ref} className='EventsContainer'>
         <div className='Events'>
-            <div className='carousel'>
-                <div className='eventsHeading'>EVENTS</div>
-                <div className='eventsSubHeading'>2023-24</div>
-                <div className='bentoGrid'>
-                        <motion.div className='event1' variants={slideAnimation}
-                            initial={{opacity:0, x:'-10%', y:'-10%'}}
-                            animate={inView?"visible":""}
-                            transition={slideAnimation.transition}
-                        >
-                            <img src={bibo1} alt="" style={{width:'190px'}}/>
-                        </motion.div>
+            {/* <Slider {...settings}> */}
+                <div className='eventsCarousel'>
+                    <div>
+                        <div className='eventsHeading'>EVENTS</div>
+                        <div className='eventsSubHeading'>2023-24</div>
+                    </div>
+                    <div className='bentoGrid'>
+                            <motion.div className='event1' variants={slideAnimation}
+                                onClick={(e)=> {setShowEventModal(true); setEventName(e.target.parentNode.className)}}
+                                initial={{opacity:0, x:'-10%', y:'-10%'}}
+                                animate={inView?"visible":""}
+                                transition={slideAnimation.transition}
+                            >
+                                <img src={cpc1} alt="" style={{height:'350px'}}/>
+                            </motion.div>
 
-                        <motion.div className='event2' variants={slideAnimation}
-                            initial={{opacity:0, x:'10%', y:'-10%'}}
-                            animate={inView?"visible":""}
-                            transition={slideAnimation.transition}
-                        >
-                            <img src={udd} alt="" style={{width:'390px'}}/>
-                        </motion.div>
+                            <motion.div className='event2' variants={slideAnimation}
+                                onClick={(e)=> {setShowEventModal(true); setEventName(e.target.parentNode.className)}}
+                                initial={{opacity:0, x:'10%', y:'-10%'}}
+                                animate={inView?"visible":""}
+                                transition={slideAnimation.transition}
+                            >
+                                <img src={udd} alt="" style={{width:'390px'}}/>
+                            </motion.div>
 
-                        <motion.div className='event3' variants={slideAnimation}
-                            initial={{opacity:0, x:'0', y:'0'}}
-                            animate={inView?"visible":""}
-                            transition={slideAnimation.transition}
-                        >
-                            <img src='' alt="" />
-                        </motion.div>
+                            <motion.div className='event3' variants={slideAnimation}
+                                onClick={(e)=> {setShowEventModal(true); setEventName(e.target.parentNode.className)}}
+                                initial={{opacity:0, x:'0', y:'0'}}
+                                animate={inView?"visible":""}
+                                transition={slideAnimation.transition}
+                            >
+                                <img src={bloom} alt="" style={{width:'300px'}} />
+                            </motion.div>
 
-                        <motion.div className='event4' variants={slideAnimation}
-                            initial={{opacity:0, x:'10%', y:'0'}}
-                            animate={inView?"visible":""}
-                            transition={slideAnimation.transition}
-                        >
-                            <img src={aksh} alt="" style={{width:'190px'}}/>
-                        </motion.div>
+                            <motion.div className='event4' variants={slideAnimation}
+                                onClick={(e)=> {setShowEventModal(true); setEventName(e.target.parentNode.className)}}
+                                initial={{opacity:0, x:'10%', y:'0'}}
+                                animate={inView?"visible":""}
+                                transition={slideAnimation.transition}
+                            >
+                                <img src={aksh} alt="" style={{width:'190px'}}/>
+                            </motion.div>
 
-                        <motion.div className='event5' variants={slideAnimation}
-                            initial={{opacity:0, x:'-10%', y:'10%'}}
-                            animate={inView?"visible":""}
-                            transition={slideAnimation.transition}
-                        >
-                            <img src={bibo} alt="" style={{width:'390px'}}/>
-                        </motion.div>
+                            <motion.div className='event5' variants={slideAnimation}
+                                onClick={(e)=> {setShowEventModal(true); setEventName(e.target.parentNode.className)}}
+                                initial={{opacity:0, x:'-10%', y:'10%'}}
+                                animate={inView?"visible":""}
+                                transition={slideAnimation.transition}
+                            >
+                                <img src={bibo} alt="" style={{width:'390px'}}/>
+                            </motion.div>
 
-                        <motion.div className='event6' variants={slideAnimation}
-                            initial={{opacity:0, x:'10%', y:'10%'}}
-                            animate={inView?"visible":""}
-                            transition={slideAnimation.transition}
-                        >
-                            <img src={bvest} alt="" style={{width:'190px'}}/>
-                        </motion.div>
+                            <motion.div className='event6' variants={slideAnimation}
+                                onClick={(e)=> {setShowEventModal(true); setEventName(e.target.parentNode.className)}}
+                                initial={{opacity:0, x:'10%', y:'10%'}}
+                                animate={inView?"visible":""}
+                                transition={slideAnimation.transition}
+                            >
+                                <img src={bvest} alt="" style={{width:'190px'}}/>
+                            </motion.div>
+                    </div>
                 </div>
-            </div>
+                {/* <div>11</div>
+                <div>11</div> */}
+
+
+                {/* <div className='eventsCarousel'>
+                    <div>
+                        <div className='eventsHeading'>EVENTS</div>
+                        <div className='eventsSubHeading'>2023-24</div>
+                    </div>
+                    <div className='bentoGrid'>
+                            <motion.div className='event1' variants={slideAnimation}
+                                onClick={(e)=> {setShowEventModal(true); setEventName(e.target.parentNode.className)}}
+                                initial={{opacity:0, x:'-10%', y:'-10%'}}
+                                animate={inView?"visible":""}
+                                transition={slideAnimation.transition}
+                            >
+                                <img src={cpc1} alt="" style={{height:'350px'}}/>
+                            </motion.div>
+
+                            <motion.div className='event2' variants={slideAnimation}
+                                onClick={(e)=> {setShowEventModal(true); setEventName(e.target.parentNode.className)}}
+                                initial={{opacity:0, x:'10%', y:'-10%'}}
+                                animate={inView?"visible":""}
+                                transition={slideAnimation.transition}
+                            >
+                                <img src={udd} alt="" style={{width:'390px'}}/>
+                            </motion.div>
+
+                            <motion.div className='event3' variants={slideAnimation}
+                                onClick={(e)=> {setShowEventModal(true); setEventName(e.target.parentNode.className)}}
+                                initial={{opacity:0, x:'0', y:'0'}}
+                                animate={inView?"visible":""}
+                                transition={slideAnimation.transition}
+                            >
+                                <img src={bloom} alt="" style={{width:'300px'}} />
+                            </motion.div>
+
+                            <motion.div className='event4' variants={slideAnimation}
+                                onClick={(e)=> {setShowEventModal(true); setEventName(e.target.parentNode.className)}}
+                                initial={{opacity:0, x:'10%', y:'0'}}
+                                animate={inView?"visible":""}
+                                transition={slideAnimation.transition}
+                            >
+                                <img src={aksh} alt="" style={{width:'190px'}}/>
+                            </motion.div>
+
+                            <motion.div className='event5' variants={slideAnimation}
+                                onClick={(e)=> {setShowEventModal(true); setEventName(e.target.parentNode.className)}}
+                                initial={{opacity:0, x:'-10%', y:'10%'}}
+                                animate={inView?"visible":""}
+                                transition={slideAnimation.transition}
+                            >
+                                <img src={bibo} alt="" style={{width:'390px'}}/>
+                            </motion.div>
+
+                            <motion.div className='event6' variants={slideAnimation}
+                                onClick={(e)=> {setShowEventModal(true); setEventName(e.target.parentNode.className)}}
+                                initial={{opacity:0, x:'10%', y:'10%'}}
+                                animate={inView?"visible":""}
+                                transition={slideAnimation.transition}
+                            >
+                                <img src={bvest} alt="" style={{width:'190px'}}/>
+                            </motion.div>
+                    </div>
+                </div> */}
+            {/* </Slider> */}
+
+            {showEventModal? <EventModal onClose={()=> setShowEventModal(false)} EventName={EventName}/>:<></>}
         </div>
+
+
         <div className='FacultyLayer'>
             <div></div>
             <div className='facultyLayerContent'>
                 <div className='facultyHeading'>
                 Meet Our Faculty Coordinator
                 </div>
-                <div className='facultyName'>Prof Bubina</div>
+                <div className='facultyName'>Prof. Rubeena Vohra</div>
                 <div className='facultyText'>
-                        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Fuga autem repellat itaque, sequi reiciendis, reprehenderit suscipit ipsam cum distinctio dolores assumenda unde esse sunt. Iusto tenetur laudantium optio perferendis cum velit labore perspiciatis repellendus ea quidem qui distinctio id earum odio vel necessitatibus natus, nulla, accusamus quis voluptas rerum dicta vero. Temporibus laudantium totam cumque nesciunt veritatis veniam magnam optio sint molestiae, ipsam eveniet officia tempore consequuntur atque ex distinctio, expedita dicta consectetur dolores ea. Itaque ipsa quibusdam praesentium consequatur illo. Deserunt, voluptatem nulla
+                    <p style={{marginTop:0}}>Professionally, I am an Assistant Professor in the ECE Department of BVCOE. During my educational journey from schooling to B.Tech (batch topper), M.Tech (Gold Medalist) and then Ph.D (Remote Sensing), I have always valued myself which I think, is one necessary tip to keep up a balanced mindset.</p>
+                    <p> In every phase of life, we encounter challenges, overcome obstacles, and jump past hurdles before enjoying the victory. What we must not forget is to set realistic goals to stay on track. Realistic goals are attained if and only if we have a healthy mindset. Mental health plays an important role in all of our lives and with the aim to help engineers, my students and I built the Blissful Minds Society. </p>
+                    <p>Our society aims to educate students on how to take good care of their minds by hosting various stress relieving sessions.
+                    Few tips that I wish to provide for a healthy mental state are:
+                    1) Surround yourself with good people.
+                    2) Silence the chaos in your head by praying or doing relaxing exercises.
+                    3) Break up the monotony.
+                    4) Get help when you need, seek help. It is a measure of strength not weakness.</p>
+                    
                 </div>
             </div>
         </div>

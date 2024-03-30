@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom'
 import logo from '../assets/logo.png'
 import { useRef } from 'react'
 
-const Nav = ({events_ref,hide,setHide}) => {
+const Nav = ({events_ref,hide,setHide, showModal, setShowModal}) => {
   // window.HTMLElement.prototype.scrollIntoView = function() {};
   // const scrollToSection = (sectionId) => {
   //   const element = document.getElementsByClassName('.EventsContainer');
@@ -27,6 +27,11 @@ const Nav = ({events_ref,hide,setHide}) => {
 
         <ul className='navItems'>
             <li className='logoDiv'><Link to='/'><img src={logo}alt="logo" className='Logo' /></Link></li>
+            <li>
+              <button onClick={()=> setShowModal(true)}>
+                Spotlight
+              </button>
+            </li> 
             <li className='Home_nav'><Link to='/'>Home</Link></li>
             <li><Link to='/about'>About</Link></li> 
             {/* <li><Link to='/'>Events</Link></li> */}
