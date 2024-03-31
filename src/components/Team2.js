@@ -1,5 +1,8 @@
 import React from 'react'
-import image1 from '../assets/Tran.png'
+import Mayank from '../assets/team/Mayank.png'
+import Riya from '../assets/team/Riya.png'
+import Taran from '../assets/team/Taran.png'
+import Tushar from '../assets/team/Tushar.png'
 import { useRef, } from "react";
 import { motion, useScroll,useMotionValueEvent,useInView } from "framer-motion";
 import Slider from 'react-slick';
@@ -12,7 +15,7 @@ var settings = {
   className: "center",
   centerMode: true,
   dots: false,
-  infinite: false,
+  infinite: true,
   speed: 500,
   slidesToShow: 7,
   slidesToScroll: 1,
@@ -39,18 +42,18 @@ const Team2 = () => {
           
                 <motion.div  className='teamMember'
                   >
-                    A
+                    <img src={Riya}/>
                 </motion.div>
                 <motion.div className='teamMember'
-                  >B
+                  ><img src={Taran}/>
                 </motion.div>
                 <motion.div className='teamMember'
                 >
-                    C
+                  <img src={Mayank}/>
                 </motion.div>
                 <motion.div className='teamMember'
                   >
-                    D
+                    <img src={Tushar}/>
                 </motion.div>
                 <motion.div className='teamMember' 
                 >
@@ -68,12 +71,12 @@ const Team2 = () => {
                   >
                     H
                 </motion.div>
+                {/* <div  className='teamMember_dummy'></div>
                 <div  className='teamMember_dummy'></div>
                 <div  className='teamMember_dummy'></div>
                 <div  className='teamMember_dummy'></div>
                 <div  className='teamMember_dummy'></div>
-                <div  className='teamMember_dummy'></div>
-                <div  className='teamMember_dummy'></div>
+                <div  className='teamMember_dummy'></div> */}
               
               
               </Slider>

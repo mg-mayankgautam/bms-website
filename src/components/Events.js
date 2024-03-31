@@ -1,6 +1,5 @@
 import React, {useEffect, useState} from 'react'
 import bibo from '../assets/bibo.png'
-import bibo1 from '../assets/bibo1.png'
 import cpc1 from '../assets/cpc1.png'
 import bvest from '../assets/bvest.png'
 import udd from '../assets/uddeshya.png'
@@ -8,7 +7,7 @@ import aksh from '../assets/aksh.png'
 import bloom from '../assets/bloom.png'
 import {motion} from 'framer-motion'
 import EventModal from './EventModal'
-import Slider from "react-slick";
+import { IoIosArrowBack, IoIosArrowForward } from "react-icons/io";
 
 const Events = ({events_ref,scrollvar}) => {
 
@@ -16,17 +15,12 @@ const Events = ({events_ref,scrollvar}) => {
     const [showEventModal, setShowEventModal] = useState(false);
     const [EventName, setEventName] = useState('');
 
-
     useEffect(()=>{
         document.querySelector('.Events').style.setProperty("--scroll", (scrollvar))
         if(scrollvar>=180){setInView(true)}
       },[scrollvar])
 
   const slideAnimation = {
-    // hidden:{
-    //     opacity:0,
-    //     x:"-50%"
-    // },
     visible:{
         opacity:1,
         x:"0", y:'0'
@@ -43,145 +37,211 @@ const Events = ({events_ref,scrollvar}) => {
         }
     })
 
-    var settings = {
-        dots: true,
-        infinite: true,
-        speed: 500,
-        slidesToShow: 1,
-        slidesToScroll: 1,
-      };
+    const [activeIndex, setActiveIndex] = useState(0);
+  const items = [
+    {
+        xml: 
+                <div className="eventsCarousel" >
+                            <div>
+                                <div className='eventsHeading'>EVENTS</div>
+                                <div className='eventsSubHeading'>2023-24</div>
+                            </div>
+                            <div className='bentoGrid'>
+                                    <motion.div className='event1' variants={slideAnimation}
+                                        onClick={(e)=> {setShowEventModal(true); setEventName(e.target.parentNode.className)}}
+                                        initial={{opacity:0, x:'-10%', y:'-10%'}}
+                                        animate={inView?"visible":""}
+                                        transition={slideAnimation.transition}
+                                    >
+                                        <img src={cpc1} alt="" style={{height:'350px'}}/>
+                                    </motion.div>
+        
+                                    <motion.div className='event2' variants={slideAnimation}
+                                        onClick={(e)=> {setShowEventModal(true); setEventName(e.target.parentNode.className)}}
+                                        initial={{opacity:0, x:'10%', y:'-10%'}}
+                                        animate={inView?"visible":""}
+                                        transition={slideAnimation.transition}
+                                    >
+                                        <img src={udd} alt="" style={{width:'390px'}}/>
+                                    </motion.div>
+        
+                                    <motion.div className='event3' variants={slideAnimation}
+                                        onClick={(e)=> {setShowEventModal(true); setEventName(e.target.parentNode.className)}}
+                                        initial={{opacity:0, x:'0', y:'0'}}
+                                        animate={inView?"visible":""}
+                                        transition={slideAnimation.transition}
+                                    >
+                                        <img src={bloom} alt="" style={{width:'300px'}} />
+                                    </motion.div>
+        
+                                    <motion.div className='event4' variants={slideAnimation}
+                                        onClick={(e)=> {setShowEventModal(true); setEventName(e.target.parentNode.className)}}
+                                        initial={{opacity:0, x:'10%', y:'0'}}
+                                        animate={inView?"visible":""}
+                                        transition={slideAnimation.transition}
+                                    >
+                                        <img src={aksh} alt="" style={{width:'190px'}}/>
+                                    </motion.div>
+        
+                                    <motion.div className='event5' variants={slideAnimation}
+                                        onClick={(e)=> {setShowEventModal(true); setEventName(e.target.parentNode.className)}}
+                                        initial={{opacity:0, x:'-10%', y:'10%'}}
+                                        animate={inView?"visible":""}
+                                        transition={slideAnimation.transition}
+                                    >
+                                        <img src={bibo} alt="" style={{width:'390px'}}/>
+                                    </motion.div>
+        
+                                    <motion.div className='event6' variants={slideAnimation}
+                                        onClick={(e)=> {setShowEventModal(true); setEventName(e.target.parentNode.className)}}
+                                        initial={{opacity:0, x:'10%', y:'10%'}}
+                                        animate={inView?"visible":""}
+                                        transition={slideAnimation.transition}
+                                    >
+                                        <img src={bvest} alt="" style={{width:'190px'}}/>
+                                    </motion.div>
+                            </div>
+            </div>
+    },
+    {
+        xml: 
+                <div className='eventsCarousel'>
+                            <div>
+                                <div className='eventsHeading'>EVENTS</div>
+                                <div className='eventsSubHeading'>2022-23</div>
+                            </div>
+                            <div className='bentoGrid'>
+                                    <motion.div className='event1' variants={slideAnimation}
+                                        onClick={(e)=> {setShowEventModal(true); setEventName(e.target.parentNode.className)}}
+                                        initial={{opacity:0, x:'-10%', y:'-10%'}}
+                                        animate={inView?"visible":""}
+                                        transition={slideAnimation.transition}
+                                    >
+                                        <img src={cpc1} alt="" style={{height:'350px'}}/>
+                                    </motion.div>
+
+                                    <motion.div className='event2' variants={slideAnimation}
+                                        onClick={(e)=> {setShowEventModal(true); setEventName(e.target.parentNode.className)}}
+                                        initial={{opacity:0, x:'10%', y:'-10%'}}
+                                        animate={inView?"visible":""}
+                                        transition={slideAnimation.transition}
+                                    >
+                                        <img src={udd} alt="" style={{width:'390px'}}/>
+                                    </motion.div>
+
+                                    <motion.div className='event3' variants={slideAnimation}
+                                        onClick={(e)=> {setShowEventModal(true); setEventName(e.target.parentNode.className)}}
+                                        initial={{opacity:0, x:'0', y:'0'}}
+                                        animate={inView?"visible":""}
+                                        transition={slideAnimation.transition}
+                                    >
+                                        <img src={bloom} alt="" style={{width:'300px'}} />
+                                    </motion.div>
+
+                                    <motion.div className='event4' variants={slideAnimation}
+                                        onClick={(e)=> {setShowEventModal(true); setEventName(e.target.parentNode.className)}}
+                                        initial={{opacity:0, x:'10%', y:'0'}}
+                                        animate={inView?"visible":""}
+                                        transition={slideAnimation.transition}
+                                    >
+                                        <img src={aksh} alt="" style={{width:'190px'}}/>
+                                    </motion.div>
+
+                                    <motion.div className='event5' variants={slideAnimation}
+                                        onClick={(e)=> {setShowEventModal(true); setEventName(e.target.parentNode.className)}}
+                                        initial={{opacity:0, x:'-10%', y:'10%'}}
+                                        animate={inView?"visible":""}
+                                        transition={slideAnimation.transition}
+                                    >
+                                        <img src={bibo} alt="" style={{width:'390px'}}/>
+                                    </motion.div>
+
+                                    <motion.div className='event6' variants={slideAnimation}
+                                        onClick={(e)=> {setShowEventModal(true); setEventName(e.target.parentNode.className)}}
+                                        initial={{opacity:0, x:'10%', y:'10%'}}
+                                        animate={inView?"visible":""}
+                                        transition={slideAnimation.transition}
+                                    >
+                                        <img src={bvest} alt="" style={{width:'190px'}}/>
+                                    </motion.div>
+                            </div>
+                </div>
+    },
+    // {
+    //   title: "Weights",
+    //   description:
+    //     "Weightlifting generally refers to activities in which people lift weights, often in the form of dumbbells or barbells. People lift various kinds of weights for a variety of different reasons.",
+    // //   icon: require("./Media/example3.svg"),
+    // },
+  ];
+
+  const updateIndex = (newIndex) => {
+    if (newIndex < 0) {
+      newIndex = 0;
+    } else if (newIndex >= items.length) {
+      newIndex = items.length - 1;
+    }
+
+    setActiveIndex(newIndex);
+  };
 
   return (
     <div ref={events_ref} className='EventsContainer'>
         <div className='Events'>
-            {/* <Slider {...settings}> */}
-                <div className='eventsCarousel'>
-                    <div>
-                        <div className='eventsHeading'>EVENTS</div>
-                        <div className='eventsSubHeading'>2023-24</div>
-                    </div>
-                    <div className='bentoGrid'>
-                            <motion.div className='event1' variants={slideAnimation}
-                                onClick={(e)=> {setShowEventModal(true); setEventName(e.target.parentNode.className)}}
-                                initial={{opacity:0, x:'-10%', y:'-10%'}}
-                                animate={inView?"visible":""}
-                                transition={slideAnimation.transition}
-                            >
-                                <img src={cpc1} alt="" style={{height:'350px'}}/>
-                            </motion.div>
+            
+        <div className='carousel'>
+            <div
+                className="slider"
+                style={{ transform: `translate(-${activeIndex * 100}%)`
+            }}
+            >
+                {items.map((item) => {
+                return <div className="eventsCarouselCon" > {item.xml}
+                    </div>;
+                })}
+            </div>
 
-                            <motion.div className='event2' variants={slideAnimation}
-                                onClick={(e)=> {setShowEventModal(true); setEventName(e.target.parentNode.className)}}
-                                initial={{opacity:0, x:'10%', y:'-10%'}}
-                                animate={inView?"visible":""}
-                                transition={slideAnimation.transition}
-                            >
-                                <img src={udd} alt="" style={{width:'390px'}}/>
-                            </motion.div>
-
-                            <motion.div className='event3' variants={slideAnimation}
-                                onClick={(e)=> {setShowEventModal(true); setEventName(e.target.parentNode.className)}}
-                                initial={{opacity:0, x:'0', y:'0'}}
-                                animate={inView?"visible":""}
-                                transition={slideAnimation.transition}
-                            >
-                                <img src={bloom} alt="" style={{width:'300px'}} />
-                            </motion.div>
-
-                            <motion.div className='event4' variants={slideAnimation}
-                                onClick={(e)=> {setShowEventModal(true); setEventName(e.target.parentNode.className)}}
-                                initial={{opacity:0, x:'10%', y:'0'}}
-                                animate={inView?"visible":""}
-                                transition={slideAnimation.transition}
-                            >
-                                <img src={aksh} alt="" style={{width:'190px'}}/>
-                            </motion.div>
-
-                            <motion.div className='event5' variants={slideAnimation}
-                                onClick={(e)=> {setShowEventModal(true); setEventName(e.target.parentNode.className)}}
-                                initial={{opacity:0, x:'-10%', y:'10%'}}
-                                animate={inView?"visible":""}
-                                transition={slideAnimation.transition}
-                            >
-                                <img src={bibo} alt="" style={{width:'390px'}}/>
-                            </motion.div>
-
-                            <motion.div className='event6' variants={slideAnimation}
-                                onClick={(e)=> {setShowEventModal(true); setEventName(e.target.parentNode.className)}}
-                                initial={{opacity:0, x:'10%', y:'10%'}}
-                                animate={inView?"visible":""}
-                                transition={slideAnimation.transition}
-                            >
-                                <img src={bvest} alt="" style={{width:'190px'}}/>
-                            </motion.div>
-                    </div>
-                </div>
-                {/* <div>11</div>
-                <div>11</div> */}
-
-
-                {/* <div className='eventsCarousel'>
-                    <div>
-                        <div className='eventsHeading'>EVENTS</div>
-                        <div className='eventsSubHeading'>2023-24</div>
-                    </div>
-                    <div className='bentoGrid'>
-                            <motion.div className='event1' variants={slideAnimation}
-                                onClick={(e)=> {setShowEventModal(true); setEventName(e.target.parentNode.className)}}
-                                initial={{opacity:0, x:'-10%', y:'-10%'}}
-                                animate={inView?"visible":""}
-                                transition={slideAnimation.transition}
-                            >
-                                <img src={cpc1} alt="" style={{height:'350px'}}/>
-                            </motion.div>
-
-                            <motion.div className='event2' variants={slideAnimation}
-                                onClick={(e)=> {setShowEventModal(true); setEventName(e.target.parentNode.className)}}
-                                initial={{opacity:0, x:'10%', y:'-10%'}}
-                                animate={inView?"visible":""}
-                                transition={slideAnimation.transition}
-                            >
-                                <img src={udd} alt="" style={{width:'390px'}}/>
-                            </motion.div>
-
-                            <motion.div className='event3' variants={slideAnimation}
-                                onClick={(e)=> {setShowEventModal(true); setEventName(e.target.parentNode.className)}}
-                                initial={{opacity:0, x:'0', y:'0'}}
-                                animate={inView?"visible":""}
-                                transition={slideAnimation.transition}
-                            >
-                                <img src={bloom} alt="" style={{width:'300px'}} />
-                            </motion.div>
-
-                            <motion.div className='event4' variants={slideAnimation}
-                                onClick={(e)=> {setShowEventModal(true); setEventName(e.target.parentNode.className)}}
-                                initial={{opacity:0, x:'10%', y:'0'}}
-                                animate={inView?"visible":""}
-                                transition={slideAnimation.transition}
-                            >
-                                <img src={aksh} alt="" style={{width:'190px'}}/>
-                            </motion.div>
-
-                            <motion.div className='event5' variants={slideAnimation}
-                                onClick={(e)=> {setShowEventModal(true); setEventName(e.target.parentNode.className)}}
-                                initial={{opacity:0, x:'-10%', y:'10%'}}
-                                animate={inView?"visible":""}
-                                transition={slideAnimation.transition}
-                            >
-                                <img src={bibo} alt="" style={{width:'390px'}}/>
-                            </motion.div>
-
-                            <motion.div className='event6' variants={slideAnimation}
-                                onClick={(e)=> {setShowEventModal(true); setEventName(e.target.parentNode.className)}}
-                                initial={{opacity:0, x:'10%', y:'10%'}}
-                                animate={inView?"visible":""}
-                                transition={slideAnimation.transition}
-                            >
-                                <img src={bvest} alt="" style={{width:'190px'}}/>
-                            </motion.div>
-                    </div>
+            <div className="carousel-buttons">
+                <button
+                className="button-arrow1"
+                onClick={() => {
+                    updateIndex(activeIndex - 1);
+                }}
+                >
+                <span class="material-symbols-outlined"><IoIosArrowBack/></span>{" "}
+                </button>
+                {/* <div className="indicators">
+                {items.map((item, index) => {
+                    return (
+                    <button
+                        className="indicator-buttons"
+                        onClick={() => {
+                        updateIndex(index);
+                        }}
+                    >
+                        <span
+                        className={`material-symbols-outlined ${
+                            index === activeIndex
+                            ? "indicator-symbol-active"
+                            : "indicator-symbol"
+                        }`}
+                        >
+                        radio_button_checked
+                        </span>
+                    </button>
+                    );
+                })}
                 </div> */}
-            {/* </Slider> */}
+                <button
+                className="button-arrow2"
+                onClick={() => {
+                    updateIndex(activeIndex + 1);
+                }}
+                >
+                <span class="material-symbols-outlined"><IoIosArrowForward/></span>
+                </button>
+            </div>
+        </div>
 
             {showEventModal? <EventModal onClose={()=> setShowEventModal(false)} EventName={EventName}/>:<></>}
         </div>
@@ -212,3 +272,21 @@ const Events = ({events_ref,scrollvar}) => {
 }
 
 export default Events
+
+
+// import React, { useState } from "react";
+// import { CarouselItem } from "./CarouselItem";
+
+// const Events = () => {
+
+  
+//   return (
+//     <div className="EventsContainer">
+//     <div className="Events">
+       
+//     </div>
+//     </div>
+//   );
+// };
+
+// export default Events
