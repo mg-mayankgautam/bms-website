@@ -1,5 +1,5 @@
 import React, { useRef } from 'react'
-import bloom from '../assets/bloom.png'
+import bloom from '../assets/events/bloom.png'
 import { Link } from 'react-router-dom';
 
 const SpotlightModal = ({onClose}) => {
@@ -17,8 +17,8 @@ const SpotlightModal = ({onClose}) => {
         <div className='modalBloomDiv'>
             <button onClick={onClose} className='modalCloseBtn'>X</button>
             <div className='modalBloom'>
-                <Link to='https://bit.ly/4ac25AV'>
-                    <img src={bloom} className='bloomPoster' style={{cursor:`${<div>click to register</div>}`}}/>
+                <Link to='https://bit.ly/4ac25AV' target='_blank'>
+                    <img src={bloom} className='bloomPoster'/>
                 </Link>
             </div>
         </div>

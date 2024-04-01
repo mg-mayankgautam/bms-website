@@ -3,19 +3,24 @@ import Mayank from '../assets/team/Mayank.png'
 import Riya from '../assets/team/Riya.png'
 import Taran from '../assets/team/Taran.png'
 import Tushar from '../assets/team/Tushar.png'
+import Prachi from '../assets/team/prachi.png'
+import Sanya from '../assets/team/sanya.png'
+import Kashvi from '../assets/team/kashvi.png'
+import Harshika from '../assets/team/harshika.png'
 import { useRef, } from "react";
 import { motion, useScroll,useMotionValueEvent,useInView } from "framer-motion";
 import Slider from 'react-slick';
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import { IoIosArrowBack, IoIosArrowForward } from "react-icons/io";
+import groupphoto from '../assets/team/group.JPG'
 
 
 var settings = {
   className: "center",
   centerMode: true,
   dots: false,
-  infinite: true,
+  infinite: false,
   speed: 500,
   slidesToShow: 7,
   slidesToScroll: 1,
@@ -53,30 +58,33 @@ const Team2 = () => {
                 </motion.div>
                 <motion.div className='teamMember'
                   >
-                    <img src={Tushar}/>
+                  <img src={Prachi}/>
                 </motion.div>
                 <motion.div className='teamMember' 
                 >
-                  E
+                  <img src={Tushar}/>
                 </motion.div>
                 <motion.div className='teamMember' 
                   >
-                    F
+                  <img src={Sanya}/>
                 </motion.div>
                 <motion.div className='teamMember'   
                   >
-                    G
+                  <img src={Kashvi}/>
                 </motion.div>
                 <motion.div className='teamMember' 
                   >
-                    H
+                  <img src={Harshika}/>
                 </motion.div>
-                {/* <div  className='teamMember_dummy'></div>
+                <div  className='teamMember full'>
+                  <img src={groupphoto}/>
+                </div>
                 <div  className='teamMember_dummy'></div>
                 <div  className='teamMember_dummy'></div>
                 <div  className='teamMember_dummy'></div>
                 <div  className='teamMember_dummy'></div>
-                <div  className='teamMember_dummy'></div> */}
+                <div  className='teamMember_dummy'></div>
+                {/* <div  className='teamMember_dummy'></div> */}
               
               
               </Slider>

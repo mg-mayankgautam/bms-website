@@ -1,7 +1,8 @@
 import React, {useState, useEffect}from 'react';
-import { color, motion,useMotionValueEvent,useScroll  } from "framer-motion"
+import { color, motion, useMotionValueEvent,useScroll  } from "framer-motion"
 import illustration from '../assets/Group 30.svg'
 import SVGillus from './SVGillus';
+import logobg from '../assets/logobg.png'
 
 const Welcome = ({hide,setHide, scrollvar}) => {
   // const { scrollY } = useScroll();
@@ -43,6 +44,15 @@ const Welcome = ({hide,setHide, scrollvar}) => {
         > 
         hello and welcome
         </motion.div>
+        <motion.div className='logoBgdiv'
+        variants={{fade:{opacity: 0},visible:{opacity: 1}}}
+        initial='visible'
+        animate={hide?"fade":""}
+        transition={{duration:0.5}}
+        > 
+        <img src={logobg} className='logoBg'/>
+        </motion.div>
+        
 
         <motion.div 
           className='Main'

@@ -1,10 +1,15 @@
 import React, {useEffect, useState} from 'react'
-import bibo from '../assets/bibo.png'
-import cpc1 from '../assets/cpc1.png'
-import bvest from '../assets/bvest.png'
-import udd from '../assets/uddeshya.png'
-import aksh from '../assets/aksh.png'
-import bloom from '../assets/bloom.png'
+import bibo from '../assets/events/bibo.png'
+import cpc1 from '../assets/events/cpc1.png'
+import bvest from '../assets/events/bvest.png'
+import udd from '../assets/events/uddeshya.png'
+import aksh from '../assets/events/aksh.png'
+import bloom from '../assets/events/bloom.png'
+import event1 from '../assets/events/event1.jpg'
+import event2 from '../assets/events/event2.jpg'
+import event3 from '../assets/events/event3.jpg'
+import event4 from '../assets/events/event4.jpg'
+import teamprev from '../assets/events/l4.jpeg'
 import {motion} from 'framer-motion'
 import EventModal from './EventModal'
 import { IoIosArrowBack, IoIosArrowForward } from "react-icons/io";
@@ -17,7 +22,7 @@ const Events = ({events_ref,scrollvar}) => {
 
     useEffect(()=>{
         document.querySelector('.Events').style.setProperty("--scroll", (scrollvar))
-        if(scrollvar>=180){setInView(true)}
+        if(scrollvar>=140){setInView(true)}
       },[scrollvar])
 
   const slideAnimation = {
@@ -110,60 +115,53 @@ const Events = ({events_ref,scrollvar}) => {
                                 <div className='eventsHeading'>EVENTS</div>
                                 <div className='eventsSubHeading'>2022-23</div>
                             </div>
-                            <div className='bentoGrid'>
-                                    <motion.div className='event1' variants={slideAnimation}
+                            <div className='bentoGrid bento2'>
+
+                                    <motion.div className='event11' variants={slideAnimation}
                                         onClick={(e)=> {setShowEventModal(true); setEventName(e.target.parentNode.className)}}
                                         initial={{opacity:0, x:'-10%', y:'-10%'}}
                                         animate={inView?"visible":""}
                                         transition={slideAnimation.transition}
                                     >
-                                        <img src={cpc1} alt="" style={{height:'350px'}}/>
+                                        <img src={event1} alt="" style={{height:'255px'}}/>
                                     </motion.div>
 
-                                    <motion.div className='event2' variants={slideAnimation}
+                                    <motion.div className='event12' variants={slideAnimation}
                                         onClick={(e)=> {setShowEventModal(true); setEventName(e.target.parentNode.className)}}
                                         initial={{opacity:0, x:'10%', y:'-10%'}}
                                         animate={inView?"visible":""}
                                         transition={slideAnimation.transition}
                                     >
-                                        <img src={udd} alt="" style={{width:'390px'}}/>
+                                        <img src={event2} alt="" style={{height:'255px'}}/>
                                     </motion.div>
 
-                                    <motion.div className='event3' variants={slideAnimation}
+                                    {/* <motion.div className='teamprev' variants={slideAnimation}
                                         onClick={(e)=> {setShowEventModal(true); setEventName(e.target.parentNode.className)}}
                                         initial={{opacity:0, x:'0', y:'0'}}
                                         animate={inView?"visible":""}
                                         transition={slideAnimation.transition}
                                     >
-                                        <img src={bloom} alt="" style={{width:'300px'}} />
-                                    </motion.div>
+                                        <img src={teamprev} alt="" style={{width:'300px'}} />
+                                    </motion.div> */}
 
-                                    <motion.div className='event4' variants={slideAnimation}
+                                    <motion.div className='event13' variants={slideAnimation}
                                         onClick={(e)=> {setShowEventModal(true); setEventName(e.target.parentNode.className)}}
                                         initial={{opacity:0, x:'10%', y:'0'}}
                                         animate={inView?"visible":""}
                                         transition={slideAnimation.transition}
                                     >
-                                        <img src={aksh} alt="" style={{width:'190px'}}/>
+                                        <img src={event3} alt="" style={{height:'255px'}}/>
                                     </motion.div>
 
-                                    <motion.div className='event5' variants={slideAnimation}
+                                    <motion.div className='event14' variants={slideAnimation}
                                         onClick={(e)=> {setShowEventModal(true); setEventName(e.target.parentNode.className)}}
                                         initial={{opacity:0, x:'-10%', y:'10%'}}
                                         animate={inView?"visible":""}
                                         transition={slideAnimation.transition}
                                     >
-                                        <img src={bibo} alt="" style={{width:'390px'}}/>
+                                        <img src={event4} alt="" style={{height:'255px'}}/>
                                     </motion.div>
 
-                                    <motion.div className='event6' variants={slideAnimation}
-                                        onClick={(e)=> {setShowEventModal(true); setEventName(e.target.parentNode.className)}}
-                                        initial={{opacity:0, x:'10%', y:'10%'}}
-                                        animate={inView?"visible":""}
-                                        transition={slideAnimation.transition}
-                                    >
-                                        <img src={bvest} alt="" style={{width:'190px'}}/>
-                                    </motion.div>
                             </div>
                 </div>
     },

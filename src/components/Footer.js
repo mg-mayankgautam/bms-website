@@ -1,11 +1,12 @@
 import React from 'react'
-import footerbg from '../assets/footerbg1.png'
+import footerbg from '../assets/footer/footerbg.png'
+import ig from '../assets/footer/ig.png'
+import linkedin from '../assets/footer/linkedin.png'
 
 const Footer = () => {
   return (
     <div className='footerContainer'>
     <div className='Footer'>
-        {/* <img className='footerBg' src={footerbg}/> */}
         <div className='footerjoinUs'>
           <div className='joinUs'>
             <h1>Join our community!</h1>
@@ -14,15 +15,22 @@ const Footer = () => {
           </div>
           <div></div>
         </div>
+
         <div className='footerContent'>
-          <div className='footerAnchors'>
+          {/* <div className='footerAnchors'>
               <div>Home</div>
               <div>About</div>
               <div>Contact Us</div>
               <div>Support Groups</div>
               <div>Events</div>
+          </div> */}
+          <div className='footerContact'>Contact Us</div>
+          <div className='footerLinks'>
+            <img src={ig} className='footerIcons'/>
+            <img src={linkedin} className='footerIcons'/>
           </div>
-          <div className='footerBMS'>BLISSFUL MINDS SOCIETY</div>
+          <div className='footerCopyright'>copyright © blissfulmindssociety</div>
+          <div className='footerBMS'><img className='' src={footerbg}/></div>
         </div>
     </div>
     </div>
