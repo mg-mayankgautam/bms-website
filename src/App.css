@@ -67,7 +67,7 @@ button{
   justify-content: center;
   min-height: 101dvh;
   background-color: #f8efe5;
-  background-image: url(./assets/Marble_blue.jpg);
+  background-image: url(./assets/bgg.png);
   /* background-image: linear-gradient(to bottom right,#ffffff, #b683f4); */
 }
 
@@ -191,9 +191,10 @@ button{
   top: 0;
   background-color: #f8efe5;
   /* background-image: linear-gradient(to bottom right,#ddf2ffa1, #dbbdff); */
-  /* background-image: url(./assets/bg.png); */
-  background-size: cover;
-  background-repeat: no-repeat;
+  background-image: linear-gradient(#ffffff, #dbbdff);
+  /* background-image: url(./assets/bgg.png); */
+  /* background-size: cover; */
+  /* background-repeat: no-repeat; */
   /* border-bottom-left-radius: 100px; */
   /* border-bottom-right-radius: 100px; */
   display: flex;
@@ -283,11 +284,13 @@ button{
   max-height: 100dvh;
   background-color: #f8efe5;
   /* background-image: linear-gradient(to bottom right,#a0cce7a1, #b683f4); */
+  /* background-image: url(./assets/bgg.png); */
   display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: column;
   box-shadow: 0px 8px 12px 0px rgba(171, 26, 255, 0.20); 
+  background-image: linear-gradient(#dbbdff,#ffffff ,#ffffff);
 }
 
 
@@ -552,6 +555,8 @@ button{
   border-bottom-left-radius: 100px;
   border-bottom-right-radius: 100px;
   box-shadow: rgba(171, 26, 255, 0.35) 0px 2px 10px;
+  background-image: url(./assets/bgg.png);
+  background-size: cover;
 }
 
 .facultyContent{
@@ -594,7 +599,7 @@ button{
   margin-top: -200dvh;
   z-index:10 ;
   position: relative;
-  background-color: #f8efe5;
+  background-color: #ffffff;
 }
 .Team2{
   z-index: 10;
@@ -606,15 +611,14 @@ button{
   min-height: 100dvh;
   /* max-height: max-content; */
   background-color: #f8efe5;
-  /* background-image: linear-gradient(to bottom right,#a0cce7a1, #b683f4); */
-  /* background-image: url(./assets/bg.png); */
-  /* background-size: cover; */
-  /* background-repeat: no-repeat; */
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
   /* box-shadow: rgba(171, 26, 255, 0.35) 0px 2px 10px;  */
   /* opacity: 0.5;  */
+  background-image: url(./assets/bgg.png);
+  /* background-image: linear-gradient(#d0cef7, #ffffff); */
+  /* background-size: cover; */
 }
 
 
@@ -794,6 +798,7 @@ button{
   z-index: 8;
   background-color: #f8efe5;
   box-shadow: rgba(171, 26, 255, 0.25) 0px 2px 10px; 
+  background-image: linear-gradient(#ffffff, #afadec);
 }
 .wallTextDiv{
   min-height: 100dvh;
@@ -989,7 +994,8 @@ button{
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  background-color: #f8efe5;
+  /* background-color: #f8efe5; */
+  background-color: #afadec;
 }
 .footerBg{ /* IMAGE */
   /* position: absolute; */
@@ -1010,7 +1016,7 @@ button{
   grid-template-columns: 1fr 1fr;
   /* justify-content: center; */
   align-content: center;
-  color: rgb(0, 0, 0);
+  color: #7d4bba;
 }
 .joinUs{
   padding-left: 70px;
@@ -1030,10 +1036,11 @@ button{
 .joinUs>button{
   border: none;
   border-radius:25px;
-  background-color: rgb(0, 0, 0);
+  background-color: #afadec;
   padding: 8px 16px;
   font-size: 20px;
-  color: rgb(255, 255, 255)
+  color: rgb(255, 255, 255);
+  font-weight: 700;
 }
 
 /* .footerAnchors{
@@ -1052,6 +1059,7 @@ button{
   height: 100%;
   justify-content: center;
   gap: 20px;
+  color: white;
 }
 .footerContact{
   font-size: 36px;
