@@ -15,6 +15,7 @@ const SpotlightModal = ({onClose}) => {
   return (
     <div ref={modalRef} onClick={closeModal} className='SpotlightModal'>
         <div className='modalBloomDiv'>
+            <div className='spotlightHead'>Spotlight</div>
             <button onClick={onClose} className='modalCloseBtn'>X</button>
             <div className='modalBloom'>
                 <Link to='https://bit.ly/4ac25AV' target='_blank'>

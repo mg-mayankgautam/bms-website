@@ -15,7 +15,7 @@ const Welcome = ({hide,setHide, scrollvar}) => {
   useEffect(()=>{
     document.querySelector('.Welcome').style.setProperty("--scroll", Math.min(scrollvar, 100))
     // console.log(Math.min(scrollvar, 100))
-    if(scrollvar>=1){setHide(true)}
+    if(scrollvar>0){setHide(true)}
   },[scrollvar])
 
   const defaultAnimation = {hidden:{opacity:0,y:"25%"},visible:{opacity:1,y:"0%"}}
@@ -32,6 +32,7 @@ const Welcome = ({hide,setHide, scrollvar}) => {
   const text9='destigmatize mental illness by conducting interactive and fun'
   const text10='sessions, wherein the students can feel heard and can be given useful '
   const text11='advice.'
+  const text1='Popularly abbreviated as BMS and founded in 2022, Blissful Minds Society is the first student-led Mental Health society at Bharati Vidyapeeth’s College of Engineering and IP University. The main purpose of BMS is to advocate the cause of spreading awareness about mental health issues and encourage people to look beyond the stigma associated with this sensitive subject. The vision of our society is to create a safe space for all, such that under no circumstance, a student feels hesitant to talk about his/her mental health issues. We aim to destigmatize mental illness by conducting interactive and funsessions, wherein the students can feel heard and can be given useful advice.'
   
   
   return (
@@ -81,9 +82,9 @@ const Welcome = ({hide,setHide, scrollvar}) => {
             <motion.p 
               initial='hidden' 
               animate= {hide? 'visible':''}
-              transition={{staggerChildren: 0.01,delayChildren: 0.3}}
+              transition={{staggerChildren: 0.001}}
               >  
-                    {text.split('').map(char=>
+                    {text1.split('').map(char=>
                     <motion.span variants={defaultAnimation} >
                       {char}
                     </motion.span>
@@ -91,7 +92,7 @@ const Welcome = ({hide,setHide, scrollvar}) => {
                 
             </motion.p>
 
-            <motion.p 
+            {/* <motion.p 
               initial='hidden' 
               animate= {hide? 'visible':''}
               transition={{staggerChildren: 0.01,delayChildren: 0.3}}
@@ -225,7 +226,7 @@ const Welcome = ({hide,setHide, scrollvar}) => {
                     </motion.span>
                     )}
                 
-            </motion.p>
+            </motion.p> */}
            
           </div>
 

@@ -48,7 +48,7 @@ const Events = ({events_ref,scrollvar}) => {
         xml: 
                 <div className="eventsCarousel" >
                             <div>
-                                <div className='eventsHeading'>EVENTS</div>
+                                <div className='eventsHeading'>Events</div>
                                 <div className='eventsSubHeading'>2023-24</div>
                             </div>
                             <div className='bentoGrid'>
@@ -112,7 +112,7 @@ const Events = ({events_ref,scrollvar}) => {
         xml: 
                 <div className='eventsCarousel'>
                             <div>
-                                <div className='eventsHeading'>EVENTS</div>
+                                <div className='eventsHeading'>Events</div>
                                 <div className='eventsSubHeading'>2022-23</div>
                             </div>
                             <div className='bentoGrid bento2'>
