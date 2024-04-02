@@ -16,11 +16,11 @@ import { IoIosArrowBack, IoIosArrowForward } from "react-icons/io";
 import groupphoto from '../assets/team/group.JPG'
 
 
-var settings = {
+var settings1 = {
   className: "center",
   centerMode: true,
   dots: false,
-  infinite: false,
+  infinite: true,
   speed: 500,
   slidesToShow: 7,
   slidesToScroll: 1,
@@ -29,7 +29,33 @@ var settings = {
   focusOnSelect: true,
   swipeToSlide: true,
   centerPadding: "150px",
-  verticalSwiping: true
+  responsive: [
+    {
+      breakpoint: 480,
+      settings: {initialSlide: 0,
+        slidesToShow: 1,
+        slidesToScroll: 1
+      }
+    }
+  ],
+  responsive :[
+    {
+      breakpoint: 600,
+      settings: {initialSlide: 0,
+        slidesToShow: 2,
+        slidesToScroll: 2,
+      }
+    }
+  ],
+  responsive:[
+    {
+      breakpoint: 800,
+      settings: {initialSlide: 0,
+        slidesToShow: 3,
+        slidesToScroll: 3,
+      }
+    }
+  ]
 };
 
 
@@ -43,7 +69,7 @@ const Team2 = ({team_ref}) => {
     <div className='Team2'>
           <div className='teamHeading'>Meet the Team</div>
         <div className='SliderContainer'>
-          <Slider ref={arrowRef} {...settings}> 
+          <Slider ref={arrowRef} {...settings1}> 
           
                 <motion.div  className='teamMember'
                   >
@@ -76,14 +102,14 @@ const Team2 = ({team_ref}) => {
                   >
                   <img src={Harshika}/>
                 </motion.div>
-                <div  className='teamMember full'>
+                {/* <div  className='teamMember full'>
                   <img src={groupphoto}/>
-                </div>
+                </div> */}
+                {/* <div  className='teamMember_dummy'></div>
                 <div  className='teamMember_dummy'></div>
                 <div  className='teamMember_dummy'></div>
                 <div  className='teamMember_dummy'></div>
-                <div  className='teamMember_dummy'></div>
-                <div  className='teamMember_dummy'></div>
+                <div  className='teamMember_dummy'></div> */}
                 {/* <div  className='teamMember_dummy'></div> */}
               
               

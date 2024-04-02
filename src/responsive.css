@@ -1,17 +1,188 @@
-@media only screen and (max-width: 726px){
-    .navItems>li>button{display: none;}
-    .Welcome{
-        border-bottom-left-radius: 0px;
-        border-bottom-right-radius: 0px;
+@media only screen and (max-width:1232px){
+  .mainWritten>p{font-size: 14px;}
+}
+
+
+@media only screen and (max-width:1177px){
+  .facultyHeading{font-size: 48px;}
+  .facultyLayerContent{padding-right: 10px;}
+  .facultyContent{padding: 0 10px;}
+  
+  .facultyLayerContent{justify-content: center; gap: 20px;}
+  .facultyImgDiv{width: 200px; height: 450px;}
+  .facultyImg{width: 100%; object-position:left;}
+  .facultyHeading{font-size: 40px;}
+  .facultyName{font-size: 32px;}
+  .facultyText{font-size: 14px;}
+  .wallText{font-size: 72px;}
+}
+
+@media only screen and (max-width:995px){
+  .Main{grid-template-columns: auto; }
+  .mainImg{
+    order:1;
+    justify-self: center;
+    width: 60vw; width: 60dvw; width: 60svw;
+  }
+  .mainWritten{order: 2;padding-top: 0;}
+
+  .aboutCards{
+    height: 250px; width: 250px;
+  }
+  .aboutCardsText{
+    font-size: 14px;
+  }
+  
+  .facultyLayerContent{justify-content: center; gap: 20px;}
+  .facultyImgDiv{width: 200px; height: 400px;}
+  .facultyImg{width: 100%; object-position:left;}
+  .facultyHeading{font-size: 36px;}
+  .facultyName{font-size: 24px;}
+  .facultyText{font-size: 12px;}
+}
+
+@media only screen and (max-width:1024px){
+  .aboutCards{
+    height: 270px; width: 270px;
+  }
+  .aboutCardsText{
+    font-size: 14px;
+  }
+
+  .eventsHeading{font-size: 40px;}
+  .eventsSubHeading{font-size: 24px;}
+  .bentoGrid{
+    grid-template-columns: repeat(3, 160px);
+    grid-template-rows: repeat(3, 150px);
+  }
+  .bentoGrid.bento2{
+    grid-template-columns: repeat(2, 240px);
+  grid-template-rows: repeat(2, 225px);
+  }
+  .button-arrow1{left: 8%;}
+  .button-arrow2{left: 16%;}
+}
+
+
+
+@keyframes scale-in-mobile{ /*wall text*/
+  0%{
+    opacity:0;
+    transform: translateY(-220%) scale(0.8); 
+  }
+  11.5%{
+    opacity: 0.3;
+    transform: translateY(0) scale(0.9);
+  }
+  30%{
+    opacity: 1;
+  }
+  100%{
+    opacity:1;
+    transform: scale(1); 
+  }
+}
+
+@media only screen and (max-width: 770px){
+  body{
+    /* background-repeat: no-repeat; */
+  /* background-size: cover; */
+  }
+  .App{
+    background-image: linear-gradient(#f1f1fc, #afadec);
+    transition: background-image 1s;
+  }
+  .navItems>li>button{display: none;}
+  .navItems{
+    grid-template-columns: auto auto;
+    justify-content: space-between;
+  }
+  .Welcome{
+    border-bottom-left-radius: 0px;
+    border-bottom-right-radius: 0px;
+    background-image: none;
+    background-color: transparent;
+    box-shadow: rgba(171, 26, 255, 0) 0px 2px 10px;
+  }
+  .About{
+    height: 100vh;
+    margin-top: 0;
+  }
+  .about_child{
+    position: static;
+    background-image: none;
+    background-color: transparent;
     }
-    .About{
-        height: 100vh;
-        margin-top: 0;
-      }
-    .about_child{
-        height: 100vh;
-        height: 100dvh;
-        height: 100svh;
-        position: relative;
-    }
+  .Events{
+    border-bottom-left-radius: 0px;
+    border-bottom-right-radius: 0px;
+    background-image: none;
+    background-color: transparent;
+    box-shadow: rgba(171, 26, 255, 0) 0px 2px 10px;
+  }
+  
+  .FacultyContainer{
+    min-height: 100vh;
+    margin-top: 0;
+  }
+  .Faculty{
+    position: static;
+    border-bottom-left-radius: 0px;
+    border-bottom-right-radius: 0px;
+    background-image: none;
+    background-color: transparent;
+    box-shadow: rgba(171, 26, 255, 0) 0px 2px 10px;
+  }
+  .FacultyLayer{display: none;}
+  .FacultyMobile{display: block;}
+  .facultyContent{gap: 20px;}
+
+  .teamContainer{
+    height: max-content;
+    margin-top: 0;
+    background-color: transparent;
+  }
+  .Team2{
+    position: static;
+    border-bottom-left-radius: 0px;
+    border-bottom-right-radius: 0px;
+    background-image: none;
+    background-color: transparent;
+  }
+  .Wall{
+    border-bottom-left-radius: 0px;
+    border-bottom-right-radius: 0px;
+    background-image: none;
+    background-color: transparent;
+  }
+  .wallText{
+    animation: scale-in-mobile linear forwards; animation-timeline: view(); animation-range-start:cover; animation-range-end:contain;
+  }
+  .footerContainer{
+    min-height: 100vh;
+    margin-top: 0;
+  }
+  .Footer{
+    position: static;
+    background-color: transparent;
+  }
+  .footerjoinUs{
+    border-radius: 25px;
+    margin: 20px 20px;
+    padding: 20px 0;
+  }
+
+
+
+  .aboutCards{
+    height: 200px; width: 200px;
+  }
+  .aboutCardsText{
+    font-size: 11px;
+  }
+  /* .eventsCarousel{width: max-content;} */
+  .slick-slider{
+    height: 520px;
+    margin-left: -300px; /*-500 pehle*/
+  }
 }
