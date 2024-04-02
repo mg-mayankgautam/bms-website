@@ -34,8 +34,6 @@ const Home = () => {
   const about_ref = useRef(null);
   const team_ref = useRef(null);
   const contact_ref = useRef(null);
-  // const about_ref = useRef(null);
-  // const about_ref = useRef(null);
   const { scrollY } = useScroll(
     // {target: ref, offset: ["end end", "end start"]}
     );
@@ -49,7 +47,14 @@ const Home = () => {
        //   const previous = scrollY.getPrevious();
   })
 
-  // const team_ref = useRef(scrollvar=400);
+  useEffect(()=>{
+    if(showModal){
+        document.body.style.overflow = 'hidden';
+    }
+    else{
+        document.body.style.overflow = 'unset';
+    }
+})
 
   return (
     <div>
