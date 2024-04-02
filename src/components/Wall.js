@@ -13,12 +13,11 @@ const Wall = () => {
   return (
     <div className='Wall'>
         <div className='wallTextDiv'>
-          <div className='walltextcon' >
             <div className='wallText' 
-            // style={{animation: 'scale-in linear forwards', animationTimeline: 'view()', animationRangeStart:'cover', animationRangeEnd:'contain'}}
+            style={{animation: 'scale-in linear forwards', animationTimeline: 'view()', animationRangeStart:'cover', animationRangeEnd:'contain'}}
             >
                 Community Wall
-            </div></div>
+            </div>
             {/* <div className='wallCardsDiv'> */}
                     <div className='wallCards un' style={{animation: 'slide-in-un 0.5s forwards', animationTimeline: 'view()', animationRangeStart:'cover', animationRangeEnd:'contain'}}>
                       <img src={card1}/>
@@ -42,8 +41,8 @@ const Wall = () => {
                     <img src={card1}/>
 
                     </div>
-            {/* </div> */}
-        </div>
+            </div>
+        
     </div>
   )
 }

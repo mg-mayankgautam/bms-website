@@ -260,8 +260,8 @@ const Events = ({events_ref,scrollvar,setShowModal}) => {
                     Few tips that I wish to provide for a healthy mental state are:
                     1) Surround yourself with good people.
                     2) Silence the chaos in your head by praying or doing relaxing exercises.
-                    3) Break up the monotony.
-                    4) Get help when you need, seek help. It is a measure of strength not weakness.</p>
+                    {/* 3) Break up the monotony.
+                    4) Get help when you need, seek help. It is a measure of strength not weakness. */}</p>
                     
                 </div>
             </div>
