@@ -2,11 +2,12 @@ import React from 'react'
 import footerbg from '../assets/footer/footerbg.png'
 import ig from '../assets/footer/ig.png'
 import linkedin from '../assets/footer/linkedin.png'
+import { Link } from 'react-router-dom'
 
-const Footer = () => {
+const Footer = ({contact_ref}) => {
   return (
-    <div className='footerContainer'>
-    <div className='Footer'>
+    <div className='footerContainer' >
+    <div className='Footer' ref={contact_ref}>
         <div className='footerjoinUs'>
           <div className='joinUs'>
             <h1>Join our community!</h1>
@@ -26,8 +27,9 @@ const Footer = () => {
           </div> */}
           <div className='footerContact'>Contact Us</div>
           <div className='footerLinks'>
-            <img src={ig} className='footerIcons'/>
-            <img src={linkedin} className='footerIcons'/>
+            {/* <Link to='https://www.instagram.com/blissfulminds_bvcoe/' target='_blank'><img src={ig} className='footerIcons'/></Link> */}
+            <Link to='https://www.instagram.com/p/C48WDEcSKzm/' target='_blank'><img src={ig} className='footerIcons'/></Link>
+            <Link to='https://www.linkedin.com/company/blissful-minds-society/' target='_blank'><img src={linkedin} className='footerIcons'/></Link>
           </div>
           <div className='footerCopyright'>copyright © blissfulmindssociety</div>
           <div className='footerBMS'><img className='' src={footerbg}/></div>

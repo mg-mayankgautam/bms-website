@@ -1,6 +1,6 @@
 import React, {useRef} from 'react'
 // import bibo from '../assets/bibo.png'
-import { EventsData2324 } from '../data/events.data';
+import { EventsData2223, EventsData2324 } from '../data/events.data';
 
 const EventModal = ({onClose, EventName}) => {
     const modalRef = useRef();
@@ -30,6 +30,21 @@ const EventModal = ({onClose, EventName}) => {
                             <p>{event.description}</p>
                         </div>
                 )})}
+
+                {EventsData2223&& EventsData2223.map((event)=>{
+                    if(event.class==EventName)
+                    return(
+                        <div className='AboutEvent'>
+                            <div className='eventPosterFlex'>
+                                {event.photos.map((img)=>{return(
+                                    <img src={img} className='EventPoster'/>
+                                )})}
+                            </div>
+                            
+                            <h2>{event.name}</h2>
+                            <p>{event.description}</p>
+                        </div>
+                )})}    
         </div>
     </div>
   )

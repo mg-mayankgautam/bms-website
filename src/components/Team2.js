@@ -33,13 +33,13 @@ var settings = {
 };
 
 
-const Team2 = () => {
+const Team2 = ({team_ref}) => {
   const arrowRef = useRef(null);
 
   // console.log(arrowRef.current)
 
   return (
-  <div className='teamContainer'>
+  <div className='teamContainer' ref={team_ref}>
     <div className='Team2'>
           <div className='teamHeading'>Meet the Team</div>
         <div className='SliderContainer'>

@@ -4,9 +4,9 @@ import students from '../assets/about/sudents.jpeg'
 import events from '../assets/about/events.jpeg'
 import support from '../assets/about/support.jpeg'
 
-const About = () => {
+const About = ({about_ref}) => {
   return (
-    <div className='About'>
+    <div className='About' ref={about_ref}>
 
       <div className='about_child'>
         <div className='aboutHeading'>About The Community</div>

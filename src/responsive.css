@@ -1,0 +1,17 @@
+@media only screen and (max-width: 726px){
+    .navItems>li>button{display: none;}
+    .Welcome{
+        border-bottom-left-radius: 0px;
+        border-bottom-right-radius: 0px;
+    }
+    .About{
+        height: 100vh;
+        margin-top: 0;
+      }
+    .about_child{
+        height: 100vh;
+        height: 100dvh;
+        height: 100svh;
+        position: relative;
+    }
+}

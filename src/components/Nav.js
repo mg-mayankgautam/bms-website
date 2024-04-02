@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom'
 import logo from '../assets/logo.png'
 import { useRef } from 'react'
 
-const Nav = ({events_ref,hide,setHide, showModal, setShowModal}) => {
+const Nav = ({hide,setHide, showModal, setShowModal,events_ref, about_ref, team_ref, contact_ref}) => {
   // window.HTMLElement.prototype.scrollIntoView = function() {};
   // const scrollToSection = (sectionId) => {
   //   const element = document.getElementsByClassName('.EventsContainer');
@@ -31,15 +31,14 @@ const Nav = ({events_ref,hide,setHide, showModal, setShowModal}) => {
               <button onClick={()=> setShowModal(true)}>
                 Spotlight
               </button>
-            </li> 
-            <li className='Home_nav'><Link to='/'>Home</Link></li>
-            <li><Link to='/about'>About</Link></li> 
-            {/* <li><Link to='/'>Events</Link></li> */}
-            <li>
-            <button onClick={() => {events_ref.current?.scrollIntoView({behaviour:'smooth'})}}>Events</button>
             </li>
-            <li><Link to='/'>Support Groups</Link></li>
-            <li><Link to='/'>Contact</Link></li>
+            <li><button onClick={() => {window.scrollTo({ top:607, behavior:'smooth'})}}>About</button></li> 
+            <li>
+            <button onClick={() => {window.scrollTo({ top:1203, behavior:'smooth'})}}>Events</button>
+            {/* <button onClick={() => {events_ref.current?.scrollIntoView({behavior:'smooth'})}}>Events</button> */}
+            </li>
+            <li><button onClick={() => {window.scrollTo({ top:2404, behavior:'smooth'})}}>Team</button></li>
+            <li><button onClick={() => {window.scrollTo({ top:5996, behavior:'smooth'})}}>Contact</button></li>
         </ul> 
 
     </motion.div>)

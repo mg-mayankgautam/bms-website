@@ -1,5 +1,6 @@
 import logo from './logo.svg';
 import './App.css';
+import './responsive.css';
 import Layout from './Layout';
 import Home from './pages/Home';
 import About from './components/About'

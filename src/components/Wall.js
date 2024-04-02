@@ -2,13 +2,13 @@ import React, { useState } from 'react'
 import card1 from '../assets/wall/card1.png'
 import card2 from '../assets/wall/card2.png'
 
-const Wall = ({scrollvar}) => {
+const Wall = () => {
 
     const [style, setStyle] = useState();
 
-    if(scrollvar>500){
+    // if(scrollvar>500){
         
-    }
+    // }
 
   return (
     <div className='Wall'>

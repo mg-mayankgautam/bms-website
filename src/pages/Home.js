@@ -31,34 +31,39 @@ const Home = () => {
   }, [hide])
   
   const events_ref = useRef(null);
-
-  const ref = useRef(null);
+  const about_ref = useRef(null);
+  const team_ref = useRef(null);
+  const contact_ref = useRef(null);
+  // const about_ref = useRef(null);
+  // const about_ref = useRef(null);
   const { scrollY } = useScroll(
     // {target: ref, offset: ["end end", "end start"]}
     );
   const [scrollvar, setscrollvar]= useState(0)
   
   useMotionValueEvent(scrollY, "change", (latest) => {
-      // console.log(latest);
+      console.log(latest);
       const height = document.body.clientHeight;
       setscrollvar(latest*100/height)
-     console.log(scrollvar)
+    //  console.log(scrollvar)
        //   const previous = scrollY.getPrevious();
   })
 
+  // const team_ref = useRef(scrollvar=400);
+
   return (
     <div>
-        <Nav events_ref={events_ref} hide={hide} setHide={setHide} showModal={showModal} setShowModal={setShowModal}/>
+        <Nav hide={hide} setHide={setHide} showModal={showModal} setShowModal={setShowModal}  events_ref={events_ref} about_ref={about_ref} team_ref={team_ref} contact_ref={contact_ref}/>
         <Welcome hide={hide} setHide={setHide} scrollvar={scrollvar}/>
         
         {isDisplayed&&showModal? <SpotlightModal onClose={()=> setShowModal(false)}/>:<></> }
-        {isDisplayed? <About/>:<></> }
-        {isDisplayed? <Events events_ref={events_ref}  scrollvar={scrollvar}/>:<></> }
+        {isDisplayed? <About about_ref={about_ref}/>:<></> }
+        {isDisplayed? <Events events_ref={events_ref}  scrollvar={scrollvar} setShowModal={setShowModal}/>:<></> }
         {isDisplayed?  <Faculty/>:<></> }
-        {isDisplayed?  <Team2/>:<></> }
-        {isDisplayed?  <Wall scrollvar={scrollvar}/>:<></> }
+        {isDisplayed?  <Team2 team_ref={team_ref}/>:<></> }
+        {isDisplayed?  <Wall/>:<></> }
         {/* {isDisplayed?  <Support/>:<></> } */}
-        {isDisplayed?  <Footer/>:<></> }
+        {isDisplayed?  <Footer contact_ref={contact_ref}/>:<></> }
     </div>
   )
 }

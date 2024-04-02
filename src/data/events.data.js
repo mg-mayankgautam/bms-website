@@ -17,7 +17,7 @@ export const EventsData2324 = [
     },
     {
         name: "BLOOM",
-        class: 'event3',
+        class: '',
         photos: [require('../assets/events/bloom.png')],
         description: `Team BMS organised a fundraiser-cum-talent event, Uddeshya 2.0. The sole aim of this event was to raise funds for donating in Bal Seva Sansthan and have a visit to the orphanage for a pre Diwali Celebration. This event featured many cultural performances such as  Group Dance, Natak, Shayari etc. with a considerable amount of funds raised, the event turned out to be a monumental success.`,
         mainImg: require('../assets/events/bloom.png'),

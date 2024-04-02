@@ -14,7 +14,7 @@ import {motion} from 'framer-motion'
 import EventModal from './EventModal'
 import { IoIosArrowBack, IoIosArrowForward } from "react-icons/io";
 
-const Events = ({events_ref,scrollvar}) => {
+const Events = ({events_ref,scrollvar,setShowModal}) => {
 
     const [inView, setInView] = useState(false);
     const [showEventModal, setShowEventModal] = useState(false);
@@ -71,12 +71,13 @@ const Events = ({events_ref,scrollvar}) => {
                                     </motion.div>
         
                                     <motion.div className='event3' variants={slideAnimation}
-                                        onClick={(e)=> {setShowEventModal(true); setEventName(e.target.parentNode.className)}}
+                                        onClick={(e)=> {setShowModal(true);}}
                                         initial={{opacity:0, x:'0', y:'0'}}
                                         animate={inView?"visible":""}
                                         transition={slideAnimation.transition}
                                     >
-                                        <img src={bloom} alt="" style={{width:'300px'}} />
+                                        Spotlight
+                                        {/* <img src={bloom} alt=""  /> */}
                                     </motion.div>
         
                                     <motion.div className='event4' variants={slideAnimation}
@@ -123,7 +124,7 @@ const Events = ({events_ref,scrollvar}) => {
                                         animate={inView?"visible":""}
                                         transition={slideAnimation.transition}
                                     >
-                                        <img src={event1} alt="" style={{height:'255px'}}/>
+                                        <img src={event1} alt="" style={{height:'255px', objectPosition:'left'}}/>
                                     </motion.div>
 
                                     <motion.div className='event12' variants={slideAnimation}
@@ -132,7 +133,7 @@ const Events = ({events_ref,scrollvar}) => {
                                         animate={inView?"visible":""}
                                         transition={slideAnimation.transition}
                                     >
-                                        <img src={event2} alt="" style={{height:'255px'}}/>
+                                        <img src={event2} alt="" style={{height:'255px', objectPosition:'left'}}/>
                                     </motion.div>
 
                                     {/* <motion.div className='teamprev' variants={slideAnimation}
