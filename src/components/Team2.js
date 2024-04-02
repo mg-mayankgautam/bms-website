@@ -43,7 +43,6 @@ var settings1 = {
       breakpoint: 600,
       settings: {initialSlide: 0,
         slidesToShow: 2,
-        slidesToScroll: 2,
       }
     }
   ],
@@ -52,7 +51,6 @@ var settings1 = {
       breakpoint: 800,
       settings: {initialSlide: 0,
         slidesToShow: 3,
-        slidesToScroll: 3,
       }
     }
   ]

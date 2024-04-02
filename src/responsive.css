@@ -14,7 +14,29 @@
   .facultyHeading{font-size: 40px;}
   .facultyName{font-size: 32px;}
   .facultyText{font-size: 14px;}
-  .wallText{font-size: 72px;}
+}
+
+
+@media only screen and (max-width:1024px){
+  .aboutCards{
+    height: 270px; width: 270px;
+  }
+  .aboutCardsText{
+    font-size: 14px;
+  }
+
+  .eventsHeading{font-size: 40px;}
+  .eventsSubHeading{font-size: 24px;}
+  .bentoGrid{
+    grid-template-columns: repeat(3, 160px);
+    grid-template-rows: repeat(3, 150px);
+  }
+  .bentoGrid.bento2{
+    grid-template-columns: repeat(2, 240px);
+  grid-template-rows: repeat(2, 225px);
+  }
+  .button-arrow1{left: 8%;}
+  .button-arrow2{left: 16%;}
 }
 
 @media only screen and (max-width:995px){
@@ -41,47 +63,8 @@
   .facultyText{font-size: 12px;}
 }
 
-@media only screen and (max-width:1024px){
-  .aboutCards{
-    height: 270px; width: 270px;
-  }
-  .aboutCardsText{
-    font-size: 14px;
-  }
-
-  .eventsHeading{font-size: 40px;}
-  .eventsSubHeading{font-size: 24px;}
-  .bentoGrid{
-    grid-template-columns: repeat(3, 160px);
-    grid-template-rows: repeat(3, 150px);
-  }
-  .bentoGrid.bento2{
-    grid-template-columns: repeat(2, 240px);
-  grid-template-rows: repeat(2, 225px);
-  }
-  .button-arrow1{left: 8%;}
-  .button-arrow2{left: 16%;}
-}
 
 
-
-@keyframes scale-in-mobile{ /*wall text*/
-  0%{
-    opacity:0;
-    transform: translateY(-220%) scale(0.8); 
-  }
-  11.5%{
-    opacity: 0.3;
-    transform: translateY(0) scale(0.9);
-  }
-  30%{
-    opacity: 1;
-  }
-  100%{
-    opacity:1;
-    transform: scale(1); 
-  }
-}
 
 @media only screen and (max-width: 770px){
   body{
@@ -109,7 +92,7 @@
     margin-top: 0;
   }
   .about_child{
-    position: static;
+    position: relative;
     background-image: none;
     background-color: transparent;
     }
@@ -126,7 +109,7 @@
     margin-top: 0;
   }
   .Faculty{
-    position: static;
+    position: relative;
     border-bottom-left-radius: 0px;
     border-bottom-right-radius: 0px;
     background-image: none;
@@ -137,13 +120,25 @@
   .FacultyMobile{display: block;}
   .facultyContent{gap: 20px;}
 
+  .facultyContent{
+    grid-template-columns: auto;
+  }
+  .FacultyMobile{order: 1;}
+  .facultyImgDiv{order: 2; width: 400px; }
+  .facultyLayerContent{
+    align-items: center;
+    height: max-content;
+  }
+  .facultyImg{object-fit: cover; object-position: top;}
+  .facultyHeading{text-align: center;}
+
   .teamContainer{
     height: max-content;
-    margin-top: 0;
+    margin-top: 100px;
     background-color: transparent;
   }
   .Team2{
-    position: static;
+    position: relative;
     border-bottom-left-radius: 0px;
     border-bottom-right-radius: 0px;
     background-image: none;
@@ -155,15 +150,38 @@
     background-image: none;
     background-color: transparent;
   }
+
+  @keyframes scale-in-mobile{ 
+    0%{
+      opacity:0;
+      transform: translateY(-220%) scale(0.8); 
+    }
+    11.5%{
+      opacity: 0.3;
+      transform: translateY(-100%) scale(0.9);
+    }
+    30%{
+      opacity: 1;
+    }
+    100%{
+      opacity:1;
+      transform: scale(1); 
+    }
+  }
+
   .wallText{
-    animation: scale-in-mobile linear forwards; animation-timeline: view(); animation-range-start:cover; animation-range-end:contain;
+    /* transform: translateY(-100%); */
+    animation: scale-in-mobile linear forwards !important; 
+    animation-timeline: view(); 
+    animation-range-start:cover; 
+    animation-range-end:contain;
   }
   .footerContainer{
     min-height: 100vh;
     margin-top: 0;
   }
   .Footer{
-    position: static;
+    position: relative;
     background-color: transparent;
   }
   .footerjoinUs{
@@ -182,7 +200,59 @@
   }
   /* .eventsCarousel{width: max-content;} */
   .slick-slider{
-    height: 520px;
+    height: 480px;
     margin-left: -300px; /*-500 pehle*/
   }
+
+
+  .Events{
+    padding: 100px 0;
+  }
+  .eventsCarousel{
+    grid-template-columns: auto;
+  }
+  .eventsHeading{font-size: 56px;}
+  .eventsSubHeading{text-align: center; font-size: 40px;}
+  .bentoGrid, .bentoGrid.bento2{
+    display: flex;
+    gap: 20px;
+    overflow-x: scroll;
+    min-width: 100vw;
+    /* max-width: 100%; */
+    height: 70vh;
+    justify-content: flex-start;
+    padding-left: 20px;
+    padding-bottom: 10px;
+    margin-right: 20px;
+  }
+
+  .bentoGrid::-webkit-scrollbar{display: none;}
+
+  .carousel{flex-direction: row; overflow: hidden;}
+  .button-arrow1{top: 10%;}
+  .button-arrow2{top: 10%;}
+  .bentoGrid>div{
+    min-height: 250px;
+    min-width: 250px;
+  }
+  .bentoGrid>div>img{
+    height: 100% !important;
+    width: 100% !important;
+    object-fit: cover
+    /* max-width: fit-content; */
+  }
+}
+
+
+@media (orientation:portrait){
+  .About{
+    padding: 100px 0;
+  }
+  .aboutMain{
+    flex-direction: column;
+    gap: 20px;
+  }
+  .wallText{font-size: 80px;}
+  .footerjoinUs{grid-template-columns: auto;}
+  .joinUs{ padding: 0 30px;}
 }
