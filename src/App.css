@@ -872,7 +872,7 @@ button{
   /* box-shadow: rgba(171, 26, 255, 0.25) 0px 2px 10px;  */
   background-image: linear-gradient(#ffffff, #afadec);
 }
-.wallTextDiv{
+.wallTextDiv, .wallTextDiv_mobile{
   height: 100dvh;
   display: flex;
   align-items: center;
@@ -900,6 +900,8 @@ button{
   /* padding: 100px 0; */
   /* animation: scale-in linear forwards; animation-timeline: view(); animation-range-start:cover; animation-range-end:contain; */
 }
+
+.wallTextDiv_mobile{display: none;}
 
 @keyframes slide-in-un{ /*wall Cards*/
   0%{
@@ -1026,7 +1028,6 @@ button{
 }
 
 .wallCardsDiv{
-  position: absolute;
 }
 
 .wallCards{

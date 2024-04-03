@@ -16,48 +16,75 @@ import { IoIosArrowBack, IoIosArrowForward } from "react-icons/io";
 import groupphoto from '../assets/team/group.JPG'
 
 
-var settings1 = {
-  className: "center",
-  centerMode: true,
-  dots: false,
-  infinite: true,
-  speed: 500,
-  slidesToShow: 7,
-  slidesToScroll: 1,
-  initialSlide: 0,
-  arrows : false,
-  focusOnSelect: true,
-  swipeToSlide: true,
-  centerPadding: "150px",
-  responsive: [
-    {
-      breakpoint: 480,
-      settings: {initialSlide: 0,
-        slidesToShow: 1,
-        slidesToScroll: 1
-      }
-    }
-  ],
-  responsive :[
-    {
-      breakpoint: 600,
-      settings: {initialSlide: 0,
-        slidesToShow: 2,
-      }
-    }
-  ],
-  responsive:[
-    {
-      breakpoint: 800,
-      settings: {initialSlide: 0,
-        slidesToShow: 3,
-      }
-    }
-  ]
-};
-
-
 const Team2 = ({team_ref}) => {
+
+  var settings = {
+    className: "center",
+    centerMode: true,
+    dots: false,
+    infinite:true,
+    speed: 500,
+    slidesToShow: 7,
+    slidesToScroll: 1,
+    initialSlide: 0,
+    arrows : false,
+    focusOnSelect: true,
+    swipeToSlide: true,
+    centerPadding: "150px",
+    // responsive:[
+    //   {
+    //     breakpoint: '800px',
+    //     settings: {initialSlide: 0,
+    //       slidesToShow: 3,
+    //       infinite: false
+    //     }
+    //   }
+    // ],
+    // responsive :[
+    //   {
+    //     breakpoint: '600px',
+    //     settings: {initialSlide: 0,
+    //     slidesToShow: 2,
+    //     infinite: false,
+    //     centerPadding:"50px",
+    //     }
+    //   }
+    // ],
+    responsive: [
+      {
+        breakpoint: '600px',
+        settings: {
+          initialSlide: 0,
+          slidesToShow: 1,
+          infinite: false,
+          centerPadding:"50px",
+        }
+      },
+      {
+        breakpoint: '700px',
+        settings: {
+          initialSlide: 0,
+          slidesToShow: 2,
+          infinite: false,
+          centerPadding:"50px",
+        }
+      },
+      
+      {
+        breakpoint: '800px',
+        settings: {
+          initialSlide: 0,
+          slidesToShow: 3,
+          infinite: false,
+          centerPadding:"100px",
+
+        }
+      }
+    ],
+  };
+  
+  
+
   const arrowRef = useRef(null);
 
   // console.log(arrowRef.current)
@@ -67,7 +94,7 @@ const Team2 = ({team_ref}) => {
     <div className='Team2'>
           <div className='teamHeading'>Meet the Team</div>
         <div className='SliderContainer'>
-          <Slider ref={arrowRef} {...settings1}> 
+          <Slider ref={arrowRef} {...settings}> 
           
                 <motion.div  className='teamMember'
                   >
