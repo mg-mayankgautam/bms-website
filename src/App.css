@@ -1113,6 +1113,8 @@ button{
   /* background-color: rgb(255, 165, 165); */
   background-color: #ffffff;
   min-height: 55vh;
+  min-height: 55dvh;
+  min-height: 55svh;
   display: grid;
   grid-template-columns: 1fr 1fr;
   /* justify-content: center; */
