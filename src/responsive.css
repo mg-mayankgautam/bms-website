@@ -89,6 +89,8 @@
   }
   .About{
     height: 100vh;
+    height: 100dvh;
+    height: 100svh;
     margin-top: 0;
   }
   .about_child{
@@ -127,6 +129,8 @@
     max-width: 100%;
     /* max-width: 100%; */
     height: 70vh;
+    height: 70dvh;
+    height: 70svh;
     justify-content: flex-start;
     padding-bottom: 10px;
     overflow-y: hidden;
@@ -141,6 +145,8 @@
   .bentoGrid>div{
     flex-shrink: 0;
     height: 55vh;
+    height: 55dvh;
+    height: 55svh;
     width: 300px;
     animation: none !important;
   }
@@ -153,6 +159,8 @@
   
   .FacultyContainer{
     min-height: 100vh;
+    min-height: 100dvh;
+    min-height: 100svh;
     margin-top: 0;
   }
   .Faculty{
@@ -209,6 +217,8 @@
 
   .Wall{
     height: 100vh;
+    height: 100dvh;
+    height: 100svh;
     border-bottom-left-radius: 0px;
     border-bottom-right-radius: 0px;
     background-image: none;
@@ -238,6 +248,8 @@
 
   .wallTextDiv_mobile{
     min-height: 100vh;
+    min-height: 100dvh;
+    min-height: 100svh;
     display: flex;
     flex-direction: column;
     justify-content: center;
