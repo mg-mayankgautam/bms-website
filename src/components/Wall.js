@@ -62,29 +62,29 @@ const Wall = () => {
             </div>
             <div className='wallCardsDiv'>
                     <div className='wallCards six'  style={{animation: 'slide-in-six 0.5s forwards', animationTimeline: 'view()', animationRangeStart:'cover', animationRangeEnd:'contain'}}>
-                    <img src={card6}/>
+                    <img src={card1}/>
 
                     </div>
                     <div className='wallCards un' style={{animation: 'slide-in-un 0.5s forwards', animationTimeline: 'view()', animationRangeStart:'cover', animationRangeEnd:'contain'}}>
-                      <img src={card1}/>
+                      <img src={card2}/>
                       {/* <div className='wallCardsContent'>
                         <img src={}/>
                         <div className='cardName'>Mayank</div>
                       </div> */}
                     </div>
                     <div className='wallCards deux'  style={{animation: 'slide-in-deux 0.5s forwards', animationTimeline: 'view()', animationRangeStart:'cover', animationRangeEnd:'contain'}}>
-                      <img src={card2}/>
+                      <img src={card3}/>
                     </div>
                     <div className='wallCards trois'  style={{animation: 'slide-in-trois 0.5s forwards', animationTimeline: 'view()', animationRangeStart:'cover', animationRangeEnd:'contain'}}>
-                    <img src={card1}/>
+                    <img src={card4}/>
 
                     </div>
                     <div className='wallCards quatre'  style={{animation: 'slide-in-quatre 0.5s forwards', animationTimeline: 'view()', animationRangeStart:'cover', animationRangeEnd:'contain'}}>
-                    <img src={card2}/>
+                    <img src={card5}/>
 
                     </div>
                     <div className='wallCards cinq'  style={{animation: 'slide-in-cinq 0.5s forwards', animationTimeline: 'view()', animationRangeStart:'cover', animationRangeEnd:'contain'}}>
-                    <img src={card1}/>
+                    <img src={card6}/>
 
                     </div>
             </div>

@@ -52,7 +52,7 @@ const Team2 = ({team_ref}) => {
     // ],
     responsive: [
       {
-        breakpoint: '600px',
+        breakpoint: '770px',
         settings: {
           initialSlide: 0,
           slidesToShow: 1,
@@ -60,26 +60,26 @@ const Team2 = ({team_ref}) => {
           centerPadding:"50px",
         }
       },
-      {
-        breakpoint: '700px',
-        settings: {
-          initialSlide: 0,
-          slidesToShow: 2,
-          infinite: false,
-          centerPadding:"50px",
-        }
-      },
+      // {
+      //   breakpoint: '700px',
+      //   settings: {
+      //     initialSlide: 0,
+      //     slidesToShow: 2,
+      //     infinite: false,
+      //     centerPadding:"50px",
+      //   }
+      // },
       
-      {
-        breakpoint: '800px',
-        settings: {
-          initialSlide: 0,
-          slidesToShow: 3,
-          infinite: false,
-          centerPadding:"100px",
+      // {
+      //   breakpoint: '800px',
+      //   settings: {
+      //     initialSlide: 0,
+      //     slidesToShow: 3,
+      //     infinite: false,
+      //     centerPadding:"100px",
 
-        }
-      }
+      //   }
+      // }
     ],
   };
   
