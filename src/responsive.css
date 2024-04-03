@@ -111,7 +111,7 @@
     box-shadow: rgba(171, 26, 255, 0) 0px 2px 10px;
   }
   .Events{
-    padding: 100px 0;
+    padding: 0px 0;
     margin-right: 20px;
     margin-left: 20px;
   }
@@ -140,8 +140,9 @@
   .button-arrow2{top: 10%;}
   .bentoGrid>div{
     flex-shrink: 0;
-    min-height: 50vh;
-    width: 250px;
+    height: 55vh;
+    width: 300px;
+    animation: none !important;
   }
   .bentoGrid>div>img{
     height: 100% !important;
@@ -308,7 +309,7 @@
     padding: 0px 0;
     margin: 0 20px;
   }
-  .Events{padding: 0px 0px 80px;}
+  .Events{padding: 0px 0px 0px;}
   .footerjoinUs{padding: 0px 0px;}
   .aboutMain{
     /* flex-direction: column; */
@@ -335,10 +336,39 @@
     width: 300px;
   flex-shrink: 0;
   }
-  .facultyImgDiv{
-    width: 300px;
+
+  .EventDiv{
+    max-width: 90%;
+    /* max-height: 70%; */
   }
-  .facultyImg{object-position: left;}
+  .eventPosterFlex{
+    overflow-x: scroll;
+    justify-content: flex-start;
+    width: 100%;
+    overflow-y: hidden;
+  }
+  .eventPosterFlex::-webkit-scrollbar{display: none;}
+
+  .eventPosterFlex>img{
+    flex-shrink: 0;
+  }
+
+  .facultyLayerContent{
+    margin: 20px;
+    padding: 0;
+  }
+  .facultyContent{padding: 0;}
+  .facultyImgDiv{
+    width: 90%;
+    /* margin: 0 20px; */
+  }
+  .facultyText{width: 100%;}
+  .facultyImg{object-position: left; }
+
+  .teamHeading{
+    font-size: 48px;
+  }
+  .next, .back{display: none;}
   .wallText{font-size: 60px;}
 
   .wallCards{
