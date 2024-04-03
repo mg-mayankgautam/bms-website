@@ -216,9 +216,10 @@
 
 
   .Wall{
-    height: 100vh;
-    height: 100dvh;
-    height: 100svh;
+    max-height: 100vh;
+    max-height: 100dvh;
+    max-height: 100svh;
+    height: 100%;
     border-bottom-left-radius: 0px;
     border-bottom-right-radius: 0px;
     background-image: none;
@@ -247,12 +248,13 @@
   .wallTextDiv{display: none;}
 
   .wallTextDiv_mobile{
-    min-height: 100vh;
-    min-height: 100dvh;
-    min-height: 100svh;
+    /* max-height: 100vh;
+    max-height: 100dvh;
+    max-height: 100svh;  */
+    max-height: max-content;
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: flex-start;
     align-items: center;
     gap: 50px;
   }
@@ -391,6 +393,10 @@
   .facultyText{width: 100%;}
   .facultyImg{object-position: left; }
 
+  .Team2{
+    justify-content: center;
+  }
+
   .teamHeading{
     font-size: 48px;
   }
@@ -398,7 +404,7 @@
     box-shadow: rgba(0, 0, 0, 0.35) 0px 2px 10px; 
   }
   .next, .back{display: none;}
-  .Wall{padding: 0 20px;}
+  .Wall{padding: 0px 20px 100px;}
   .wallText{font-size: 60px;}
 
   .wallCards{
