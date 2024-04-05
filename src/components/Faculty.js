@@ -1,15 +1,50 @@
-import React from 'react'
+import React, { useEffect,useState } from 'react'
 import maam from '../assets/rubeenamam.jpeg'
+import { motion } from "framer-motion"
 
-const Faculty = () => {
+
+const Faculty = ({scrollvar}) => {
+
+  console.log(scrollvar);
+  const [startfade,setstartfade]=useState(false);
+
+  useEffect(()=>{
+
+    if(scrollvar>250){
+      setstartfade(true);
+    }
+
+
+  },[scrollvar])
+
+  const fadeAnimation = {
+    initial:{opacity:0.4,scale:0.8,},
+    visible:{
+        opacity:1,
+      scale:1,
+    },
+    transition:{duration:0.8, type:"easeInOut"}
+}
+
   return (
     <div className='FacultyContainer'>
         <div className='Faculty'>
             {/* <div className='teamHeading'>Meet Our Faculty Coordinator</div> */}
             <div className='facultyContent'>
-                <div className='facultyImgDiv'>
+                <motion.div className='facultyImgDiv' variants={fadeAnimation}
+                initial='initial'
+                animate={startfade?'visible':''}
+                >
+
                   <img src={maam} className='facultyImg'/>
-                </div>
+                </motion.div>
+                {/* <div className='facultyImgDiv' 
+                  style={{
+                    animation: 'scale-in linear forwards', 
+                    animationTimeline: 'view()', animationRangeStart:'cover', 
+                    animationRangeEnd:'contain'
+                  }}> 
+                  <img src={maam} className='facultyImg'/></div> */}
                 <div className='FacultyMobile'>
                 <div className='facultyLayerContent'>
                 <div className='facultyHeading'>

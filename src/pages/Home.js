@@ -14,7 +14,9 @@ import SpotlightModal from '../components/SpotlightModal';
 
 const Home = () => {
 
-  const [hide, setHide] = useState(false)
+  // const [hide, setHide] = useState(false)
+  const [hide, setHide] = useState(true)
+
   const [isDisplayed, setIsDisplayed] = useState(false);
   const [showModal, setShowModal] = useState(false);
 
@@ -40,7 +42,7 @@ const Home = () => {
   const [scrollvar, setscrollvar]= useState(0)
   
   useMotionValueEvent(scrollY, "change", (latest) => {
-      console.log(latest);
+      // console.log(latest);
       const height = document.body.clientHeight;
       setscrollvar(latest*100/height)
     //  console.log(scrollvar)
@@ -64,7 +66,7 @@ const Home = () => {
         {isDisplayed&&showModal? <SpotlightModal onClose={()=> setShowModal(false)}/>:<></> }
         {isDisplayed? <About about_ref={about_ref}/>:<></> }
         {isDisplayed? <Events events_ref={events_ref}  scrollvar={scrollvar} setShowModal={setShowModal}/>:<></> }
-        {isDisplayed?  <Faculty/>:<></> }
+        {isDisplayed?  <Faculty scrollvar={scrollvar}/>:<></> }
         {isDisplayed?  <Team2 team_ref={team_ref}/>:<></> }
         {isDisplayed?  <Wall/>:<></> }
         {/* {isDisplayed?  <Support/>:<></> } */}

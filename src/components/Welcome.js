@@ -21,23 +21,23 @@ const Welcome = ({hide,setHide, scrollvar}) => {
   const defaultAnimation = {hidden:{opacity:0,y:"25%"},visible:{opacity:1,y:"0%"}}
 
   const heading ='Keeping Mental Health in Check'
-  const text=' Popularly abbreviated as BMS and founded in 2022, is the first student         '
-  const text2= '-led Mental Health society at Bharati Vidyapeeth’s College of' 
-  const text3= 'Engineering and IP University. The main purpose of BMS is to'
-  const text4='advocate the cause of spreading awareness about mental health'
-  const text5='issues and encourage people to look beyond the stigma associated'
-  const text6= 'with this sensitive subject. The vision of our society is to create a safe'
-  const text7='space for all, such that under no circumstance, a student feels'
-  const text8='hesitant to talk about his/her mental health issues. We aim to'
-  const text9='destigmatize mental illness by conducting interactive and fun'
-  const text10='sessions, wherein the students can feel heard and can be given useful '
-  const text11='advice.'
+  // const text=' Popularly abbreviated as BMS and founded in 2022, is the first student         '
+  // const text2= '-led Mental Health society at Bharati Vidyapeeth’s College of' 
+  // const text3= 'Engineering and IP University. The main purpose of BMS is to'
+  // const text4='advocate the cause of spreading awareness about mental health'
+  // const text5='issues and encourage people to look beyond the stigma associated'
+  // const text6= 'with this sensitive subject. The vision of our society is to create a safe'
+  // const text7='space for all, such that under no circumstance, a student feels'
+  // const text8='hesitant to talk about his/her mental health issues. We aim to'
+  // const text9='destigmatize mental illness by conducting interactive and fun'
+  // const text10='sessions, wherein the students can feel heard and can be given useful '
+  // const text11='advice.'
   const text1='Popularly abbreviated as BMS and founded in 2022, Blissful Minds Society is the first student-led Mental Health society at Bharati Vidyapeeth’s College of Engineering and IP University. The main purpose of BMS is to advocate the cause of spreading awareness about mental health issues and encourage people to look beyond the stigma associated with this sensitive subject. The vision of our society is to create a safe space for all, such that under no circumstance, a student feels hesitant to talk about his/her mental health issues. We aim to destigmatize mental illness by conducting interactive and funsessions, wherein the students can feel heard and can be given useful advice.'
   
   
   return (
     <div className='Welcome'>
-        <motion.div className='welcomeText'
+        {/* <motion.div className='welcomeText'
         variants={{fade:{opacity: 0},visible:{opacity: 1}}}
         initial='visible'
         animate={hide?"fade":""}
@@ -45,6 +45,7 @@ const Welcome = ({hide,setHide, scrollvar}) => {
         > 
         hello and welcome
         </motion.div>
+
         <motion.div className='logoBgdiv'
         variants={{fade:{opacity: 0},visible:{opacity: 1}}}
         initial='visible'
@@ -52,7 +53,7 @@ const Welcome = ({hide,setHide, scrollvar}) => {
         transition={{duration:0.5}}
         > 
         <img src={logobg} className='logoBg'/>
-        </motion.div>
+        </motion.div> */}
         
 
         <motion.div 
