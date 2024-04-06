@@ -64,7 +64,7 @@ const Home = () => {
         <Welcome hide={hide} setHide={setHide} scrollvar={scrollvar}/>
         
         {isDisplayed&&showModal? <SpotlightModal onClose={()=> setShowModal(false)}/>:<></> }
-        {isDisplayed? <About about_ref={about_ref}/>:<></> }
+        {isDisplayed? <About about_ref={about_ref} scrollvar={scrollvar}/>:<></> }
         {isDisplayed? <Events events_ref={events_ref}  scrollvar={scrollvar} setShowModal={setShowModal}/>:<></> }
         {isDisplayed?  <Faculty scrollvar={scrollvar}/>:<></> }
         {isDisplayed?  <Team2 team_ref={team_ref}/>:<></> }

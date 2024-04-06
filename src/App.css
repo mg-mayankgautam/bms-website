@@ -234,6 +234,40 @@ button{
   /* box-shadow: rgba(171, 26, 255, 0.35) 0px 2px 10px;  */
 }
 
+@keyframes about-scalein{ /*wall text*/
+  0%{
+    opacity:0.5;
+    transform: translateY(1100%) scale(0.3); 
+  }
+  90%{
+    opacity:1;
+    transform: translateY(0%) scale(1);
+  }
+  100%{
+    opacity:1;
+    transform: translateY(0%) scale(1);
+  }
+}
+
+@keyframes cards-scalein{ /*wall text*/
+  0%{
+    opacity:0;
+    transform: scale(0.5);  
+  }
+  100%{
+    opacity:1;
+    transform: scale(1); 
+  }
+}
+@keyframes bee-fade-in{ /*wall text*/
+  0%{
+    opacity:0;
+  }
+  100%{
+    opacity:1;
+  }
+}
+
 .aboutHeading{
   font-size: 56px;
   font-family: myfont;
@@ -241,6 +275,11 @@ button{
   color: #219897;
   padding-top: 30px;
   /* height: 400px; */
+  animation: about-scalein linear forwards;
+  animation-timeline: view();
+  animation-range-start: contain;
+  animation-range-end: cover;
+  z-index: 31;
 }
 .aboutMain{
   display: flex;
@@ -253,7 +292,16 @@ button{
 .aboutBee{
   /* height: 50px; */
   object-fit: cover;
+  opacity:0; 
+  animation: bee-fade-in linear forwards;
+  animation-timeline: view();
+  animation-range-start: contain 80%;
+  animation-range-end: contain 88%;
 }
+
+
+
+
 .aboutCards{
   position: relative;
   background-color: rgb(0, 0, 0);
@@ -261,6 +309,12 @@ button{
   height: 300px;
   width: 300px;
   box-shadow: rgba(171, 26, 255, 0.35) 0px 2px 8px;
+  opacity:0;
+  transform: scale(0.5); 
+  animation: cards-scalein linear forwards;
+  animation-timeline: view();
+  animation-range-start: contain 35%;
+  animation-range-end: contain 70%;
 }
 .aboutCards>img{
   object-fit: cover;
@@ -279,6 +333,61 @@ button{
   height: 100%;
   width: 100%;
   gap: 20px;
+}
+
+@property --num {
+  syntax: "<integer>";
+  initial-value: 0;
+  inherits: false;
+}
+
+.aboutCardsHead.one {
+  animation: counter 5s linear forwards;
+  counter-reset: num var(--num);
+}
+.aboutCardsHead.one::after {
+  content: counter(num) '+';
+}
+
+@keyframes counter {
+  from {
+    --num: 0;
+  }
+  to {
+    --num: 100;
+  }
+}
+.aboutCardsHead.two {
+  animation: counter2 5s linear forwards;
+  counter-reset: num var(--num);
+}
+.aboutCardsHead.two::after {
+  content: counter(num) '+';
+}
+
+@keyframes counter2 {
+  from {
+    --num: 0;
+  }
+  to {
+    --num: 20;
+  }
+}
+.aboutCardsHead.three {
+  animation: counter3 5s linear forwards;
+  counter-reset: num var(--num);
+}
+.aboutCardsHead.three::after {
+  content: counter(num) '+';
+}
+
+@keyframes counter3 {
+  from {
+    --num: 0;
+  }
+  to {
+    --num: 10;
+  }
 }
 
 .aboutCardsHead{
