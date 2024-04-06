@@ -246,7 +246,7 @@ const Events = ({events_ref,scrollvar,setShowModal}) => {
         </div>
 
 
-        <div className='FacultyLayer'>
+        {/* <div className='FacultyLayer'>
             <div></div>
             <div className='facultyLayerContent'>
                 <div className='facultyHeading'>
@@ -264,7 +264,7 @@ const Events = ({events_ref,scrollvar,setShowModal}) => {
                     
                 </div>
             </div>
-        </div>
+        </div> */}
     </div>
   )
 }

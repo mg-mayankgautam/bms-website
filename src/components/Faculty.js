@@ -31,22 +31,19 @@ const Faculty = ({scrollvar}) => {
         <div className='Faculty'>
             {/* <div className='teamHeading'>Meet Our Faculty Coordinator</div> */}
             <div className='facultyContent'>
-                <motion.div className='facultyImgDiv' variants={fadeAnimation}
+                {/* <motion.div className='facultyImgDiv' variants={fadeAnimation}
                 initial='initial'
                 animate={startfade?'visible':''}
                 >
 
                   <img src={maam} className='facultyImg'/>
-                </motion.div>
-                {/* <div className='facultyImgDiv' 
-                  style={{
-                    animation: 'scale-in linear forwards', 
-                    animationTimeline: 'view()', animationRangeStart:'cover', 
-                    animationRangeEnd:'contain'
-                  }}> 
-                  <img src={maam} className='facultyImg'/></div> */}
+                </motion.div> */}
+                <div className='facultyImgDiv' 
+                  style={{animation: 'faculty-scalein linear forwards', animationTimeline: 'view()', animationRangeStart: 'contain', animationRangeEnd: 'contain 92%'}}
+                  > 
+                  <img src={maam} className='facultyImg'/></div>
                 <div className='FacultyMobile'>
-                <div className='facultyLayerContent'>
+                  <div className='facultyLayerContent' style={{animation: 'faculty-parallax linear forwards', animationTimeline: 'view()', animationRangeStart: 'contain', animationRangeEnd: 'contain 92%'}}>
                 <div className='facultyHeading'>
                 Meet Our Faculty Coordinator
                 </div>
@@ -62,7 +59,7 @@ const Faculty = ({scrollvar}) => {
                     4) Get help when you need, seek help. It is a measure of strength not weakness.*/}</p> 
                     
                 </div>
-            </div>        
+                  </div>        
                 </div>
             </div>
             </div>

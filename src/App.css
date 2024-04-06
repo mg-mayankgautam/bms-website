@@ -276,6 +276,8 @@ button{
   padding-top: 30px;
   /* height: 400px; */
   z-index: 31;
+  text-shadow: 2px 7px 5px rgba(0,0,0,0.3), 0px -4px 10px rgba(255,255,255,0.3);
+
 }
 .aboutMain{
   display: flex;
@@ -670,19 +672,43 @@ button{
 }
 
 
-.FacultyLayer{
+/* .FacultyLayer{
   z-index: 20;
   position: relative;
   height: 100vh;
   height: 100dvh;
   height: 100svh;
-  /* display: flex;
-  flex-direction: column;
-  align-items:end; */
   display: grid;
   grid-template-columns: 2.5fr 3fr;
   align-items: center;
+} */
+
+@keyframes faculty-parallax{ /*wall text*/
+  0%{
+    opacity:0.5;
+    transform: translateY(250%); 
+  }
+  /* 90%{
+    opacity:1;
+    transform: translateY(0%) scale(1);
+  } */
+  100%{
+    opacity:1;
+    transform: translateY(0%);
+  }
 }
+
+@keyframes faculty-scalein{ /*wall text*/
+  0%{
+    opacity:0;
+    transform: scale(0.5);  
+  }
+  100%{
+    opacity:1;
+    transform: scale(1); 
+  }
+}
+
 .facultyLayerContent{
   justify-self: left;
   padding-right: 50px;
@@ -710,7 +736,7 @@ button{
 }
 .FacultyContainer{
   min-height: 300vh;
-  margin-top: -300vh;
+  margin-top: -200vh;
 }
 
 .Faculty{
@@ -745,7 +771,7 @@ button{
   gap: 50px;
   padding: 0 50px;
 }
-.FacultyMobile{display: none;}
+/* .FacultyMobile{display: ;} */
 .facultyImgDiv{
   height: 500px;
   min-width: 300px;
@@ -1005,12 +1031,18 @@ button{
 .wallText{
   opacity: 0;
   transform: translateY(-220%)  scale(0.2);
-  color: #543c72;
+  /* color: #543c72; */
   width: 100%;
   position: relative;
   /* min-height: 100dvh; */
   /* padding: 100px 0; */
-  /* animation: scale-in linear forwards; animation-timeline: view(); animation-range-start:cover; animation-range-end:contain; */
+  background-image: linear-gradient(90deg, #00c455, #006eff);
+  /* background-image: url('./assets/wallcolor.jpg'); */
+  background-clip: text;
+  color: transparent;
+  /* background-size: cover; */
+  /* box-shadow: 1px 1px 4px #ffffff; */
+
 }
 
 .wallTextDiv_mobile{display: none;}

@@ -25,7 +25,7 @@ const Footer = ({contact_ref}) => {
             <div className='footerContact'>Contact Us</div>
               <div className='footerLinks'>
                 {/* <Link to='https://www.instagram.com/blissfulminds_bvcoe/' target='_blank'><img src={ig} className='footerIcons'/></Link> */}
-                <Link to='https://www.instagram.com/p/C48WDEcSKzm/' target='_blank'><img src={ig} className='footerIcons'/></Link>
+                {/* <Link to='https://www.instagram.com/p/C48WDEcSKzm/' target='_blank'><img src={ig} className='footerIcons'/></Link> */}
                 <Link to='https://www.linkedin.com/company/blissful-minds-society/' target='_blank'><img src={linkedin} className='footerIcons'/></Link>
                 <div ><a style={{}}  href='https://www.instagram.com/blissfulminds_bvcoe/'><img src={ig} className='footerIcons'/></a></div>
             </div>
