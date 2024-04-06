@@ -340,7 +340,7 @@ button{
 }
 
 .aboutCardsHead.one {
-  animation: counter 5s linear forwards;
+  animation: counter 2.5s linear forwards;
   counter-reset: num var(--num);
 }
 .aboutCardsHead.one::after {
@@ -356,7 +356,7 @@ button{
   }
 }
 .aboutCardsHead.two {
-  animation: counter2 5s linear forwards;
+  animation: counter2 2.5s linear forwards;
   counter-reset: num var(--num);
 }
 .aboutCardsHead.two::after {
@@ -372,7 +372,7 @@ button{
   }
 }
 .aboutCardsHead.three {
-  animation: counter3 5s linear forwards;
+  animation: counter3 2.5s linear forwards;
   counter-reset: num var(--num);
 }
 .aboutCardsHead.three::after {
