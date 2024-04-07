@@ -1,5 +1,5 @@
 import React from 'react'
-import image1 from '../assets/Tran.png'
+// import image1 from '../assets/Tran.png'
 import { useRef, } from "react";
 import { motion, useScroll,useMotionValueEvent,useInView } from "framer-motion";
 

@@ -61,6 +61,8 @@
   .facultyHeading{font-size: 36px;}
   .facultyName{font-size: 24px;}
   .facultyText{font-size: 12px;}
+
+  /* .teamMember{height: 300px; width: 168px;} */
 }
 
 
@@ -72,7 +74,7 @@
   /* background-size: cover; */
   }
   .App{
-    background-image: linear-gradient(#f1f1fc, #afadec);
+    background-image: linear-gradient(#f1f1fc, #c9c9ff, #E1CAFD , #b7e0fa , #afadec);
     transition: background-image 1s;
   }
   .navItems>li>button{display: none;}
@@ -98,8 +100,18 @@
     background-image: none;
     background-color: transparent;
     }
+    .aboutHeading{
+      animation: none !important;
+    }
+    .aboutBee{
+      animation: none !important;
+      opacity:1;
+    }
     .aboutCards{
       height: 200px; width: 200px;
+      animation: none !important;
+      opacity:1;
+      transform: scale(1); 
     }
     .aboutCardsText{
       font-size: 11px;
@@ -116,6 +128,9 @@
     padding: 0px 0;
     margin-right: 20px;
     margin-left: 20px;
+    height: 100vh;
+    height: 100dvh;
+    height: 100svh;
   }
   .eventsCarousel{
     grid-template-columns: auto;
@@ -179,10 +194,14 @@
     grid-template-columns: auto;
   }
   .FacultyMobile{order: 1;}
-  .facultyImgDiv{order: 2; width: 400px; }
+  .facultyImgDiv{
+    order: 2; width: 400px; 
+    animation: none !important; 
+  }
   .facultyLayerContent{
     align-items: center;
     height: max-content;
+    animation: none !important;
   }
   .facultyImg{object-fit: cover; object-position: top;}
   .facultyHeading{text-align: center;}
@@ -216,9 +235,9 @@
 
 
   .Wall{
-    max-height: 100vh;
-    max-height: 100dvh;
-    max-height: 100svh;
+    max-height: 70vh;
+    max-height: 70dvh;
+    max-height: 70svh;
     height: 100%;
     border-bottom-left-radius: 0px;
     border-bottom-right-radius: 0px;
@@ -337,6 +356,7 @@
     padding: 0px 0;
     margin: 0 20px;
   }
+  .about_child{gap: 20px;}
   .Events{padding: 0px 0px 0px;}
   .footerjoinUs{padding: 0px 0px;}
   .aboutMain{
