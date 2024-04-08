@@ -62,7 +62,7 @@ const Footer = ({contact_ref}) => {
           </div>
           <div className='footerCopyright'>
             <div>© 2024 Blissful Minds Society. All Rights Reserved</div> 
-            <div style={{fontSize:''}}>Developed & Designed by 
+            <div style={{fontSize:''}}>Developed & Designed by  
               <a style={{color:'white'}} href='https://www.linkedin.com/in/mg-mayankgautam/' target='_blank'> Mayank</a> , 
               <a style={{color:'white'}} href='https://www.linkedin.com/in/manshapreet/' target='_blank'> Mansha</a> & 
               <a style={{color:'white'}} href='https://www.linkedin.com/in/tusharmittal0109/' target='_blank'> Tushar</a>

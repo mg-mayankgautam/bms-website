@@ -223,7 +223,7 @@ button{
   position: sticky;
   top: 0;
   background-color: #f8efe5;
-  background-image: linear-gradient(#ffffff, #dbbdff);
+  background-image: linear-gradient(#ffffff, #aadeffcc);
   /* background-image: url(./assets/bgg.png); */
   background-size: cover;
   background-repeat: no-repeat;
@@ -307,7 +307,7 @@ button{
   border-radius: 25px;
   height: 300px;
   width: 300px;
-  box-shadow: rgba(171, 26, 255, 0.35) 0px 2px 8px;
+  box-shadow: rgba(171, 26, 255, 0.5) 0px 2px 8px;
   opacity:0;
   transform: scale(0.5); 
   /* animation: cards-scalein linear forwards;
@@ -341,7 +341,7 @@ button{
 }
 
 .aboutCardsHead.one {
-  animation: counter 2.5s linear forwards;
+  animation: counter 2s linear forwards;
   counter-reset: num var(--num);
 }
 .aboutCardsHead.one::after {
@@ -357,7 +357,7 @@ button{
   }
 }
 .aboutCardsHead.two {
-  animation: counter2 2.5s linear forwards;
+  animation: counter2 2s linear forwards;
   counter-reset: num var(--num);
 }
 .aboutCardsHead.two::after {
@@ -365,15 +365,18 @@ button{
 }
 
 @keyframes counter2 {
-  from {
+  0% {
     --num: 0;
   }
-  to {
+  60% {
+    --num: 60;
+  }
+  100%{
     --num: 20;
   }
 }
 .aboutCardsHead.three {
-  animation: counter3 2.5s linear forwards;
+  animation: counter3 2s linear forwards;
   counter-reset: num var(--num);
 }
 .aboutCardsHead.three::after {
@@ -381,10 +384,13 @@ button{
 }
 
 @keyframes counter3 {
-  from {
+  0% {
     --num: 0;
   }
-  to {
+  55% {
+    --num: 60;
+  }
+  100%{
     --num: 10;
   }
 }
@@ -427,8 +433,10 @@ button{
   align-items: center;
   justify-content: flex-end;
   flex-direction: column;
-  box-shadow: 0px 8px 12px 0px rgba(171, 26, 255, 0.20); 
-  background-image: linear-gradient(#dbbdff,#ffffff ,#ffffff);
+  box-shadow: 0px 8px 12px 0px rgba(48, 13, 69, 0.2); 
+  /* box-shadow: rgba(8, 8, 8, 0.35) 0px 2px 10px; */
+
+  background-image: linear-gradient(#aadeffcc ,#ffffff, #e3cbff);
 }
 
 
@@ -779,7 +787,9 @@ button{
   min-width: 300px;
   background-color: white;
   border-radius: 25px;
-  box-shadow: rgba(171, 26, 255, 0.35) 0px 2px 10px; 
+  /* box-shadow: rgba(171, 26, 255, 0.35) 0px 2px 10px; */
+  box-shadow: rgba(11, 11, 11, 0.496) 0px 4px 12px;
+
   /* justify-self: right; */
 }
 .facultyImg{
@@ -1257,6 +1267,7 @@ button{
   border-bottom-left-radius: 100px;
   border-bottom-right-radius: 100px;
   box-shadow: rgba(171, 26, 255, 0.20) 0px 2px 10px; 
+  
   /* background-color: rgb(255, 165, 165); */
   background-color: #ffffff;
   min-height: 55vh;
@@ -1293,6 +1304,7 @@ button{
   font-size: 20px;
   color: rgb(255, 255, 255);
   font-weight: 700;
+  box-shadow: rgba(0, 0, 0, 0.5) 0px 4px 8px;
 }
 
 
