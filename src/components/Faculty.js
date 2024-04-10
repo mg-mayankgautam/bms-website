@@ -1,17 +1,24 @@
 import React, { useEffect,useState } from 'react'
 import maam from '../assets/rubeenamam.jpeg'
 import { motion } from "framer-motion"
+import shivam from '../assets/shivam.jpeg'
+import gurusha from '../assets/gurusha.jpeg'
+import nikita from '../assets/nikita.jpeg'
 
 
 const Faculty = ({scrollvar}) => {
 
   console.log(scrollvar);
-  const [startfade,setstartfade]=useState(false);
+  // const [startfade,setstartfade]=useState(false);
 
   useEffect(()=>{
 
-    if(scrollvar>250){
-      setstartfade(true);
+    // if(scrollvar>250){
+    //   setstartfade(true);
+    // }
+
+    if(scrollvar>330){
+      // setstartfade(true);
     }
 
 
@@ -62,7 +69,20 @@ const Faculty = ({scrollvar}) => {
                   </div>        
                 </div>
             </div>
-            </div>
+            
+            {/* <div className='foundersContent' style={{marginTop:'100px', height:'100vh', display:'grid', gridTemplateColumns:'1fr 1fr 1fr', alignItems:'center', justifyItems:'center'}}>
+                 
+                  <div  className='facultyHeading'>meet</div>
+                  <div><img style={{height:'15rem', borderRadius:'25px' }} src={shivam}></img> </div>
+                  <div className='facultyHeading'>founders</div>
+                  <div><img style={{height:'15rem',borderRadius:'25px'}} src={gurusha}></img> </div>
+                  <div className='facultyHeading'>our</div>
+                  <div><img style={{height:'15rem',borderRadius:'25px'}} src={nikita}></img> </div>
+                  
+            </div> */}
+        </div>
+
+          
     </div>
   )
 }
