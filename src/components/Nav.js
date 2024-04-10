@@ -26,12 +26,25 @@ const Nav = ({hide,setHide, showModal, setShowModal,events_ref, about_ref, team_
       transition={{duration:0.5}}>
 
         <ul className='navItems'>
-            <li className='logoDiv'><Link to='/'><img src={logo}alt="logo" className='Logo' /></Link></li>
-            <li>
+            <li className='logoDiv'>
+              <Link to='/'><img src={logo}alt="logo" className='Logo' />
+                </Link>
+               
+            
+                
+            `</li>
+            {/* <li>
               <div onClick={()=> setShowModal(true)}>
                 Spotlight
               </div>
-            </li>
+            </li> */}
+            {/* <li>
+              <button>
+                <Link to='/Bloom'>
+                    Bloom 
+                </Link>
+              </button>
+            </li> */}
             <li><button onClick={() => {window.scrollTo({ top:607, behavior:'smooth'})}}>About</button></li> 
             <li>
             <button onClick={() => {window.scrollTo({ top:1203, behavior:'smooth'})}}>Events</button>
