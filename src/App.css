@@ -1296,7 +1296,7 @@ button{
   /* font-family: 'bangers'; */
   text-shadow: 1px 1px 4px #ffffff;
 }
-.joinUs>button{
+.askQuesBtn{
   border: none;
   border-radius:25px;
   background-color: #afadec;
