@@ -38,13 +38,13 @@ const Nav = ({hide,setHide, showModal, setShowModal,events_ref, about_ref, team_
                 Spotlight
               </div>
             </li> */}
-            <li>
+            {/* <li>
               <button>
                 <Link to='/Bloom'>
                     Bloom 
                 </Link>
               </button>
-            </li>
+            </li> */}
             <li><button onClick={() => {window.scrollTo({ top:607, behavior:'smooth'})}}>About</button></li> 
             <li>
             <button onClick={() => {window.scrollTo({ top:1203, behavior:'smooth'})}}>Events</button>
