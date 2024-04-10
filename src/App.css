@@ -1385,6 +1385,6 @@ button{
 .Banner_bloom{
   display:grid; 
   grid-template-columns: 1fr 3fr 1fr;
-  height:20vh
+  height:100vh
 }
 
