@@ -46,12 +46,12 @@ const Nav = ({hide,setHide, showModal, setShowModal,events_ref, about_ref, team_
               </button>
             </li> */}
             <li><button onClick={() => {window.scrollTo({ top:607, behavior:'smooth'})}}>About</button></li> 
-            <li>
-            <button onClick={() => {window.scrollTo({ top:1203, behavior:'smooth'})}}>Events</button>
+            {/* <li> */}
+            {/* <button onClick={() => {window.scrollTo({ top:1203, behavior:'smooth'})}}>Events</button> */}
             {/* <button onClick={() => {events_ref.current?.scrollIntoView({behavior:'smooth'})}}>Events</button> */}
-            </li>
-            <li><button onClick={() => {window.scrollTo({ top:2404, behavior:'smooth'})}}>Team</button></li>
-            <li><button onClick={() => {window.scrollTo({ top:5996, behavior:'smooth'})}}>Contact</button></li>
+            {/* </li> */}
+            {/* <li><button onClick={() => {window.scrollTo({ top:2404, behavior:'smooth'})}}>Team</button></li> */}
+            <li><button onClick={() => {window.scrollTo({top: document.body.scrollHeight, behavior: "smooth"})}}>Contact</button></li>
         </ul> 
 
     </motion.div>)

@@ -5,7 +5,7 @@ import { motion } from "framer-motion"
 
 const Faculty = ({scrollvar}) => {
 
-  console.log(scrollvar);
+  // console.log(scrollvar);
   const [startfade,setstartfade]=useState(false);
 
   useEffect(()=>{
