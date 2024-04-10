@@ -27,7 +27,7 @@ const Home = () => {
     }, 1500);
     setTimeout(() => {
       setShowModal(true);
-    }, 2500);
+    }, 5000);
   }
     
   }, [hide])
