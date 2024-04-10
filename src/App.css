@@ -1394,10 +1394,6 @@ background-image: linear-gradient(#dbbdff,#ffffff );
 }
 .BloomBanner{
   display:grid; 
-<<<<<<< HEAD
-  grid-template-columns: 1fr 3fr 1fr;
-  height:100vh
-=======
   grid-template-columns: 1fr 2fr 1fr;
   height:80vh;
   margin: 0px 60px;
@@ -1414,7 +1410,6 @@ background-image: linear-gradient(#dbbdff,#ffffff );
   position: absolute;
   top: 40px;
   right: 0;
->>>>>>> 8342587d0529d33935cede06ddb3d3b04008e391
 }
 
 .bloomBannerLogo{
