@@ -25,9 +25,9 @@ const Footer = ({contact_ref}) => {
             <div className='footerContact'>Contact Us</div>
               <div className='footerLinks'>
                 {/* <Link to='https://www.instagram.com/blissfulminds_bvcoe/' target='_blank'><img src={ig} className='footerIcons'/></Link> */}
-                <Link to='https://www.instagram.com/p/C48WDEcSKzm/' target='_blank'><img src={ig} className='footerIcons'/></Link>
+                {/* <Link to='https://www.instagram.com/p/C48WDEcSKzm/' target='_blank'><img src={ig} className='footerIcons'/></Link> */}
                 <Link to='https://www.linkedin.com/company/blissful-minds-society/' target='_blank'><img src={linkedin} className='footerIcons'/></Link>
-                <div ><a style={{}}  href='https://www.instagram.com/blissfulminds_bvcoe/'><img src={ig} className='footerIcons'/></a></div>
+                <div ><a style={{}}  href='https://www.instagram.com/blissfulminds_bvcoe/' target='_blank'><img src={ig} className='footerIcons'/></a></div>
             </div>
           {/* <img src={logo} className='footerLogo'/> */}
               <div>© 2024 Blissful Minds Society. All Rights Reserved</div>
@@ -37,9 +37,9 @@ const Footer = ({contact_ref}) => {
           <div className='footerCredits'>
               <div>Developed & Designed by :</div>
               <div style={{cursor:'pointer',textDecoration:'underline'}}className='footerCreditsNames'>
-                  <div ><a style={{color:'white'}} href='https://www.linkedin.com/in/mg-mayankgautam/'>Mayank Gautam</a></div>
-                  <div ><a style={{color:'white'}} href='https://www.linkedin.com/in/manshapreet/'>Manshapreet</a></div>
-                  <div ><a style={{color:'white'}} href='https://www.linkedin.com/in/tusharmittal0109/'>Tushar Mittal</a></div>
+                  <div ><a style={{color:'white'}} href='https://www.linkedin.com/in/mg-mayankgautam/' target='_blank'>Mayank Gautam</a></div>
+                  <div ><a style={{color:'white'}} href='https://www.linkedin.com/in/manshapreet/' target='_blank'>Manshapreet</a></div>
+                  <div ><a style={{color:'white'}} href='https://www.linkedin.com/in/tusharmittal0109/' target='_blank'>Tushar Mittal</a></div>
                   
               </div> 
           </div>
@@ -62,9 +62,13 @@ const Footer = ({contact_ref}) => {
           </div>
           <div className='footerCopyright'>
             <div>© 2024 Blissful Minds Society. All Rights Reserved</div> 
-            <div>Developed & Designed by Mayank, Mansha & Tushar</div>
+            <div style={{fontSize:''}}>Developed & Designed by  
+              <a style={{color:'white'}} href='https://www.linkedin.com/in/mg-mayankgautam/' target='_blank'> Mayank</a> , 
+              <a style={{color:'white'}} href='https://www.linkedin.com/in/manshapreet/' target='_blank'> Mansha</a> & 
+              <a style={{color:'white'}} href='https://www.linkedin.com/in/tusharmittal0109/' target='_blank'> Tushar</a>
+              </div>
             </div>
-          <div className='footerBMS'><img className='' src={footerbg}/></div>
+          <div className='footerBMS'><img className='' src={footerbgm}/></div>
         </div>
     </div>
     </div>

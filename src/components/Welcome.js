@@ -20,7 +20,8 @@ const Welcome = ({hide,setHide, scrollvar}) => {
 
   const defaultAnimation = {hidden:{opacity:0,y:"25%"},visible:{opacity:1,y:"0%"}}
 
-  const heading ='Keeping Mental Health in Check'
+  const heading ='Keeping Mental Health'
+  const heading2 ='in Check'
   // const text=' Popularly abbreviated as BMS and founded in 2022, is the first student         '
   // const text2= '-led Mental Health society at Bharati Vidyapeeth’s College of' 
   // const text3= 'Engineering and IP University. The main purpose of BMS is to'
@@ -73,6 +74,12 @@ const Welcome = ({hide,setHide, scrollvar}) => {
               className='mainHeading'
               >  
                     {heading.split('').map(char=>
+                    <motion.span  variants={defaultAnimation} >
+                      {char}
+                    </motion.span>
+                    )}
+                    <br/>
+                    {heading2.split('').map(char=>
                     <motion.span  variants={defaultAnimation} >
                       {char}
                     </motion.span>

@@ -22,24 +22,26 @@ const About = ({about_ref, scrollvar}) => {
     <div className='About' ref={about_ref}>
 
       <div className='about_child'>
-        <div className='aboutHeading'>About The Community</div>
-        <img src={bee} className='aboutBee'/>
+        <div className='aboutHeading' style={{animation: 'about-scalein linear forwards', animationTimeline: 'view()', animationRangeStart: 'contain', animationRangeEnd: 'cover'}}>
+          About The Community
+        </div>
+        <img src={bee} className='aboutBee' style={{animation: 'bee-fade-in linear forwards', animationTimeline: 'view()', animationRangeStart: 'contain 80%', animationRangeEnd: 'contain 88%'}}/>
         <div className='aboutMain'>
-            <div className='aboutCards'>
+            <div className='aboutCards' style={{animation: 'cards-scalein linear forwards', animationTimeline: 'view()', animationRangeStart: 'contain 35%', animationRangeEnd: 'contain 70%'}}>
               <img src={students}/>
               <div className='aboutCardsContent'>
                 <div className='aboutCardsHead'></div>
                 <div className='aboutCardsText'>Students registered with us.</div>
                 </div>
             </div>
-            <div className='aboutCards'>
+            <div className='aboutCards' style={{animation: 'cards-scalein linear forwards', animationTimeline: 'view()', animationRangeStart: 'contain 35%', animationRangeEnd: 'contain 70%'}}>
               <img src={events}/>
               <div className='aboutCardsContent'>
                 <div className='aboutCardsHead'></div>
                 <div className='aboutCardsText'>events conducted on college campus to foster mental well-being in a span of two years.</div>
                 </div>
             </div>
-            <div className='aboutCards'>
+            <div className='aboutCards' style={{animation: 'cards-scalein linear forwards', animationTimeline: 'view()', animationRangeStart: 'contain 35%', animationRangeEnd: 'contain 70%'}}>
               <img src={support}/>
               <div className='aboutCardsContent'>
                 <div className='aboutCardsHead'></div>

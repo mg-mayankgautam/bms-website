@@ -42,7 +42,7 @@ export const EventsData2324 = [
     {
         name: "Bvest",
         class: 'event6',
-        photos: [require('../assets/events/bvest.png'), require('../assets/events/bibo1.png')],
+        photos: [require('../assets/events/bvest.png')],
         description: `Tri-Psych-el was an innovative ideathon conducted in the technical fest of BVCOE, BVEST. Participants presented the judges with innovative technical ideas to deal with real life problems pertaining to mental health and well-being. The ideas, then, were presented in a creative way which included poems, jingles and skits. Oratory Odyssey, an event organized in the technical fest of BVCOE, BVEST was an event which included three thrilling rounds which included group discussion, extempore and a buzzer triviathon rounds. The participants competed in a battle of wits to determine the winner.`,
         mainImg: require('../assets/events/bvest.png'),
         style: {}

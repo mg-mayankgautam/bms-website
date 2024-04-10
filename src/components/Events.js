@@ -54,7 +54,9 @@ const Events = ({events_ref,scrollvar,setShowModal}) => {
                             <div className='bentoGrid'>
                                     <motion.div className='event1' variants={slideAnimation}
                                         onClick={(e)=> {setShowEventModal(true); setEventName(e.target.parentNode.className)}}
-                                        initial={{opacity:0, x:'-10%', y:'-10%'}}
+                                        initial={{opacity:0, 
+                                            // x:'-10%', y:'-10%'
+                                    }}
                                         animate={inView?"visible":""}
                                         transition={slideAnimation.transition}
                                     >
@@ -63,7 +65,9 @@ const Events = ({events_ref,scrollvar,setShowModal}) => {
         
                                     <motion.div className='event2' variants={slideAnimation}
                                         onClick={(e)=> {setShowEventModal(true); setEventName(e.target.parentNode.className)}}
-                                        initial={{opacity:0, x:'10%', y:'-10%'}}
+                                        initial={{opacity:0,
+                                            //  x:'10%', y:'-10%'
+                                            }}
                                         animate={inView?"visible":""}
                                         transition={slideAnimation.transition}
                                     >
@@ -72,7 +76,9 @@ const Events = ({events_ref,scrollvar,setShowModal}) => {
         
                                     <motion.div className='event3' variants={slideAnimation}
                                         onClick={(e)=> {setShowModal(true);}}
-                                        initial={{opacity:0, x:'0', y:'0'}}
+                                        initial={{opacity:0,
+                                            //  x:'0', y:'0'
+                                            }}
                                         animate={inView?"visible":""}
                                         transition={slideAnimation.transition}
                                     >
@@ -82,7 +88,9 @@ const Events = ({events_ref,scrollvar,setShowModal}) => {
         
                                     <motion.div className='event4' variants={slideAnimation}
                                         onClick={(e)=> {setShowEventModal(true); setEventName(e.target.parentNode.className)}}
-                                        initial={{opacity:0, x:'10%', y:'0'}}
+                                        initial={{opacity:0,
+                                            //  x:'10%', y:'0'
+                                            }}
                                         animate={inView?"visible":""}
                                         transition={slideAnimation.transition}
                                     >
@@ -91,7 +99,9 @@ const Events = ({events_ref,scrollvar,setShowModal}) => {
         
                                     <motion.div className='event5' variants={slideAnimation}
                                         onClick={(e)=> {setShowEventModal(true); setEventName(e.target.parentNode.className)}}
-                                        initial={{opacity:0, x:'-10%', y:'10%'}}
+                                        initial={{opacity:0,
+                                            //  x:'-10%', y:'10%'
+                                            }}
                                         animate={inView?"visible":""}
                                         transition={slideAnimation.transition}
                                     >
@@ -100,7 +110,9 @@ const Events = ({events_ref,scrollvar,setShowModal}) => {
         
                                     <motion.div className='event6' variants={slideAnimation}
                                         onClick={(e)=> {setShowEventModal(true); setEventName(e.target.parentNode.className)}}
-                                        initial={{opacity:0, x:'10%', y:'10%'}}
+                                        initial={{opacity:0,
+                                            //  x:'10%', y:'10%'
+                                            }}
                                         animate={inView?"visible":""}
                                         transition={slideAnimation.transition}
                                     >
@@ -120,7 +132,7 @@ const Events = ({events_ref,scrollvar,setShowModal}) => {
 
                                     <motion.div className='event11' variants={slideAnimation}
                                         onClick={(e)=> {setShowEventModal(true); setEventName(e.target.parentNode.className)}}
-                                        initial={{opacity:0, x:'-10%', y:'-10%'}}
+                                        initial={{opacity:0}}
                                         animate={inView?"visible":""}
                                         transition={slideAnimation.transition}
                                     >
@@ -129,7 +141,7 @@ const Events = ({events_ref,scrollvar,setShowModal}) => {
 
                                     <motion.div className='event12' variants={slideAnimation}
                                         onClick={(e)=> {setShowEventModal(true); setEventName(e.target.parentNode.className)}}
-                                        initial={{opacity:0, x:'10%', y:'-10%'}}
+                                        initial={{opacity:0}}
                                         animate={inView?"visible":""}
                                         transition={slideAnimation.transition}
                                     >
@@ -147,7 +159,7 @@ const Events = ({events_ref,scrollvar,setShowModal}) => {
 
                                     <motion.div className='event13' variants={slideAnimation}
                                         onClick={(e)=> {setShowEventModal(true); setEventName(e.target.parentNode.className)}}
-                                        initial={{opacity:0, x:'10%', y:'0'}}
+                                        initial={{opacity:0}}
                                         animate={inView?"visible":""}
                                         transition={slideAnimation.transition}
                                     >
@@ -156,7 +168,7 @@ const Events = ({events_ref,scrollvar,setShowModal}) => {
 
                                     <motion.div className='event14' variants={slideAnimation}
                                         onClick={(e)=> {setShowEventModal(true); setEventName(e.target.parentNode.className)}}
-                                        initial={{opacity:0, x:'-10%', y:'10%'}}
+                                        initial={{opacity:0}}
                                         animate={inView?"visible":""}
                                         transition={slideAnimation.transition}
                                     >
@@ -246,7 +258,7 @@ const Events = ({events_ref,scrollvar,setShowModal}) => {
         </div>
 
 
-        <div className='FacultyLayer'>
+        {/* <div className='FacultyLayer'>
             <div></div>
             <div className='facultyLayerContent'>
                 <div className='facultyHeading'>
@@ -264,7 +276,7 @@ const Events = ({events_ref,scrollvar,setShowModal}) => {
                     
                 </div>
             </div>
-        </div>
+        </div> */}
     </div>
   )
 }
