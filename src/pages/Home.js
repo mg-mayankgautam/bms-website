@@ -25,9 +25,10 @@ const Home = () => {
     setTimeout(() => {
       setIsDisplayed(true);
     }, 1500);
+
     setTimeout(() => {
       setShowModal(true);
-    }, 2500);
+    }, 3000);
   }
     
   }, [hide])

@@ -14,7 +14,9 @@ const Footer = ({contact_ref}) => {
           <div className='joinUs'>
             <h1>Join our community!</h1>
             <div>Be a part of a community that cares! Join Blissful Minds Society today and help us in creating a community that aims at ending stigma and fostering acceptance around mental health and well-being.</div>
-            <button>ask a question</button>
+            <a href='mailto:blissfulminds.bvcoe@gmail.com'>
+            <button className='askQuesBtn'>ask a question</button>
+            </a>
           </div>
           <div></div>
         </div>
