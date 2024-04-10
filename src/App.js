@@ -3,7 +3,8 @@ import './App.css';
 import './responsive.css';
 import Layout from './Layout';
 import Home from './pages/Home';
-import About from './components/About'
+import Bloom from './components/Bloom';
+import About from './components/About';
 import { Route, Routes, useNavigate } from 'react-router-dom';
 import { useState, useEffect } from 'react';
 
@@ -13,9 +14,10 @@ function App() {
         
       <Route  path="/" element={<Layout />}>
 
-      <Route index element={<Home />} />
-      {/* <Route path="about" element={<About />} />  */}
-
+      <Route  index element={<Home />} />
+      
+      <Route path="bloom" element={<Bloom />} /> 
+    
     </Route>
     {/* <Route exact path='/' element={<Home/>} /> */}
   </Routes> 

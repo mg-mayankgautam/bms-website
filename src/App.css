@@ -1327,3 +1327,10 @@ button{
   text-align: right;
   justify-content: flex-end;
 }
+
+.Banner_bloom{
+  display:grid; 
+  grid-template-columns: 1fr 3fr 1fr;
+  height:20vh
+}
+
