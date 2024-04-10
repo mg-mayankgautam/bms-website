@@ -29,7 +29,7 @@
 }
 .navItems{
   display: grid;
-  grid-template-columns: 7fr repeat(6, auto);
+  grid-template-columns: 7fr repeat(3, auto);
   list-style: none;
   gap: 30px;
   align-items: center;
