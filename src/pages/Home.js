@@ -25,10 +25,10 @@ const Home = () => {
     setTimeout(() => {
       setIsDisplayed(true);
     }, 1500);
-    
+
     setTimeout(() => {
       setShowModal(true);
-    }, 5000);
+    }, 3000);
   }
     
   }, [hide])

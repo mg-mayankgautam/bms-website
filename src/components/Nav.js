@@ -33,11 +33,11 @@ const Nav = ({hide,setHide, showModal, setShowModal,events_ref, about_ref, team_
             
                 
             `</li>
-            {/* <li>
+            <li>
               <div onClick={()=> setShowModal(true)}>
-                Spotlight
+                Bloom
               </div>
-            </li> */}
+            </li>
             {/* <li>
               <button>
                 <Link to='/Bloom'>
