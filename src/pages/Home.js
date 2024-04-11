@@ -43,7 +43,7 @@ const Home = () => {
   const [scrollvar, setscrollvar]= useState(0)
   
   useMotionValueEvent(scrollY, "change", (latest) => {
-      // console.log(latest);
+      console.log(latest);
       const height = document.body.clientHeight;
       setscrollvar(latest*100/height)
     //  console.log(scrollvar)
