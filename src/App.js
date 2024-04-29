@@ -5,6 +5,7 @@ import Layout from './Layout';
 import Home from './pages/Home';
 import Bloom from './components/Bloom';
 import About from './components/About';
+import Supportgroup from './components/Supportgroup';
 import { Route, Routes, useNavigate } from 'react-router-dom';
 import { useState, useEffect } from 'react';
 
@@ -16,9 +17,11 @@ function App() {
 
       <Route  index element={<Home />} />
       
-      <Route path="bloom" element={<Bloom />} /> 
+      <Route path="supportgroup" element={< Supportgroup/>} /> 
+
+      <Route path="bloom" element={<Bloom />} />
     
-    </Route>
+     </Route>
     {/* <Route exact path='/' element={<Home/>} /> */}
   </Routes> 
   );
