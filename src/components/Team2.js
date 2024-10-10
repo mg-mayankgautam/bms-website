@@ -7,6 +7,14 @@ import Prachi from '../assets/team/prachi.png'
 import Sanya from '../assets/team/sanya.png'
 import Kashvi from '../assets/team/kashvi.png'
 import Harshika from '../assets/team/harshika.png'
+import TusharChair from '../assets/team/tusharChair.png'
+import SanyaChair from '../assets/team/sanyaChair.png'
+import Vidyut from '../assets/team/vidyut.png'
+import Mansha from '../assets/team/mansha.png'
+import Mukul from '../assets/team/mukul.png'
+import Ridhi from '../assets/team/ridhi.png'
+import Diya from '../assets/team/diya.png'
+import Nirbhay from '../assets/team/nirbhay.png'
 import { useRef, } from "react";
 import { motion, useScroll, useMotionValueEvent, useInView } from "framer-motion";
 import Slider from 'react-slick';
@@ -98,34 +106,34 @@ const Team2 = ({ team_ref }) => {
 
             <motion.div className='teamMember'
             >
-              <img src={Riya} />
+              <img src={SanyaChair} />
             </motion.div>
             <motion.div className='teamMember'
-            ><img src={Taran} />
-            </motion.div>
-            <motion.div className='teamMember'
-            >
-              <img src={Mayank} />
+            ><img src={TusharChair} />
             </motion.div>
             <motion.div className='teamMember'
             >
-              <img src={Prachi} />
+              <img src={Vidyut} />
             </motion.div>
             <motion.div className='teamMember'
             >
-              <img src={Tushar} />
+              <img src={Mansha} />
             </motion.div>
             <motion.div className='teamMember'
             >
-              <img src={Sanya} />
+              <img src={Ridhi} />
             </motion.div>
             <motion.div className='teamMember'
             >
-              <img src={Kashvi} />
+              <img src={Mukul} />
             </motion.div>
             <motion.div className='teamMember'
             >
-              <img src={Harshika} />
+              <img src={Diya} />
+            </motion.div>
+            <motion.div className='teamMember'
+            >
+              <img src={Nirbhay} />
             </motion.div>
             {/* <div  className='teamMember full'>
                   <img src={groupphoto}/>
