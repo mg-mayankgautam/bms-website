@@ -26,15 +26,16 @@ const Home = () => {
       setIsDisplayed(true);
     }, 1500);
 
-    setTimeout(() => {
-      setShowModal(true);
-    }, 3000);
+    // setTimeout(() => {
+    //   setShowModal(true);
+    // }, 3000);
   }
     
   }, [hide])
   
   const events_ref = useRef(null);
   const about_ref = useRef(null);
+  
   const team_ref = useRef(null);
   const contact_ref = useRef(null);
   const { scrollY } = useScroll(

@@ -28,16 +28,16 @@ const Nav = ({hide,setHide, showModal, setShowModal,events_ref, about_ref, team_
         <ul className='navItems'>
             <li className='logoDiv'>
               <Link to='/'><img src={logo}alt="logo" className='Logo' />
-                </Link>
+              </Link>
                
             
                 
-            `</li>
-            <li>
+            </li>
+            {/* <li>
               <div onClick={()=> setShowModal(true)}>
                 Bloom
               </div>
-            </li>
+            </li> */}
             {/* <li>
               <button>
                 <Link to='/Bloom'>
@@ -45,6 +45,13 @@ const Nav = ({hide,setHide, showModal, setShowModal,events_ref, about_ref, team_
                 </Link>
               </button>
             </li> */}
+            <li>
+              {/* <button onClick={() => {window.scrollTo({ top:607, behavior:'smooth'})}}>Support Group</button> */}
+              <Link to='/supportgroup'>
+                   Support group
+              </Link>
+            </li>
+            <li><button onClick={() => {window.scrollTo({ top:607, behavior:'smooth'})}}>Blogs</button></li>  
             <li><button onClick={() => {window.scrollTo({ top:607, behavior:'smooth'})}}>About</button></li> 
             {/* <li> */}
             {/* <button onClick={() => {window.scrollTo({ top:1203, behavior:'smooth'})}}>Events</button> */}
