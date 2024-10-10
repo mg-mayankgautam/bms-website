@@ -8,7 +8,6 @@ import About from './components/About';
 import Supportgroup from './components/Supportgroup';
 import { Route, Routes, useNavigate } from 'react-router-dom';
 import { useState, useEffect } from 'react';
-import Support from './components/Support';
 
 function App() {
   return (
@@ -20,10 +19,10 @@ function App() {
       
       <Route path="bloom" element={<Bloom />} />
 
-      <Route path="support" element={<Support />} /> 
+      {/* <Route path="support" element={<Support />} />  */}
       <Route path="supportgroup" element={< Supportgroup/>} /> 
 
-      <Route path="bloom" element={<Bloom />} />
+      {/* <Route path="bloom" element={<Bloom />} /> */}
     
      </Route>
     {/* <Route exact path='/' element={<Home/>} /> */}

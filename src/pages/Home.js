@@ -9,7 +9,6 @@ import Nav from '../components/Nav';
 import Footer from '../components/Footer';
 import Faculty from '../components/Faculty';
 import Wall from '../components/Wall';
-import Support from '../components/Support';
 import SpotlightModal from '../components/SpotlightModal';
 
 const Home = () => {
