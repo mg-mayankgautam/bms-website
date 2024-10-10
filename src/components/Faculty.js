@@ -70,16 +70,28 @@ const Faculty = ({scrollvar}) => {
                 </div>
             </div>
             
-            {/* <div className='foundersContent' style={{marginTop:'100px', height:'100vh', display:'grid', gridTemplateColumns:'1fr 1fr 1fr', alignItems:'center', justifyItems:'center'}}>
+            <div className='foundersContent'>
                  
-                  <div  className='facultyHeading'>meet</div>
-                  <div><img style={{height:'15rem', borderRadius:'25px' }} src={shivam}></img> </div>
-                  <div className='facultyHeading'>founders</div>
-                  <div><img style={{height:'15rem',borderRadius:'25px'}} src={gurusha}></img> </div>
-                  <div className='facultyHeading'>our</div>
-                  <div><img style={{height:'15rem',borderRadius:'25px'}} src={nikita}></img> </div>
+                  <div  className='founderHeading'>meet</div>
+                  <div className='founderImgDiv shivam'><img className='founderImg' src={shivam}></img> </div>
+                  <div className='founderHeading'>founders</div>
+                  <div className='founderImgDiv'><img className='founderImg' src={gurusha}></img> </div>
+                  <div className='founderHeading'>our</div>
+                  <div className='founderImgDiv'><img className='founderImg' src={nikita}></img> </div>
                   
-            </div> */}
+            </div>
+
+            <div className='foundersContentMobile'>
+                 
+                  <div  className='founderHeading'>meet our founders</div>
+                  <div className='founderScrollMobile'>
+                    <div className='founderImgDiv'><img className='founderImg' src={gurusha}></img> </div>
+                    <div className='founderImgDiv shivam'><img className='founderImg' src={shivam}></img> </div>
+                    <div className='founderImgDiv'><img className='founderImg' src={nikita}></img> </div>
+                  </div>
+                  
+                  
+            </div>
         </div>
 
           

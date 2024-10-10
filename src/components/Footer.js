@@ -11,13 +11,16 @@ const Footer = ({contact_ref}) => {
     <div className='footerContainer' >
     <div className='Footer' ref={contact_ref}>
         <div className='footerjoinUs'>
+
           <div className='joinUs'>
-            <h1>Join our community!</h1>
+            <h1>Request a Support Group!</h1>
+            {/* <div>Be a part of a community that cares! Join Blissful Minds Society today and help us in creating a community that aims at ending stigma and fostering acceptance around mental health and well-being.</div> */}
             <div>Be a part of a community that cares! Join Blissful Minds Society today and help us in creating a community that aims at ending stigma and fostering acceptance around mental health and well-being.</div>
-            <a href='mailto:blissfulminds.bvcoe@gmail.com'>
+            {/* <a href='mailto:blissfulminds.bvcoe@gmail.com'> */}
             <button className='askQuesBtn'>ask a question</button>
-            </a>
+            {/* </a> */}
           </div>
+
           <div></div>
         </div>
 

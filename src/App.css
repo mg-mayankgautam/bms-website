@@ -75,7 +75,7 @@ button{
   justify-content: center;
   min-height: 101vh;
   min-height: 101dvh;
-  min-height: 101svh;
+  min-height: 101lvh;
   background-color: white;
   background-image: url(./assets/bgg.png);
   background-repeat: no-repeat;
@@ -209,8 +209,8 @@ button{
 .About{
   height: 200dvh;
   margin-top: -100dvh;
-  height: 200svh;
-  margin-top: -100svh;
+  height: 200lvh;
+  margin-top: -100lvh;
   /* background-color: bisque; */
   /* padding: 0 100px; */
   z-index: 30;
@@ -219,7 +219,7 @@ button{
 .about_child{
   height: 100vh;
   height: 100dvh;
-  height: 100svh;
+  height: 100lvh;
   position: sticky;
   top: 0;
   background-color: #f8efe5;
@@ -427,8 +427,8 @@ button{
   height: 130vh;
   height: 130dvh;
   /* max-height: 100dvh; */
-  height: 130svh;
-  /* max-height: 100svh; */
+  height: 130lvh;
+  /* max-height: 100lvh; */
   background-color: #f8efe5;
   display: flex;
   align-items: center;
@@ -535,7 +535,7 @@ background-image: linear-gradient(#dbbdff,#ffffff );
   max-width:100%; 
   height: 100vh;
   height: 100dvh;
-  height: 100svh;
+  height: 100lvh;
   max-height: 100%;
 }
 .eventsHeading{
@@ -687,7 +687,7 @@ background-image: linear-gradient(#dbbdff,#ffffff );
   position: relative;
   height: 100vh;
   height: 100dvh;
-  height: 100svh;
+  height: 100lvh;
   display: grid;
   grid-template-columns: 2.5fr 3fr;
   align-items: center;
@@ -728,7 +728,7 @@ background-image: linear-gradient(#dbbdff,#ffffff );
   justify-content: space-between;
   height: 500px;
 }
-.facultyHeading{
+.facultyHeading, .founderHeading{
     font-size: 56px;
     /* padding: 50px 0 0; */
     /* margin-top: 64px; */
@@ -746,22 +746,19 @@ background-image: linear-gradient(#dbbdff,#ffffff );
 }
 
 .FacultyContainer{
-  /* min-height: 400vh;
-  margin-top: -200vh; */
-  min-height: 300vh;
+  min-height: 400vh;
   margin-top: -200vh;
+  /* min-height: 400vh;
+  margin-top: -300vh; */
 }
 
 .Faculty{
   position: sticky;
   top: 0;
   z-index: 15;
-  /* min-height: 200vh;
+  min-height: 200vh;
   min-height: 200dvh;
-  min-height: 200svh; */
-  min-height: 100vh;
-  min-height: 100dvh;
-  min-height: 100svh;
+  min-height: 200lvh;
   background-color: #f8efe5;
   display: flex;
   flex-direction: column;
@@ -787,6 +784,9 @@ background-image: linear-gradient(#dbbdff,#ffffff );
   justify-items: center;
   gap: 50px;
   padding: 0 50px;
+  height: 100vh;
+  height: 100dvh;
+  height: 100lvh;
 }
 /* .FacultyMobile{display: ;} */
 .facultyImgDiv{
@@ -812,13 +812,47 @@ background-image: linear-gradient(#dbbdff,#ffffff );
   font-size: 15px;
 }
 
-
+.foundersContent{
+  height: 100vh;
+  height: 100dvh;
+  height: 100lvh;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 10px;
+  align-items: center;
+  justify-items: center;
+  padding: 0 20px;
+}
+.foundersContentMobile{
+  display: none;
+}
+.founderImgDiv{
+  width: 100%;
+  height: 100%;
+  max-height: 300px;
+  align-self: start;
+  transform: translateY(-20%);
+}
+.founderImgDiv.shivam{
+  transform: translateY(20%);
+  align-self: end;
+}
+.founderImg{
+  /* height: 15rem; */
+  max-height: 100%;
+  max-width: 100%;
+  object-fit: contain;
+  border-radius: 25px;
+}
+.founderHeading{
+  font-size: 72px;
+}
 
 .teamContainer{
   height: 300dvh;
   margin-top: -200dvh;
-  height: 300svh;
-  margin-top: -200svh;
+  height: 300lvh;
+  margin-top: -200lvh;
   z-index:10 ;
   position: relative;
   background-color: #ffffff;
@@ -831,7 +865,7 @@ background-image: linear-gradient(#dbbdff,#ffffff );
   border-bottom-right-radius:0px;
   min-height: 100vh;
   min-height: 100dvh;
-  min-height: 100svh;
+  min-height: 100lvh;
 
   /* max-height: max-content; */
   background-color: #f8efe5;
@@ -1262,7 +1296,7 @@ background-image: linear-gradient(#dbbdff,#ffffff );
   /* position: relative; */
   min-height: 100vh;
   min-height: 100dvh;
-  min-height: 100svh;
+  min-height: 100lvh;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -1279,7 +1313,7 @@ background-image: linear-gradient(#dbbdff,#ffffff );
   background-color: #ffffff;
   min-height: 55vh;
   min-height: 55dvh;
-  min-height: 55svh;
+  min-height: 55lvh;
   display: grid;
   grid-template-columns: 1fr 1fr;
   /* justify-content: center; */

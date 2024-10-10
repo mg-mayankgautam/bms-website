@@ -7,6 +7,7 @@ import Bloom from './components/Bloom';
 import About from './components/About';
 import { Route, Routes, useNavigate } from 'react-router-dom';
 import { useState, useEffect } from 'react';
+import Support from './components/Support';
 
 function App() {
   return (
@@ -16,7 +17,9 @@ function App() {
 
       <Route  index element={<Home />} />
       
-      <Route path="bloom" element={<Bloom />} /> 
+      <Route path="bloom" element={<Bloom />} />
+
+      <Route path="support" element={<Support />} /> 
     
     </Route>
     {/* <Route exact path='/' element={<Home/>} /> */}
