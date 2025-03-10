@@ -47,7 +47,7 @@ const Team2 = ({ team_ref }) => {
     Sanya
   ];
 
-  const [teamMembers, setTeamMembers] = useState(teamMembers1)
+  const [teamMembers, setTeamMembers] = useState('2025')
 
 
 
@@ -125,16 +125,28 @@ const Team2 = ({ team_ref }) => {
   return (
     <div className='teamContainer' ref={team_ref}>
       <div className='Team2'>
-        <div>
-          <div className='teamHeading'>Meet the Team</div>
-          <div className='teamSwitchBtn'>
 
-          </div>
+        <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center'}}>
+          {/* Centered Heading */}
+          <div className='teamHeading'>Meet the Team</div>
+
+          {/* Right-aligned Button */}
+            <button className='teamswitchbtn' onClick={() => setTeamMembers(teamMembers === '2025' ? '2024' : '2025')}>
+              {teamMembers === '2025' ? '2024-25' : '2023-24'}
+            </button>
         </div>
+
+
         <div className='SliderContainer'>
           <Slider ref={arrowRef} {...settings}>
 
-            {teamMembers?.map((member, index) => (
+            {teamMembers == '2025' && teamMembers1?.map((member, index) => (
+              <motion.div className='teamMember' key={index}>
+                <img src={member} />
+              </motion.div>
+            ))}
+
+            {teamMembers == '2024' && teamMembers2?.map((member, index) => (
               <motion.div className='teamMember' key={index}>
                 <img src={member} />
               </motion.div>
