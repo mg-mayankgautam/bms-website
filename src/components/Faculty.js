@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react'
-import maam from '../assets/rubeenamam.jpeg'
+import maam from '../assets/maam.jpg'
 import { motion } from "framer-motion"
 import shivam from '../assets/shivam.jpeg'
 import gurusha from '../assets/gurusha.jpeg'
@@ -48,7 +48,9 @@ const Faculty = ({ scrollvar }) => {
           <div className='facultyImgDiv'
             style={{ animation: 'faculty-scalein linear forwards', animationTimeline: 'view()', animationRangeStart: 'contain', animationRangeEnd: 'contain 92%' }}
           >
-            <img src={maam} className='facultyImg' /></div>
+            <img src={maam} className='facultyImg' />
+          </div>
+
           <div className='FacultyMobile'>
             <div className='facultyLayerContent' style={{ animation: 'faculty-parallax linear forwards', animationTimeline: 'view()', animationRangeStart: 'contain', animationRangeEnd: 'contain 92%' }}>
               <div className='facultyHeading'>

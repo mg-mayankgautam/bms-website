@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import Mayank from '../assets/team/Mayank.png'
 import Riya from '../assets/team/Riya.png'
 import Taran from '../assets/team/Taran.png'
@@ -26,19 +26,44 @@ import groupphoto from '../assets/team/group.JPG'
 
 const Team2 = ({ team_ref }) => {
 
+  const teamMembers1 = [
+    SanyaChair,
+    TusharChair,
+    Vidyut,
+    Mansha,
+    Ridhi,
+    Mukul,
+    Diya
+  ];
+
+  const teamMembers2 = [
+    Riya,
+    Taran,
+    Mayank,
+    Prachi,
+    Tushar,
+    Harshika,
+    Kashvi,
+    Sanya
+  ];
+
+  const [teamMembers, setTeamMembers] = useState(teamMembers1)
+
+
+
   var settings = {
     className: "center",
     centerMode: true,
     dots: false,
     infinite: true,
     speed: 500,
-    slidesToShow: 7,
+    slidesToShow: 6,
     slidesToScroll: 1,
     initialSlide: 0,
     arrows: false,
     focusOnSelect: true,
     swipeToSlide: true,
-    centerPadding: "150px",
+    centerPadding: "160px",
     // responsive:[
     //   {
     //     breakpoint: '800px',
@@ -100,41 +125,21 @@ const Team2 = ({ team_ref }) => {
   return (
     <div className='teamContainer' ref={team_ref}>
       <div className='Team2'>
-        <div className='teamHeading'>Meet the Team</div>
+        <div>
+          <div className='teamHeading'>Meet the Team</div>
+          <div className='teamSwitchBtn'>
+
+          </div>
+        </div>
         <div className='SliderContainer'>
           <Slider ref={arrowRef} {...settings}>
 
-            <motion.div className='teamMember'
-            >
-              <img src={SanyaChair} />
-            </motion.div>
-            <motion.div className='teamMember'
-            ><img src={TusharChair} />
-            </motion.div>
-            <motion.div className='teamMember'
-            >
-              <img src={Vidyut} />
-            </motion.div>
-            <motion.div className='teamMember'
-            >
-              <img src={Mansha} />
-            </motion.div>
-            <motion.div className='teamMember'
-            >
-              <img src={Ridhi} />
-            </motion.div>
-            <motion.div className='teamMember'
-            >
-              <img src={Mukul} />
-            </motion.div>
-            <motion.div className='teamMember'
-            >
-              <img src={Diya} />
-            </motion.div>
-            <motion.div className='teamMember'
-            >
-              <img src={Nirbhay} />
-            </motion.div>
+            {teamMembers?.map((member, index) => (
+              <motion.div className='teamMember' key={index}>
+                <img src={member} />
+              </motion.div>
+            ))}
+
             {/* <div  className='teamMember full'>
                   <img src={groupphoto}/>
                 </div> */}
